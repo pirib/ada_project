@@ -1,0 +1,3 @@
+main.adb:9:14: warning: unit "MicroBit.IOs" is not referenced
+main.adb:10:14: warning: unit "MicroBit.Display" is not referenced
+main.adb:16:06: warning: unit "Sensor" is not referenced

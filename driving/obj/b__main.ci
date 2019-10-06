@@ -1,0 +1,26 @@
+graph: { title: "b__main.adb"
+node: { title: "_ada_main" label: "ada_main_program\nb__main.adb:77:14" shape : ellipse }
+node: { title: "microbit__display___elabb" label: "e41b\nb__main.adb:71:23" shape : ellipse }
+node: { title: "microbit__time___elabb" label: "e39b\nb__main.adb:69:20" shape : ellipse }
+node: { title: "microbit__ios___elabb" label: "e37b\nb__main.adb:67:19" shape : ellipse }
+node: { title: "microbit__ios___elabs" label: "e35b\nb__main.adb:66:19" shape : ellipse }
+node: { title: "nrf51__device___elabs" label: "e33b\nb__main.adb:64:19" shape : ellipse }
+node: { title: "nrf51__interrupts___elabb" label: "e31b\nb__main.adb:54:23" shape : ellipse }
+node: { title: "ada_main___elabb" label: "e29b\nb__main.adb:44:15" shape : ellipse }
+node: { title: "system__secondary_stack__ss_stackIP" label: "Ss_Stackip\nD:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\gnat\s-secsta.ads:106:9" shape : ellipse }
+node: { title: "ada_main___elabb" label: "ada_main\nb__main.adb:7:1\n8 bytes (static)" }
+edge: { sourcename: "ada_main___elabb" targetname: "ada_main__Tsec_default_sized_stacksBIP" label: "b__main.adb:29:4" }
+node: { title: "main" label: "main\nb__main.adb:80:4\n16 bytes (static)" }
+edge: { sourcename: "main" targetname: "_ada_main" label: "b__main.adb:86:7" }
+edge: { sourcename: "main" targetname: "adainit" label: "b__main.adb:85:7" }
+node: { title: "adainit" label: "adainit\nb__main.adb:32:4\n8 bytes (static)" }
+edge: { sourcename: "adainit" targetname: "microbit__display___elabb" label: "b__main.adb:71:23" }
+edge: { sourcename: "adainit" targetname: "microbit__time___elabb" label: "b__main.adb:69:20" }
+edge: { sourcename: "adainit" targetname: "microbit__ios___elabb" label: "b__main.adb:67:19" }
+edge: { sourcename: "adainit" targetname: "microbit__ios___elabs" label: "b__main.adb:66:19" }
+edge: { sourcename: "adainit" targetname: "nrf51__device___elabs" label: "b__main.adb:64:19" }
+edge: { sourcename: "adainit" targetname: "nrf51__interrupts___elabb" label: "b__main.adb:54:23" }
+edge: { sourcename: "adainit" targetname: "ada_main___elabb" label: "b__main.adb:44:15" }
+node: { title: "ada_main__Tsec_default_sized_stacksBIP" label: "tsec_default_sized_stacksbip\nb__main.adb:29:4\n32 bytes (static)" }
+edge: { sourcename: "ada_main__Tsec_default_sized_stacksBIP" targetname: "system__secondary_stack__ss_stackIP" label: "b__main.adb:29:4" }
+}

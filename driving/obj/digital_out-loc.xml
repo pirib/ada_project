@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file />
+    <file_marker column=" 1" line=" 20" >
+      <vfs_project />
+      <vfs_file>F:\Code\Git\ada_project\driving\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>F:\Code\Git\ada_project\driving\src\nav.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 20" >
+      <vfs_project />
+      <vfs_file>F:\Code\Git\ada_project\driving\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 5" line=" 27" >
+      <vfs_project />
+      <vfs_file>F:\Code\Git\ada_project\driving\src\nav.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

@@ -1,0 +1,19 @@
+graph: { title: "F:\Code\Git\ada_project\driving\src\main.adb"
+node: { title: "nav__stop" label: "Stop\nF:\Code\Git\ada_project\driving\src\nav.ads:8:15" shape : ellipse }
+node: { title: "nav__drive_backward" label: "Drive_Backward\nF:\Code\Git\ada_project\driving\src\nav.ads:5:15" shape : ellipse }
+node: { title: "nav__turn_right" label: "Turn_Right\nF:\Code\Git\ada_project\driving\src\nav.ads:7:15" shape : ellipse }
+node: { title: "nav__turn_left" label: "Turn_Left\nF:\Code\Git\ada_project\driving\src\nav.ads:6:15" shape : ellipse }
+node: { title: "microbit__time__delay_ms" label: "Delay_Ms\nF:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\src\microbit-time.ads:41:14" shape : ellipse }
+node: { title: "nav__drive_forward" label: "Drive_Forward\nF:\Code\Git\ada_project\driving\src\nav.ads:4:15" shape : ellipse }
+node: { title: "_ada_main" label: "Main\nF:\Code\Git\ada_project\driving\src\main.adb:19:1\n16 bytes (static)" }
+edge: { sourcename: "_ada_main" targetname: "microbit__time__delay_ms" label: "F:\Code\Git\ada_project\driving\src\main.adb:37:22" }
+edge: { sourcename: "_ada_main" targetname: "nav__stop" label: "F:\Code\Git\ada_project\driving\src\main.adb:36:12" }
+edge: { sourcename: "_ada_main" targetname: "microbit__time__delay_ms" label: "F:\Code\Git\ada_project\driving\src\main.adb:35:22" }
+edge: { sourcename: "_ada_main" targetname: "nav__drive_backward" label: "F:\Code\Git\ada_project\driving\src\main.adb:34:12" }
+edge: { sourcename: "_ada_main" targetname: "microbit__time__delay_ms" label: "F:\Code\Git\ada_project\driving\src\main.adb:33:22" }
+edge: { sourcename: "_ada_main" targetname: "nav__turn_right" label: "F:\Code\Git\ada_project\driving\src\main.adb:32:12" }
+edge: { sourcename: "_ada_main" targetname: "microbit__time__delay_ms" label: "F:\Code\Git\ada_project\driving\src\main.adb:31:22" }
+edge: { sourcename: "_ada_main" targetname: "nav__turn_left" label: "F:\Code\Git\ada_project\driving\src\main.adb:30:12" }
+edge: { sourcename: "_ada_main" targetname: "microbit__time__delay_ms" label: "F:\Code\Git\ada_project\driving\src\main.adb:29:22" }
+edge: { sourcename: "_ada_main" targetname: "nav__drive_forward" label: "F:\Code\Git\ada_project\driving\src\main.adb:28:12" }
+}
