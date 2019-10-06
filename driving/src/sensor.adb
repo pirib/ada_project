@@ -6,8 +6,8 @@ package body Sensor is
 
     --  PINS
 
-    sensor_TRIG: constant Pin_Id := 0;  -- Output Pin
-    sensor_ECHO: constant Pin_Id := 1;  -- Input Pin
+    sensor_TRIG_pin: constant Pin_Id := 0;  -- Output Pin
+    sensor_ECHO_pin: constant Pin_Id := 1;  -- Input Pin
 
     -- VARS
     
@@ -18,22 +18,22 @@ package body Sensor is
     begin
 	duration_echo_us := 0;
 
-	MicroBit.IOs.Set(sensor_TRIG, False);
+	MicroBit.IOs.Set(sensor_TRIG_pin, False);
 	MicroBit.Time.Delay_Ms(10);
 
-	MicroBit.IOs.Set(sensor_TRIG, True);
+	MicroBit.IOs.Set(sensor_TRIG_pin, True);
 	MicroBit.Time.HAL_Delay.Delay_Microseconds(10);
-	MicroBit.IOs.Set(sensor_TRIG, False);
+	MicroBit.IOs.Set(sensor_TRIG_pin, False);
 
 	outerloop:
 	loop
 
-	    if MicroBit.IOs.Set(sensor_ECHO) then
+	    if MicroBit.IOs.Set(sensor_ECHO_pin) then
 
 		innerloop:
 		loop
 		    MicroBit.Time.HAL_Delay.Delay_Microseconds(1);
-		    if MicroBit.IOs.Set(sensor_ECHO) then
+		    if MicroBit.IOs.Set(sensor_ECHO_pin) then
 			duration_echo_us := duration_echo_us + 1;
 		    else
 			return duration_echo_us;

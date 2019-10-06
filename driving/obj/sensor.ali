@@ -23,7 +23,7 @@ RV NO_DISPATCHING_CALLS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U sensor%b		sensor.adb		88389c31 NE OO PK
+U sensor%b		sensor.adb		a8867b34 NE OO PK
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W microbit%s		microbit.ads		microbit.ali
 W microbit.ios%s	microbit-ios.adb	microbit-ios.ali
@@ -55,7 +55,7 @@ D nrf51_svd-spi.ads	20190914074758 d8f87c63 nrf51_svd.spi%s
 D nrf51_svd-timer.ads	20190914074758 31dae6f3 nrf51_svd.timer%s
 D nrf51_svd-twi.ads	20190914074758 87adf514 nrf51_svd.twi%s
 D sensor.ads		20191006084652 b0e880d3 sensor%s
-D sensor.adb		20191006084902 9023b6e9 sensor%b
+D sensor.adb		20191006085816 b09d51ec sensor%b
 D system.ads		20190518152826 e69b74bd system%s
 D s-stoele.ads		20190518152826 2dc34a04 system.storage_elements%s
 D s-unstyp.ads		20190518152826 34867c83 system.unsigned_types%s
@@ -80,7 +80,7 @@ X 9 microbit.ads
 . 36r24
 X 10 microbit-ios.ads
 34K18*IOs 98e17 25|1w15 1r33 21r18 24r18 26r18 31r25 36r33
-36I9*Pin_Id<short_short_integer> 25|9r27 10r27
+36I9*Pin_Id<short_short_integer> 25|9r31 10r31
 52U14*Set 25|21s22 24s22 26s22
 55V13*Set{boolean} 25|31s29 36s37
 X 11 microbit-time.ads
@@ -92,8 +92,8 @@ X 24 sensor.ads
 4I10*travel_time_us<integer> 6r26 25|14r23 17r26
 6V14*read{4I10} 25|17b14 47l9 47t13
 X 25 sensor.adb
-9i5 sensor_TRIG{10|36I9} 21r26 24r26 26r26
-10i5 sensor_ECHO{10|36I9} 31r33 36r41
+9i5 sensor_TRIG_pin{10|36I9} 21r26 24r26 26r26
+10i5 sensor_ECHO_pin{10|36I9} 31r33 36r41
 14i5 duration_echo_us{24|4I10} 19m9 37m25 37r45 39r32
 28l9 outerloop 45l18 45e27
 33l17 innerloop 41l26 41e35
