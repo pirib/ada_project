@@ -6,6 +6,7 @@ F:\Code\Git\ada_project\driving\digital_out.gpr
 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\microbit_zfp.gpr
 20190914074758
 [BOUND OBJECT FILES]
+F:\Code\Git\ada_project\driving\obj\accelerometer.o
 F:\Code\Git\ada_project\driving\obj\nav.o
 F:\Code\Git\ada_project\driving\obj\sensor.o
 F:\Code\Git\ada_project\driving\obj\main.o

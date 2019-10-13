@@ -32,7 +32,7 @@ RV NO_ELABORATION_CODE
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U ada_main%b		b__main.adb		2231bcf0 OO PK IL
+U ada_main%b		b__main.adb		c89d1251 OO PK IL
 Z system%s		system.ads		system.ali
 
 U ada_main%s		b__main.ads		f21fa8d0 EE NE OO PK IL
@@ -40,8 +40,8 @@ W system%s		system.ads		system.ali
 W system.parameters%s	s-parame.ads		s-parame.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
-D b__main.ads		20191006085818 bc409f7c ada_main%s
-D b__main.adb		20191006085818 9e71238c ada_main%b
+D b__main.ads		20191013134828 bc409f7c ada_main%s
+D b__main.adb		20191013134828 74dd8d2d ada_main%b
 D system.ads		20190518152826 e69b74bd system%s
 D s-parame.ads		20190518152826 fe66c50d system.parameters%s
 D s-secsta.ads		20190518152826 56a2861c system.secondary_stack%s
@@ -49,48 +49,52 @@ D s-stoele.ads		20190518152826 2dc34a04 system.storage_elements%s
 G a e
 G c Z s b [adainit ada_main 17 14 none]
 G c Z s b [main ada_main 20 14 none]
-G c Z b b [Tsec_default_sized_stacksBIP ada_main 29 4 none]
-G c Z b b [ada_main_program ada_main 77 14 none]
+G c Z b b [Tsec_default_sized_stacksBIP ada_main 33 4 none]
+G c Z b b [ada_main_program ada_main 86 14 none]
 X 1 b__main.ads
-7K9*ada_main 110l5 110e13 2|7b14 101l5 101t13
+7K9*ada_main 118l5 118e13 2|7b14 111l5 111t13
 10a4*GNAT_Version{string} 12r22
-14a4*Ada_Main_Program_Name{string} 15r22 2|81r52
-17U14*adainit 18i<c,adainit>22 2|32b14 75l8 75t15 85s7
-20U14*main 21i<c,main>22 2|80b14 87t7
+14a4*Ada_Main_Program_Name{string} 15r22 2|90r52
+17U14*adainit 18i<c,adainit>22 2|36b14 84l8 84t15 94s7
+20U14*main 21i<c,main>22 2|89b14 96t7
 X 2 b__main.adb
-9i4 E68{short_integer} 9m45 9r45 50m7 50r14
-10i4 E63{short_integer} 10m45 10r45 51m7 51r14
-11i4 E17{short_integer} 11m45 11r45 52m7 52r14
-12i4 E78{short_integer} 12m45 12r45 53m7 53r14
-13i4 E65{short_integer} 13m45 13r45 55m7 55r14
-14i4 E27{short_integer} 14m45 14r45 56m7 56r14
-15i4 E30{short_integer} 15m45 15r45 57m7 57r14
-16i4 E47{short_integer} 16m45 16r45 58m7 58r14
-17i4 E76{short_integer} 17m45 17r45 59m7 59r14
-18i4 E45{short_integer} 18m45 18r45 60m7 60r14
-19i4 E80{short_integer} 19m45 19r45 61m7 61r14
-20i4 E34{short_integer} 20m45 20r45 62m7 62r14
-21i4 E37{short_integer} 21m45 21r45 63m7 63r14
-22i4 E05{short_integer} 22m45 22r45 65m7 65r14
-23i4 E74{short_integer} 23m45 23r45 68m7 68r14
-24i4 E43{short_integer} 24m45 24r45 70m7 70r14
-25i4 E41{short_integer} 25m45 25r45 72m7 72r14
-26i4 E82{short_integer} 26m45 26r45 73m7 73r14
-27i4 E84{short_integer} 27m45 27r45 74m7 74r14
-29a4 Sec_Default_Sized_Stacks(5|43R9) 47m32 47r32
-33i7*Binder_Sec_Stacks_Count{natural} 34m27 34r27 46m7
-36i7*Default_Secondary_Stack_Size{4|56I9} 37m25 37r25 45m7
-38m7*Default_Sized_SS_Pool{3|90M9} 39m27 39r27 47m7
-77U14 Ada_Main_Program 78b<ada,_ada_main>24 86s7
-81m7 Ensure_Reference{3|90M9} 82r24
+9i4 E76{short_integer} 9m45 9r45 54m7 54r14
+10i4 E47{short_integer} 10m45 10r45 55m7 55r14
+11i4 E71{short_integer} 11m45 11r45 56m7 56r14
+12i4 E19{short_integer} 12m45 12r45 57m7 57r14
+13i4 E88{short_integer} 13m45 13r45 58m7 58r14
+14i4 E73{short_integer} 14m45 14r45 60m7 60r14
+15i4 E29{short_integer} 15m45 15r45 61m7 61r14
+16i4 E32{short_integer} 16m45 16r45 62m7 62r14
+17i4 E55{short_integer} 17m45 17r45 63m7 63r14
+18i4 E86{short_integer} 18m45 18r45 64m7 64r14
+19i4 E53{short_integer} 19m45 19r45 65m7 65r14
+20i4 E90{short_integer} 20m45 20r45 66m7 66r14
+21i4 E36{short_integer} 21m45 21r45 67m7 67r14
+22i4 E39{short_integer} 22m45 22r45 68m7 68r14
+23i4 E07{short_integer} 23m45 23r45 70m7 70r14
+24i4 E45{short_integer} 24m45 24r45 71m7 71r14
+25i4 E43{short_integer} 25m45 25r45 73m7 73r14
+26i4 E84{short_integer} 26m45 26r45 76m7 76r14
+27i4 E51{short_integer} 27m45 27r45 78m7 78r14
+28i4 E49{short_integer} 28m45 28r45 80m7 80r14
+29i4 E04{short_integer} 29m45 29r45 81m7 81r14
+30i4 E82{short_integer} 30m45 30r45 82m7 82r14
+31i4 E92{short_integer} 31m45 31r45 83m7 83r14
+33a4 Sec_Default_Sized_Stacks(5|43R9) 51m32 51r32
+37i7*Binder_Sec_Stacks_Count{natural} 38m27 38r27 50m7
+40i7*Default_Secondary_Stack_Size{4|56I9} 41m25 41r25 49m7
+42m7*Default_Sized_SS_Pool{3|90M9} 43m27 43r27 51m7
+86U14 Ada_Main_Program 87b<ada,_ada_main>24 95s7
+90m7 Ensure_Reference{3|90M9} 91r24
 X 3 system.ads
-60K9*System 1|4w6 5r6 6r6 2|29r57 29r90 36r38 38r31 45r39 81r34 3|172e11
-90M9*Address 2|38r38 81r41
+60K9*System 1|4w6 5r6 6r6 2|33r57 33r90 40r38 42r31 49r39 90r34 3|172e11
+90M9*Address 2|42r38 90r41
 X 4 s-parame.ads
-49K16*Parameters 1|5w13 2|29r97 36r45 45r46 4|72e22
-56I9*Size_Type<integer> 2|36r56
-68i4*Runtime_Default_Sec_Stack_Size{56I9} 2|29r108 45r57
+49K16*Parameters 1|5w13 2|33r97 40r45 49r46 4|72e22
+56I9*Size_Type<integer> 2|40r56
+68i4*Runtime_Default_Sec_Stack_Size{56I9} 2|33r108 49r57
 X 5 s-secsta.ads
-37K16*Secondary_Stack 1|6w13 2|29r64 5|154e27
-43R9*SS_Stack 2|29r80 5|119e14
+37K16*Secondary_Stack 1|6w13 2|33r64 5|154e27
+43R9*SS_Stack 2|33r80 5|119e14
 

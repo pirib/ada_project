@@ -6,18 +6,19 @@ package body Nav is
 
     --  Motor 1 Pins left motor
 
-    m1anal_pin: constant Pin_Id := 1; 
-    m1in1_pin: constant Pin_Id := 4;
-    m1in2_pin: constant Pin_Id := 5;      -- Set through not gate on the breadboard
+    m1anal_pin: constant Pin_Id := 0; 
+    m1in1_pin: constant Pin_Id := 16;
+    m1in2_pin: constant Pin_Id := 19;      -- Set through not gate on the breadboard
 
     --  Motor 2 Pins right motor
     
-    m2anal_pin: constant Pin_Id := 0;
+    m2anal_pin: constant Pin_Id := 1;
     m2in1_pin: constant Pin_Id := 12;
     m2in2_pin: constant Pin_Id := 8;      -- Set through not gate on the breadboard
     
     
     --  Variables
+    
     zero: constant Analog_Value := 0;
     low: constant Analog_Value := 500;
     med: constant Analog_Value := 750;

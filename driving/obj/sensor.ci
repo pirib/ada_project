@@ -1,10 +1,10 @@
 edge: { sourcename: "sensor__read"
   targetname: "1:hal__time__delays,hal__time__delays"
-  label: "sensor.adb:25:32"
+  label: "sensor.adb:24:32"
 }
 edge: { sourcename: "sensor__read"
   targetname: "1:hal__time__delays,hal__time__delays"
-  label: "sensor.adb:35:44"
+  label: "sensor.adb:34:44"
 }
 graph: { title: "F:\Code\Git\ada_project\driving\src\sensor.adb"
 node: { title: "__gnat_last_chance_handler" label: "gnat_last_chance_handler\n<built-in>" shape : ellipse }
@@ -12,17 +12,17 @@ node: { title: "microbit__ios__set__2" label: "Set\nF:\Code\Git\ada_project\Ada_
 node: { title: "microbit__time__hal_delay" label: "Hal_Delay\nF:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\src\microbit-time.ads:64:13" shape : ellipse }
 node: { title: "microbit__time__delay_ms" label: "Delay_Ms\nF:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\src\microbit-time.ads:41:14" shape : ellipse }
 node: { title: "microbit__ios__set" label: "Set\nF:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\src\microbit-ios.ads:52:14" shape : ellipse }
-node: { title: "sensor__read" label: "Read\nF:\Code\Git\ada_project\driving\src\sensor.adb:17:5\n8 bytes (static)" }
-edge: { sourcename: "sensor__read" targetname: "__gnat_last_chance_handler" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:37:62" }
-edge: { sourcename: "sensor__read" targetname: "microbit__ios__set__2" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:36:36" }
-edge: { sourcename: "sensor__read" targetname: "__indirect_call" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:35:44" }
+node: { title: "sensor__read" label: "Read\nF:\Code\Git\ada_project\driving\src\sensor.adb:16:5\n8 bytes (static)" }
+edge: { sourcename: "sensor__read" targetname: "__gnat_last_chance_handler" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:36:62" }
+edge: { sourcename: "sensor__read" targetname: "microbit__ios__set__2" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:35:36" }
+edge: { sourcename: "sensor__read" targetname: "__indirect_call" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:34:44" }
 node: { title: "__indirect_call" label: "Indirect Call Placeholder" shape : ellipse }
-edge: { sourcename: "sensor__read" targetname: "microbit__time__hal_delay" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:35:34" }
-edge: { sourcename: "sensor__read" targetname: "microbit__ios__set__2" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:31:28" }
-edge: { sourcename: "sensor__read" targetname: "microbit__ios__set" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:26:21" }
-edge: { sourcename: "sensor__read" targetname: "__indirect_call" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:25:32" }
-edge: { sourcename: "sensor__read" targetname: "microbit__time__hal_delay" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:25:22" }
-edge: { sourcename: "sensor__read" targetname: "microbit__ios__set" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:24:21" }
-edge: { sourcename: "sensor__read" targetname: "microbit__time__delay_ms" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:22:22" }
-edge: { sourcename: "sensor__read" targetname: "microbit__ios__set" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:21:21" }
+edge: { sourcename: "sensor__read" targetname: "microbit__time__hal_delay" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:34:34" }
+edge: { sourcename: "sensor__read" targetname: "microbit__ios__set__2" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:30:28" }
+edge: { sourcename: "sensor__read" targetname: "microbit__ios__set" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:25:21" }
+edge: { sourcename: "sensor__read" targetname: "__indirect_call" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:24:32" }
+edge: { sourcename: "sensor__read" targetname: "microbit__time__hal_delay" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:24:22" }
+edge: { sourcename: "sensor__read" targetname: "microbit__ios__set" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:23:21" }
+edge: { sourcename: "sensor__read" targetname: "microbit__time__delay_ms" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:21:22" }
+edge: { sourcename: "sensor__read" targetname: "microbit__ios__set" label: "F:\Code\Git\ada_project\driving\src\sensor.adb:20:21" }
 }

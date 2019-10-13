@@ -1,0 +1,45 @@
+graph: { title: "F:\Code\Git\ada_project\driving\src\accelerometer.adb"
+node: { title: "microbit__accelerometer__initialized" label: "Initialized\nF:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\src\microbit-accelerometer.ads:36:13" shape : ellipse }
+node: { title: "microbit__display__set" label: "Set\nF:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\src\microbit-display.ads:36:14" shape : ellipse }
+node: { title: "__gnat_last_chance_handler" label: "gnat_last_chance_handler\n<built-in>" shape : ellipse }
+node: { title: "microbit__accelerometer__data" label: "Data\nF:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\src\microbit-accelerometer.ads:43:13" shape : ellipse }
+node: { title: "microbit__display__clear__2" label: "Clear\nF:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\src\microbit-display.ads:42:14" shape : ellipse }
+node: { title: "microbit__accelerometer__initialize" label: "Initialize\nF:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\src\microbit-accelerometer.ads:39:14" shape : ellipse }
+node: { title: "accelerometer__get_z" label: "get_z\nF:\Code\Git\ada_project\driving\src\accelerometer.adb:80:5\n16 bytes (static)" }
+edge: { sourcename: "accelerometer__get_z" targetname: "microbit__accelerometer__data" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:89:33" }
+edge: { sourcename: "accelerometer__get_z" targetname: "microbit__accelerometer__initialized" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:88:16" }
+edge: { sourcename: "accelerometer__get_z" targetname: "microbit__accelerometer__initialize" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:84:13" }
+edge: { sourcename: "accelerometer__get_z" targetname: "microbit__accelerometer__initialized" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:83:16" }
+node: { title: "accelerometer__get_y" label: "get_y\nF:\Code\Git\ada_project\driving\src\accelerometer.adb:64:5\n16 bytes (static)" }
+edge: { sourcename: "accelerometer__get_y" targetname: "microbit__accelerometer__data" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:73:33" }
+edge: { sourcename: "accelerometer__get_y" targetname: "microbit__accelerometer__initialized" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:72:16" }
+edge: { sourcename: "accelerometer__get_y" targetname: "microbit__accelerometer__initialize" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:68:13" }
+edge: { sourcename: "accelerometer__get_y" targetname: "microbit__accelerometer__initialized" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:67:16" }
+node: { title: "accelerometer__get_x" label: "get_x\nF:\Code\Git\ada_project\driving\src\accelerometer.adb:48:5\n16 bytes (static)" }
+edge: { sourcename: "accelerometer__get_x" targetname: "microbit__accelerometer__data" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:57:33" }
+edge: { sourcename: "accelerometer__get_x" targetname: "microbit__accelerometer__initialized" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:56:16" }
+edge: { sourcename: "accelerometer__get_x" targetname: "microbit__accelerometer__initialize" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:52:13" }
+edge: { sourcename: "accelerometer__get_x" targetname: "microbit__accelerometer__initialized" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:51:16" }
+node: { title: "accelerometer__use_display" label: "use_display\nF:\Code\Git\ada_project\driving\src\accelerometer.adb:12:5\n152 bytes (static)" }
+edge: { sourcename: "accelerometer__use_display" targetname: "microbit__display__set" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:43:25" }
+edge: { sourcename: "accelerometer__use_display" targetname: "__gnat_last_chance_handler" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:43:33" }
+edge: { sourcename: "accelerometer__use_display" targetname: "__gnat_last_chance_handler" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:43:30" }
+edge: { sourcename: "accelerometer__use_display" targetname: "microbit__accelerometer__data" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:39:15" }
+edge: { sourcename: "accelerometer__use_display" targetname: "microbit__accelerometer__data" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:37:31" }
+edge: { sourcename: "accelerometer__use_display" targetname: "microbit__accelerometer__data" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:37:15" }
+edge: { sourcename: "accelerometer__use_display" targetname: "microbit__accelerometer__data" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:35:32" }
+edge: { sourcename: "accelerometer__use_display" targetname: "microbit__accelerometer__data" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:35:15" }
+edge: { sourcename: "accelerometer__use_display" targetname: "microbit__accelerometer__data" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:33:33" }
+edge: { sourcename: "accelerometer__use_display" targetname: "microbit__accelerometer__data" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:33:15" }
+edge: { sourcename: "accelerometer__use_display" targetname: "microbit__accelerometer__data" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:31:12" }
+edge: { sourcename: "accelerometer__use_display" targetname: "microbit__accelerometer__data" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:27:15" }
+edge: { sourcename: "accelerometer__use_display" targetname: "microbit__accelerometer__data" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:25:31" }
+edge: { sourcename: "accelerometer__use_display" targetname: "microbit__accelerometer__data" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:25:15" }
+edge: { sourcename: "accelerometer__use_display" targetname: "microbit__accelerometer__data" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:23:32" }
+edge: { sourcename: "accelerometer__use_display" targetname: "microbit__accelerometer__data" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:23:15" }
+edge: { sourcename: "accelerometer__use_display" targetname: "microbit__accelerometer__data" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:21:33" }
+edge: { sourcename: "accelerometer__use_display" targetname: "microbit__accelerometer__data" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:21:15" }
+edge: { sourcename: "accelerometer__use_display" targetname: "microbit__accelerometer__data" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:19:12" }
+edge: { sourcename: "accelerometer__use_display" targetname: "microbit__display__clear__2" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:17:25" }
+edge: { sourcename: "accelerometer__use_display" targetname: "microbit__accelerometer__initialize" label: "F:\Code\Git\ada_project\driving\src\accelerometer.adb:16:9" }
+}

@@ -1,2 +1,2 @@
-nav.adb:22:05: warning: constant "low" is not referenced
-nav.adb:23:05: warning: constant "med" is not referenced
+nav.adb:23:05: warning: constant "low" is not referenced
+nav.adb:24:05: warning: constant "med" is not referenced

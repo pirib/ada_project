@@ -22,27 +22,29 @@ P ZX
 RN
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		141b0145 NE OO SU
+U main%b		main.adb		3d8c5839 NE OO SU
+W accelerometer%s	accelerometer.adb	accelerometer.ali
 W microbit%s		microbit.ads		microbit.ali
-W microbit.display%s	microbit-display.adb	microbit-display.ali
-W microbit.ios%s	microbit-ios.adb	microbit-ios.ali
+W microbit.accelerometer%s  microbit-accelerometer.adb  microbit-accelerometer.ali
 W microbit.time%s	microbit-time.adb	microbit-time.ali
 W nav%s			nav.adb			nav.ali
 W sensor%s		sensor.adb		sensor.ali
 
+D accelerometer.ads	20191011152716 eb7725de accelerometer%s
 D ada.ads		20190518152826 76789da1 ada%s
 D a-tags.ads		20190518152826 2dde273c ada.tags%s
+D a-unccon.ads		20190518152826 0e9b276f ada.unchecked_conversion%s
 D hal.ads		20190914074758 2b42c80e hal%s
 D hal-gpio.ads		20190914074758 7f0c2ffe hal.gpio%s
 D hal-i2c.ads		20190914074758 0ed73138 hal.i2c%s
 D hal-spi.ads		20190914074758 fe139819 hal.spi%s
 D hal-time.ads		20190914074758 f5295cd7 hal.time%s
 D interfac.ads		20190518152826 5ab55268 interfaces%s
-D main.adb		20191006084910 9d925220 main%b
+D main.adb		20191013134656 cc52fbe9 main%b
 D microbit.ads		20190914074758 4ce6a4c2 microbit%s
-D microbit-display.ads	20190914074758 74556d74 microbit.display%s
-D microbit-ios.ads	20190914074758 c34f2bcd microbit.ios%s
+D microbit-accelerometer.ads  20191011085926 243a93d2 microbit.accelerometer%s
 D microbit-time.ads	20191004151342 6bbc81c6 microbit.time%s
+D mma8653.ads		20190914074758 ff6d1e0b mma8653%s
 D nav.ads		20191004150616 e5c714c9 nav%s
 D nrf51.ads		20190914074758 548f0fe8 nrf51%s
 D nrf51-device.ads	20190914074758 3066f1b0 nrf51.device%s
@@ -56,44 +58,32 @@ D nrf51_svd-rtc.ads	20190914074758 7ec0736e nrf51_svd.rtc%s
 D nrf51_svd-spi.ads	20190914074758 d8f87c63 nrf51_svd.spi%s
 D nrf51_svd-timer.ads	20190914074758 31dae6f3 nrf51_svd.timer%s
 D nrf51_svd-twi.ads	20190914074758 87adf514 nrf51_svd.twi%s
-D sensor.ads		20191006084652 b0e880d3 sensor%s
+D sensor.ads		20191006141218 b0e880d3 sensor%s
 D system.ads		20190518152826 e69b74bd system%s
 D s-stoele.ads		20190518152826 2dc34a04 system.storage_elements%s
 D s-unstyp.ads		20190518152826 34867c83 system.unsigned_types%s
 G a e
-G c Z b b [main standard 19 11 none]
-G r c none [main standard 19 11 none] [drive_forward nav 4 15 none]
-G r c none [main standard 19 11 none] [delay_ms microbit__time 41 14 none]
-G r c none [main standard 19 11 none] [turn_left nav 6 15 none]
-G r c none [main standard 19 11 none] [turn_right nav 7 15 none]
-G r c none [main standard 19 11 none] [drive_backward nav 5 15 none]
-G r c none [main standard 19 11 none] [stop nav 8 15 none]
-X 4 hal-gpio.ads
+G c Z b b [main standard 20 11 none]
+X 1 accelerometer.ads
+1K9*accelerometer 11e18 11|18w6
+X 6 hal-gpio.ads
 47h9*GPIO_Point
-X 5 hal-i2c.ads
+X 7 hal-i2c.ads
 48h9*I2C_Port
-X 6 hal-spi.ads
+X 8 hal-spi.ads
 48h9*SPI_Port
-X 7 hal-time.ads
+X 9 hal-time.ads
 34h9*Delays
-X 9 main.adb
-19U11*Main 19b11 41l5 41t9
-X 10 microbit.ads
-35K9*MicroBit 9|9r6 10r6 11r6 29r9 31r9 33r9 35r9 37r9 10|67e13
-X 11 microbit-display.ads
-32K18*Display 9|10w15 11|69e21
-X 12 microbit-ios.ads
-34K18*IOs 9|9w15 12|98e17
-X 13 microbit-time.ads
-35K18*Time 9|11w15 29r18 31r18 33r18 35r18 37r18 13|81e18
-41U14*Delay_Ms 9|29s23 31s23 33s23 35s23 37s23
-X 14 nav.ads
-2K9*Nav 9|15w6 28r9 30r9 32r9 34r9 36r9 14|10e8
-4U15*drive_forward 9|28s13
-5U15*drive_backward 9|34s13
-6U15*turn_left 9|30s13
-7U15*turn_right 9|32s13
-8U15*stop 9|36s13
-X 27 sensor.ads
-2K9*Sensor 9|16w6 27|8e11
+X 11 main.adb
+20U11*Main 20b11 70l5 70t9
+X 12 microbit.ads
+35K9*MicroBit 11|10r6 11r6 12|67e13
+X 13 microbit-accelerometer.ads
+34K18*Accelerometer 11|11w15 13|46e27
+X 14 microbit-time.ads
+35K18*Time 11|10w15 14|81e18
+X 16 nav.ads
+2K9*Nav 11|16w6 16|10e8
+X 29 sensor.ads
+2K9*Sensor 11|17w6 29|8e11
 

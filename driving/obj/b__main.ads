@@ -67,6 +67,8 @@ package ada_main is
    --  hal.i2c%s
    --  hal.spi%s
    --  hal.time%s
+   --  mma8653%s
+   --  mma8653%b
    --  nrf51%s
    --  nrf51.events%s
    --  nrf51.events%b
@@ -94,12 +96,18 @@ package ada_main is
    --  nrf51.twi%b
    --  nrf51.device%s
    --  microbit%s
+   --  microbit.i2c%s
+   --  microbit.i2c%b
+   --  microbit.accelerometer%s
+   --  microbit.accelerometer%b
    --  microbit.ios%s
    --  microbit.ios%b
    --  microbit.time%s
    --  microbit.time%b
    --  microbit.display%s
    --  microbit.display%b
+   --  accelerometer%s
+   --  accelerometer%b
    --  nav%s
    --  nav%b
    --  sensor%s

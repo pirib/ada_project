@@ -22,7 +22,7 @@ RN
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U nav%b			nav.adb			419adbf2 NE OO PK
+U nav%b			nav.adb			0de9b242 NE OO PK
 W microbit%s		microbit.ads		microbit.ali
 W microbit.ios%s	microbit-ios.adb	microbit-ios.ali
 
@@ -38,7 +38,7 @@ D interfac.ads		20190518152826 5ab55268 interfaces%s
 D microbit.ads		20190914074758 4ce6a4c2 microbit%s
 D microbit-ios.ads	20190914074758 c34f2bcd microbit.ios%s
 D nav.ads		20191004150616 e5c714c9 nav%s
-D nav.adb		20191006084220 6712e4f6 nav%b
+D nav.adb		20191006123558 2b618d46 nav%b
 D nrf51.ads		20190914074758 548f0fe8 nrf51%s
 D nrf51-device.ads	20190914074758 3066f1b0 nrf51.device%s
 D nrf51-gpio.ads	20190914074758 8e815cce nrf51.gpio%s
@@ -60,8 +60,8 @@ G c Z s b [drive_backward nav 5 15 none]
 G c Z s b [turn_left nav 6 15 none]
 G c Z s b [turn_right nav 7 15 none]
 G c Z s b [stop nav 8 15 none]
-G c Z b b [write_to_m1 nav 27 15 none]
-G c Z b b [write_to_m2 nav 38 15 none]
+G c Z b b [write_to_m1 nav 28 15 none]
+G c Z b b [write_to_m2 nav 39 15 none]
 G r c none [drive_forward nav 4 15 none] [write microbit__ios 64 14 none]
 G r c none [drive_forward nav 4 15 none] [set microbit__ios 52 14 none]
 G r c none [drive_backward nav 5 15 none] [write microbit__ios 64 14 none]
@@ -72,10 +72,10 @@ G r c none [turn_right nav 7 15 none] [write microbit__ios 64 14 none]
 G r c none [turn_right nav 7 15 none] [set microbit__ios 52 14 none]
 G r c none [stop nav 8 15 none] [write microbit__ios 64 14 none]
 G r c none [stop nav 8 15 none] [set microbit__ios 52 14 none]
-G r c none [write_to_m1 nav 27 15 none] [write microbit__ios 64 14 none]
-G r c none [write_to_m1 nav 27 15 none] [set microbit__ios 52 14 none]
-G r c none [write_to_m2 nav 38 15 none] [write microbit__ios 64 14 none]
-G r c none [write_to_m2 nav 38 15 none] [set microbit__ios 52 14 none]
+G r c none [write_to_m1 nav 28 15 none] [write microbit__ios 64 14 none]
+G r c none [write_to_m1 nav 28 15 none] [set microbit__ios 52 14 none]
+G r c none [write_to_m2 nav 39 15 none] [write microbit__ios 64 14 none]
+G r c none [write_to_m2 nav 39 15 none] [set microbit__ios 52 14 none]
 X 4 hal-gpio.ads
 47h9*GPIO_Point
 X 5 hal-i2c.ads
@@ -83,35 +83,35 @@ X 5 hal-i2c.ads
 X 6 hal-spi.ads
 48h9*SPI_Port
 X 8 microbit.ads
-35K9*MicroBit 67e13 11|1r6 1r24 31r9 33r9 34r9 42r9 44r9 45r9
+35K9*MicroBit 67e13 11|1r6 1r24 32r9 34r9 35r9 43r9 45r9 46r9
 X 9 microbit-ios.ads
-34K18*IOs 98e17 11|1w15 1r33 31r18 33r18 34r18 42r18 44r18 45r18
+34K18*IOs 98e17 11|1w15 1r33 32r18 34r18 35r18 43r18 45r18 46r18
 36I9*Pin_Id<short_short_integer> 11|9r26 10r25 11r25 15r26 16r25 17r25
-52U14*Set 11|33s22 34s22 44s22 45s22
-58I9*Analog_Value<short_integer> 11|21r20 22r19 23r19 24r20 27r40 38r40
-64U14*Write 11|31s22 42s22
+52U14*Set 11|34s22 35s22 45s22 46s22
+58I9*Analog_Value<short_integer> 11|22r20 23r19 24r19 25r20 28r40 39r40
+64U14*Write 11|32s22 43s22
 X 10 nav.ads
-2K9*Nav 10l5 10e8 11|3b14 99l5 99t8
-4U15*drive_forward 11|51b15 57l9 57t22
-5U15*drive_backward 11|60b15 66l9 66t23
-6U15*turn_left 11|69b15 75l9 75t18
-7U15*turn_right 11|78b15 84l9 84t19
-8U15*stop 11|87b15 93l9 93t13
+2K9*Nav 10l5 10e8 11|3b14 100l5 100t8
+4U15*drive_forward 11|52b15 58l9 58t22
+5U15*drive_backward 11|61b15 67l9 67t23
+6U15*turn_left 11|70b15 76l9 76t18
+7U15*turn_right 11|79b15 85l9 85t19
+8U15*stop 11|88b15 94l9 94t13
 X 11 nav.adb
-9i5 m1anal_pin{9|36I9} 31r29
-10i5 m1in1_pin{9|36I9} 33r27
-11i5 m1in2_pin{9|36I9} 34r27
-15i5 m2anal_pin{9|36I9} 42r29
-16i5 m2in1_pin{9|36I9} 44r27
-17i5 m2in2_pin{9|36I9} 45r27
-21i5 zero{9|58I9} 90r21 91r21
-22i5 low{9|58I9}
-23i5 med{9|58I9}
-24i5 high{9|58I9} 54r21 55r21 63r21 64r21 72r21 73r21 81r21 82r21
-27U15 write_to_m1 27b15 27>28 28>28 36l9 36t20 54s9 63s9 72s9 81s9 90s9
-27i28 anal_value{9|58I9} 31r41
-28b28 in_value{boolean} 33r39 34r43
-38U15 write_to_m2 38b15 38>28 39>28 47l9 47t20 55s9 64s9 73s9 82s9 91s9
-38i28 anal_value{9|58I9} 42r41
-39b28 in_value{boolean} 44r39 45r43
+9i5 m1anal_pin{9|36I9} 32r29
+10i5 m1in1_pin{9|36I9} 34r27
+11i5 m1in2_pin{9|36I9} 35r27
+15i5 m2anal_pin{9|36I9} 43r29
+16i5 m2in1_pin{9|36I9} 45r27
+17i5 m2in2_pin{9|36I9} 46r27
+22i5 zero{9|58I9} 91r21 92r21
+23i5 low{9|58I9}
+24i5 med{9|58I9}
+25i5 high{9|58I9} 55r21 56r21 64r21 65r21 73r21 74r21 82r21 83r21
+28U15 write_to_m1 28b15 28>28 29>28 37l9 37t20 55s9 64s9 73s9 82s9 91s9
+28i28 anal_value{9|58I9} 32r41
+29b28 in_value{boolean} 34r39 35r43
+39U15 write_to_m2 39b15 39>28 40>28 48l9 48t20 56s9 65s9 74s9 83s9 92s9
+39i28 anal_value{9|58I9} 43r41
+40b28 in_value{boolean} 45r39 46r43
 
