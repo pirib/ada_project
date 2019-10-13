@@ -8,10 +8,13 @@ with MMA8653;                  use MMA8653;
 
 package body accelerometer is
 
+    -- Used by display. Declared up here so doesnt have to redefine them on each procedure call.
+    dx : Integer := 2;   
+    dy : Integer := 2;
+
     -- Displays the accelerometer readings on led display. 
     procedure use_display is
-	dx : Integer := 2;   
-	dy : Integer := 2;
+
     begin
 	Initialize;
 	MicroBit.Display.Clear;
