@@ -1,11 +1,9 @@
 -- TODO: force dx and dy to be within 0...5 range and/or limit it to 3 bits
 -- TODO: Get rid of Initialize withing get_x, get_y, get_z
 
-
 with MicroBit.Display;         
 with MicroBit.Accelerometer;   use MicroBit.Accelerometer;
 with MMA8653;                  use MMA8653;
-
 
 
 package body accelerometer is

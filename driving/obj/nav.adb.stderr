@@ -1,3 +1,6 @@
 nav.adb:22:05: warning: constant "zero" is not referenced
-nav.adb:24:05: warning: constant "low" is not referenced
-nav.adb:25:05: warning: constant "med" is not referenced
+nav.adb:23:05: warning: constant "low" is not referenced
+nav.adb:24:05: warning: constant "med" is not referenced
+nav.adb:25:05: warning: constant "high" is not referenced
+nav.adb:29:15: warning: procedure "write_to_m1" is not referenced
+nav.adb:40:15: warning: procedure "write_to_m2" is not referenced

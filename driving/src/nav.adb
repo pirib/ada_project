@@ -20,12 +20,12 @@ package body Nav is
     --  Variables
     
     zero: constant Analog_Value := 0; 
-    
     low:  constant Analog_Value := 500;
     med:  constant Analog_Value := 750;
     high: constant Analog_Value := 1000;
 
 
+    -- Putting the endings on with PWM. Used by default.
     procedure write_to_m1 (anal_value: Analog_Value; 
 			   in_value: Boolean) is
     begin
@@ -49,7 +49,8 @@ package body Nav is
     end write_to_m2;
 
 
-   procedure write_to_m1 (in_value1: Boolean; 
+    -- Putting the endings on without PWM
+    procedure write_to_m1 (in_value1: Boolean; 
 			   in_value2: Boolean) is 
     begin
  
@@ -73,8 +74,8 @@ package body Nav is
     procedure drive_forward is
     begin
 
-	write_to_m1(high, True);
-	write_to_m2(high, True);
+	write_to_m1(True, False);
+	write_to_m2(True, False);
 
     end drive_forward;
 
@@ -82,8 +83,8 @@ package body Nav is
     procedure drive_backward is
     begin
 
-	write_to_m1(high, False);
-	write_to_m2(high, False);
+	write_to_m1(False, True);
+	write_to_m2(False, True);
 
     end drive_backward;
     
@@ -91,8 +92,8 @@ package body Nav is
     procedure turn_left is
     begin
 
-	write_to_m1(high, True);
-	write_to_m2(high, False);
+	write_to_m1(True, False);
+	write_to_m2(False, True);
 	
     end turn_left;
 
@@ -100,8 +101,8 @@ package body Nav is
     procedure turn_right is
     begin
 	
-	write_to_m1(high, False);
-	write_to_m2(high, True);
+	write_to_m1(False, True);
+	write_to_m2(True, False);
 
     end turn_right;
 

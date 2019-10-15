@@ -1,2 +1,4 @@
+main.adb:8:14: warning: unit "MicroBit.Time" is not referenced
+main.adb:12:06: warning: unit "Nav" is not referenced
 main.adb:13:06: warning: unit "Sensor" is not referenced
-main.adb:78:05: warning: unreachable code
+main.adb:14:22: warning: use clause for type "acc_data" defined at accelerometer.ads:4 has no effect

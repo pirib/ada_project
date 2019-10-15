@@ -1,15 +1,3 @@
 graph: { title: "F:\Code\Git\ada_project\driving\src\main.adb"
-node: { title: "microbit__time__delay_ms" label: "Delay_Ms\nF:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\src\microbit-time.ads:41:14" shape : ellipse }
-node: { title: "nav__stop" label: "Stop\nF:\Code\Git\ada_project\driving\src\nav.ads:8:15" shape : ellipse }
-node: { title: "nav__drive_forward" label: "Drive_Forward\nF:\Code\Git\ada_project\driving\src\nav.ads:4:15" shape : ellipse }
-node: { title: "accelerometer__get_y" label: "get_y\nF:\Code\Git\ada_project\driving\src\accelerometer.ads:15:14" shape : ellipse }
-node: { title: "accelerometer__get_x" label: "get_x\nF:\Code\Git\ada_project\driving\src\accelerometer.ads:14:14" shape : ellipse }
-node: { title: "accelerometer__initialize" label: "initialize\nF:\Code\Git\ada_project\driving\src\accelerometer.ads:9:15" shape : ellipse }
-node: { title: "_ada_main" label: "Main\nF:\Code\Git\ada_project\driving\src\main.adb:17:1\n16 bytes (static)" }
-edge: { sourcename: "_ada_main" targetname: "microbit__time__delay_ms" label: "F:\Code\Git\ada_project\driving\src\main.adb:34:22" }
-edge: { sourcename: "_ada_main" targetname: "nav__stop" label: "F:\Code\Git\ada_project\driving\src\main.adb:32:16" }
-edge: { sourcename: "_ada_main" targetname: "nav__drive_forward" label: "F:\Code\Git\ada_project\driving\src\main.adb:30:16" }
-edge: { sourcename: "_ada_main" targetname: "accelerometer__get_y" label: "F:\Code\Git\ada_project\driving\src\main.adb:29:24" }
-edge: { sourcename: "_ada_main" targetname: "accelerometer__get_x" label: "F:\Code\Git\ada_project\driving\src\main.adb:28:25" }
-edge: { sourcename: "_ada_main" targetname: "accelerometer__initialize" label: "F:\Code\Git\ada_project\driving\src\main.adb:25:18" }
+node: { title: "_ada_main" label: "Main\nF:\Code\Git\ada_project\driving\src\main.adb:17:1\n8 bytes (static)" }
 }
