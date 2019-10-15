@@ -1,3 +1,12 @@
 graph: { title: "F:\Code\Git\ada_project\driving\src\main.adb"
+node: { title: "nav__drive_backward" label: "Drive_Backward\nF:\Code\Git\ada_project\driving\src\nav.ads:5:15" shape : ellipse }
+node: { title: "nav__drive_forward" label: "Drive_Forward\nF:\Code\Git\ada_project\driving\src\nav.ads:4:15" shape : ellipse }
+node: { title: "sensor__read" label: "Read\nF:\Code\Git\ada_project\driving\src\sensor.ads:8:14" shape : ellipse }
+node: { title: "accelerometer__initialize" label: "initialize\nF:\Code\Git\ada_project\driving\src\accelerometer.ads:10:15" shape : ellipse }
 node: { title: "_ada_main" label: "Main\nF:\Code\Git\ada_project\driving\src\main.adb:17:1\n8 bytes (static)" }
+edge: { sourcename: "_ada_main" targetname: "nav__drive_backward" label: "F:\Code\Git\ada_project\driving\src\main.adb:58:16" }
+edge: { sourcename: "_ada_main" targetname: "sensor__read" label: "F:\Code\Git\ada_project\driving\src\main.adb:57:22" }
+edge: { sourcename: "_ada_main" targetname: "nav__drive_forward" label: "F:\Code\Git\ada_project\driving\src\main.adb:56:16" }
+edge: { sourcename: "_ada_main" targetname: "sensor__read" label: "F:\Code\Git\ada_project\driving\src\main.adb:55:18" }
+edge: { sourcename: "_ada_main" targetname: "accelerometer__initialize" label: "F:\Code\Git\ada_project\driving\src\main.adb:25:17" }
 }

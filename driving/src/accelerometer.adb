@@ -1,5 +1,4 @@
 -- TODO: force dx and dy to be within 0...5 range and/or limit it to 3 bits
--- TODO: Get rid of Initialize withing get_x, get_y, get_z
 
 with MicroBit.Display;         
 with MicroBit.Accelerometer;   use MicroBit.Accelerometer;
@@ -21,7 +20,6 @@ package body accelerometer is
     procedure show_on_display is
     begin
     
-	Initialize;
 	MicroBit.Display.Clear;
 	
 	if Data.X <= -190 then

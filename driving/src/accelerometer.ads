@@ -3,8 +3,9 @@ package accelerometer is
 
     type acc_data is range -2 ** 9 .. 2 ** 9 - 1;
     
-    tilt_stop_motors_y: constant acc_data := 65;
---      tilt_stop_motors_x: constant acc_data := 65;
+    -- used to stop the car when it is picked up
+    tilt_max_y: constant acc_data := -200;  -- old working value -220 or 200
+    tilt_min_y: constant acc_data := -300;  -- old working value -260 or 300
     
     procedure Initialize;
     function Initialized return Boolean;

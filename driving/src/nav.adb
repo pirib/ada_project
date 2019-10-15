@@ -12,18 +12,24 @@ package body Nav is
 
     --  Motor 2 Pins right motor
     
-    m2anal_pin: constant Pin_Id := 1;
-    m2in1_pin: constant Pin_Id := 8;
-    m2in2_pin: constant Pin_Id := 12;      
+    m2anal_pin: constant Pin_Id := 2;
+    m2in1_pin: constant Pin_Id := 11;
+    m2in2_pin: constant Pin_Id := 5;      
     
     
     --  Variables
     
-    zero: constant Analog_Value := 0; 
-    low:  constant Analog_Value := 500;
-    med:  constant Analog_Value := 750;
-    high: constant Analog_Value := 1000;
+    -- info: if the analog_value(low, med, high) to the engine ctrl function is too high(e.g +500)
+    -- (e.g. drive forward) the less stable, the direction of the weels will be, even if the
+    -- accelerometer reading are stable.
+    
+    zero: constant Analog_Value := 0;
+    low: constant Analog_Value := 150;
+    med: constant Analog_Value := 200;
+    high: constant Analog_Value := 500;
 
+    -- Indicates that these objects are unreferenced on purpose.
+    Pragma Unreferenced(zero, low, med); 
 
     -- Putting the endings on with PWM. Used by default.
     procedure write_to_m1 (anal_value: Analog_Value; 
@@ -70,12 +76,11 @@ package body Nav is
 
 
 
-
     procedure drive_forward is
     begin
 
-	write_to_m1(True, False);
-	write_to_m2(True, False);
+	write_to_m1(high, True);
+	write_to_m2(high, True);
 
     end drive_forward;
 
@@ -83,8 +88,8 @@ package body Nav is
     procedure drive_backward is
     begin
 
-	write_to_m1(False, True);
-	write_to_m2(False, True);
+	write_to_m1(high, False);
+	write_to_m2(high, False);
 
     end drive_backward;
     
@@ -92,8 +97,8 @@ package body Nav is
     procedure turn_left is
     begin
 
-	write_to_m1(True, False);
-	write_to_m2(False, True);
+	write_to_m1(high, True);
+	write_to_m2(high, False);
 	
     end turn_left;
 
@@ -101,8 +106,8 @@ package body Nav is
     procedure turn_right is
     begin
 	
-	write_to_m1(False, True);
-	write_to_m2(True, False);
+	write_to_m1(high, False);
+	write_to_m2(high, True);
 
     end turn_right;
 
@@ -114,9 +119,6 @@ package body Nav is
 	write_to_m2(False, False);
 
     end stop;
-
     
-    
-   
     
 end Nav;

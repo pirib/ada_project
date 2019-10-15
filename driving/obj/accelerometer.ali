@@ -23,16 +23,16 @@ RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U accelerometer%b	accelerometer.adb	b24f9ed7 NE OO PK IL
+U accelerometer%b	accelerometer.adb	7e4a09b4 NE OO PK IL
 W microbit%s		microbit.ads		microbit.ali
 W microbit.accelerometer%s  microbit-accelerometer.adb  microbit-accelerometer.ali
 W microbit.display%s	microbit-display.adb	microbit-display.ali
 W mma8653%s		mma8653.adb		mma8653.ali
 
-U accelerometer%s	accelerometer.ads	3fb12b7e EE NE OO PK IL
+U accelerometer%s	accelerometer.ads	57587512 EE NE OO PK IL
 
-D accelerometer.ads	20191015084418 3fb12b7e accelerometer%s
-D accelerometer.adb	20191015085350 22fc5504 accelerometer%b
+D accelerometer.ads	20191015130038 57587512 accelerometer%s
+D accelerometer.adb	20191015130130 86109c0b accelerometer%b
 D ada.ads		20190518152826 76789da1 ada%s
 D a-tags.ads		20190518152826 2dde273c ada.tags%s
 D a-unccon.ads		20190518152826 0e9b276f ada.unchecked_conversion%s
@@ -61,32 +61,33 @@ D system.ads		20190518152826 e69b74bd system%s
 D s-stoele.ads		20190518152826 2dc34a04 system.storage_elements%s
 D s-unstyp.ads		20190518152826 34867c83 system.unsigned_types%s
 G a e
-G c Z s b [initialize accelerometer 9 15 none]
-G c Z s b [initialized accelerometer 10 14 none]
-G c Z s b [show_on_display accelerometer 12 15 none]
-G c Z s b [get_x accelerometer 14 14 none]
-G c Z s b [get_y accelerometer 15 14 none]
-G c Z s b [get_z accelerometer 16 14 none]
-G r c none [show_on_display accelerometer 12 15 none] [clear microbit__display 42 14 none]
-G r c none [show_on_display accelerometer 12 15 none] [data microbit__accelerometer 43 13 none]
-G r c none [show_on_display accelerometer 12 15 none] [set microbit__display 36 14 none]
-G r c none [get_x accelerometer 14 14 none] [data microbit__accelerometer 43 13 none]
-G r c none [get_y accelerometer 15 14 none] [data microbit__accelerometer 43 13 none]
-G r c none [get_z accelerometer 16 14 none] [data microbit__accelerometer 43 13 none]
+G c Z s b [initialize accelerometer 10 15 none]
+G c Z s b [initialized accelerometer 11 14 none]
+G c Z s b [show_on_display accelerometer 13 15 none]
+G c Z s b [get_x accelerometer 15 14 none]
+G c Z s b [get_y accelerometer 16 14 none]
+G c Z s b [get_z accelerometer 17 14 none]
+G r c none [show_on_display accelerometer 13 15 none] [clear microbit__display 42 14 none]
+G r c none [show_on_display accelerometer 13 15 none] [data microbit__accelerometer 43 13 none]
+G r c none [show_on_display accelerometer 13 15 none] [set microbit__display 36 14 none]
+G r c none [get_x accelerometer 15 14 none] [data microbit__accelerometer 43 13 none]
+G r c none [get_y accelerometer 16 14 none] [data microbit__accelerometer 43 13 none]
+G r c none [get_z accelerometer 17 14 none] [data microbit__accelerometer 43 13 none]
 X 1 accelerometer.ads
-2K9*accelerometer 18l5 18e18 2|9b14 75l5 75t18
-4I10*acc_data<short_integer> 6r34 14r27 15r27 16r27 2|57r27 59r16 63r27 65r16
-. 69r27 71r16
-6i5*tilt_stop_motors_y{4I10}
-9U15*Initialize 2|12b15 24s9
-10V14*Initialized{boolean} 2|13b14
-12U15*show_on_display 2|21b15 53l9 53t24
-14V14*get_x{4I10} 2|57b14 60l9 60t14
-15V14*get_y{4I10} 2|63b14 66l9 66t14
-16V14*get_z{4I10} 2|69b14 72l9 72t14
+2K9*accelerometer 19l5 19e18 2|8b14 73l5 73t18
+4I10*acc_data<short_integer> 7r26 8r26 15r27 16r27 17r27 2|55r27 57r16 61r27
+. 63r16 67r27 69r16
+7i5*tilt_max_y{4I10}
+8i5*tilt_min_y{4I10}
+10U15*Initialize 2|11b15
+11V14*Initialized{boolean} 2|12b14
+13U15*show_on_display 2|20b15 51l9 51t24
+15V14*get_x{4I10} 2|55b14 58l9 58t14
+16V14*get_y{4I10} 2|61b14 64l9 64t14
+17V14*get_z{4I10} 2|67b14 70l9 70t14
 X 2 accelerometer.adb
-17i5 dx{integer} 28m13 30m13 32m13 34m13 36m13 51r30
-18i5 dy{integer} 40m13 42m13 44m13 46m13 48m13 51r33
+16i5 dx{integer} 26m13 28m13 30m13 32m13 34m13 49r30
+17i5 dy{integer} 38m13 40m13 42m13 44m13 46m13 49r33
 X 7 hal-gpio.ads
 47h9*GPIO_Point
 X 8 hal-i2c.ads
@@ -94,21 +95,21 @@ X 8 hal-i2c.ads
 X 9 hal-spi.ads
 48h9*SPI_Port
 X 11 microbit.ads
-35K9*MicroBit 2|4r6 5r6 5r36 12r34 13r49 25r9 51r9 11|67e13
+35K9*MicroBit 2|3r6 4r6 4r36 11r34 12r49 23r9 49r9 11|67e13
 X 12 microbit-accelerometer.ads
-34K18*Accelerometer 2|5w15 5r45 12r43 13r58 12|46e27
-36V13*Initialized{boolean} 2|13r72
-39U14*Initialize 2|12r57
-43V13*Data{14|58R9} 2|27s12 29s15 29s33 31s15 31s32 33s15 33s31 35s15 39s12
-. 41s15 41s33 43s15 43s32 45s15 45s31 47s15 59s25 65s25 71s25
+34K18*Accelerometer 2|4w15 4r45 11r43 12r58 12|46e27
+36V13*Initialized{boolean} 2|12r72
+39U14*Initialize 2|11r57
+43V13*Data{14|58R9} 2|25s12 27s15 27s33 29s15 29s32 31s15 31s31 33s15 37s12
+. 39s15 39s33 41s15 41s32 43s15 43s31 45s15 57s25 63s25 69s25
 X 13 microbit-display.ads
-32K18*Display 2|4w15 25r18 51r18 13|69e21
-36U14*Set 2|51s26
-42U14*Clear 2|25s26
+32K18*Display 2|3w15 23r18 49r18 13|69e21
+36U14*Set 2|49s26
+42U14*Clear 2|23s26
 X 14 mma8653.ads
-37K9*MMA8653 2|6w6 6r36 14|144e12
+37K9*MMA8653 2|5w6 5r36 14|144e12
 55I9*Axis_Data<short_integer>
-59i7*X{55I9} 2|27r17 29r20 29r38 31r20 31r37 33r20 33r36 35r20 59r30
-59i10*Y{55I9} 2|39r17 41r20 41r38 43r20 43r37 45r20 45r36 47r20 65r30
-59i13*Z{55I9} 2|71r30
+59i7*X{55I9} 2|25r17 27r20 27r38 29r20 29r37 31r20 31r36 33r20 57r30
+59i10*Y{55I9} 2|37r17 39r20 39r38 41r20 41r37 43r20 43r36 45r20 63r30
+59i13*Z{55I9} 2|69r30
 

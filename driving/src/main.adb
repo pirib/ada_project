@@ -9,9 +9,9 @@ with MicroBit.Time;
 
 
 -- User
-with Nav;  -- Package with driving instructions
-with Sensor;  -- Package with sensor instructions
-with Accelerometer;  use type accelerometer.acc_data;
+with Nav;
+with Sensor;          use type sensor.travel_time_us;
+with Accelerometer;   use type accelerometer.acc_data;
 
 
 procedure Main is
@@ -21,6 +21,44 @@ procedure Main is
     -- VARS
 
 begin
+
+   Accelerometer.Initialize;
+
+    -- loop
+    --
+    --        if Accelerometer.get_y < Accelerometer.tilt_max_y and
+    --           Accelerometer.get_y > Accelerometer.tilt_min_y then
+    --          --Sensor.read > Sensor.travel_time_stop then
+    --           Nav.drive_forward;
+    --  --        elsif
+    --  --          Accelerometer.get_y < Accelerometer.tilt_max_y and
+    --  --          Accelerometer.get_y > Accelerometer.tilt_min_y then
+    --  --           Nav.stop;
+    --
+    --        elsif  Sensor.read < Sensor.travel_time_stop then
+    --                 Nav.drive_backward;
+    --        else
+    --           Nav.turn_right;
+    --          -- MicroBit.IOs.Write(0, 0);
+    --        end if;
+    --
+    --        Microbit.Time.Delay_Ms(500); --  the longer the delay the shorter wheel interruptions
+    --
+    --     end loop;
+
+    ----------------------------------------------------------------------
+    --THIS IS WORKING: PHASE 1, OF FUNCTIONAL SENSOR CODE
+    -----------------------------------------------------------------------
+
+    loop
+
+	if Sensor.read > Sensor.travel_time_stop then
+	    Nav.drive_forward;
+	elsif  Sensor.read < Sensor.travel_time_stop then
+	    Nav.drive_backward;
+	end if;
+    end loop;
+
 
 
 
