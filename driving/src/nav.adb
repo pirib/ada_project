@@ -8,21 +8,22 @@ package body Nav is
 
     m1anal_pin: constant Pin_Id := 0; 
     m1in1_pin: constant Pin_Id := 16;
-    m1in2_pin: constant Pin_Id := 19;      -- Set through not gate on the breadboard
+    m1in2_pin: constant Pin_Id := 15;      
 
     --  Motor 2 Pins right motor
     
     m2anal_pin: constant Pin_Id := 1;
-    m2in1_pin: constant Pin_Id := 12;
-    m2in2_pin: constant Pin_Id := 8;      -- Set through not gate on the breadboard
+    m2in1_pin: constant Pin_Id := 8;
+    m2in2_pin: constant Pin_Id := 12;      
     
     
     --  Variables
     
-    zero: constant Analog_Value := 0;
-    low: constant Analog_Value := 500;
-    med: constant Analog_Value := 750;
-    high: constant Analog_Value := 500;
+    zero: constant Analog_Value := 0; 
+    
+    low:  constant Analog_Value := 500;
+    med:  constant Analog_Value := 750;
+    high: constant Analog_Value := 1000;
 
 
     procedure write_to_m1 (anal_value: Analog_Value; 
@@ -48,7 +49,27 @@ package body Nav is
     end write_to_m2;
 
 
-        
+   procedure write_to_m1 (in_value1: Boolean; 
+			   in_value2: Boolean) is 
+    begin
+ 
+	MicroBit.IOs.Set (m2in1_pin , in_value1);	
+	MicroBit.IOs.Set (m2in2_pin , in_value2);	
+	
+    end write_to_m1;
+
+    procedure write_to_m2 (in_value1: Boolean; 
+			   in_value2: Boolean) is 
+    begin
+ 
+	MicroBit.IOs.Set (m2in1_pin , in_value1);	
+	MicroBit.IOs.Set (m2in2_pin , in_value2);	
+	
+    end write_to_m2;
+
+
+
+
     procedure drive_forward is
     begin
 
@@ -88,8 +109,8 @@ package body Nav is
     procedure stop is
     begin
 	
-	write_to_m1(zero, False);
-	write_to_m2(zero, False);
+	write_to_m1(False, False);
+	write_to_m2(False, False);
 
     end stop;
 

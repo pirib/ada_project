@@ -1,5 +1,2 @@
-main.adb:10:14: warning: unit "MicroBit.Time" is not referenced
-main.adb:11:14: warning: unit "MicroBit.Accelerometer" is not referenced
-main.adb:16:06: warning: unit "Nav" is not referenced
-main.adb:17:06: warning: unit "Sensor" is not referenced
-main.adb:18:06: warning: unit "Accelerometer" is not referenced
+main.adb:13:06: warning: unit "Sensor" is not referenced
+main.adb:78:05: warning: unreachable code

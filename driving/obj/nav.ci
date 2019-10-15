@@ -1,27 +1,33 @@
 graph: { title: "F:\Code\Git\ada_project\driving\src\nav.adb"
 node: { title: "microbit__ios__set" label: "Set\nF:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\src\microbit-ios.ads:52:14" shape : ellipse }
 node: { title: "microbit__ios__write" label: "Write\nF:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\src\microbit-ios.ads:64:14" shape : ellipse }
-node: { title: "nav__stop" label: "Stop\nF:\Code\Git\ada_project\driving\src\nav.adb:88:5\n8 bytes (static)" }
-edge: { sourcename: "nav__stop" targetname: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m2" label: "F:\Code\Git\ada_project\driving\src\nav.adb:92:9" }
-edge: { sourcename: "nav__stop" targetname: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m1" label: "F:\Code\Git\ada_project\driving\src\nav.adb:91:9" }
-node: { title: "nav__turn_right" label: "Turn_Right\nF:\Code\Git\ada_project\driving\src\nav.adb:79:5\n8 bytes (static)" }
-edge: { sourcename: "nav__turn_right" targetname: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m2" label: "F:\Code\Git\ada_project\driving\src\nav.adb:83:9" }
-edge: { sourcename: "nav__turn_right" targetname: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m1" label: "F:\Code\Git\ada_project\driving\src\nav.adb:82:9" }
-node: { title: "nav__turn_left" label: "Turn_Left\nF:\Code\Git\ada_project\driving\src\nav.adb:70:5\n8 bytes (static)" }
-edge: { sourcename: "nav__turn_left" targetname: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m2" label: "F:\Code\Git\ada_project\driving\src\nav.adb:74:9" }
-edge: { sourcename: "nav__turn_left" targetname: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m1" label: "F:\Code\Git\ada_project\driving\src\nav.adb:73:9" }
-node: { title: "nav__drive_backward" label: "Drive_Backward\nF:\Code\Git\ada_project\driving\src\nav.adb:61:5\n8 bytes (static)" }
-edge: { sourcename: "nav__drive_backward" targetname: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m2" label: "F:\Code\Git\ada_project\driving\src\nav.adb:65:9" }
-edge: { sourcename: "nav__drive_backward" targetname: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m1" label: "F:\Code\Git\ada_project\driving\src\nav.adb:64:9" }
-node: { title: "nav__drive_forward" label: "Drive_Forward\nF:\Code\Git\ada_project\driving\src\nav.adb:52:5\n8 bytes (static)" }
-edge: { sourcename: "nav__drive_forward" targetname: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m2" label: "F:\Code\Git\ada_project\driving\src\nav.adb:56:9" }
-edge: { sourcename: "nav__drive_forward" targetname: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m1" label: "F:\Code\Git\ada_project\driving\src\nav.adb:55:9" }
-node: { title: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m2" label: "Write_To_M2\nF:\Code\Git\ada_project\driving\src\nav.adb:39:5\n16 bytes (static)" }
+node: { title: "nav__stop" label: "Stop\nF:\Code\Git\ada_project\driving\src\nav.adb:109:5\n8 bytes (static)" }
+edge: { sourcename: "nav__stop" targetname: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m2__2" label: "F:\Code\Git\ada_project\driving\src\nav.adb:113:9" }
+edge: { sourcename: "nav__stop" targetname: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m1__2" label: "F:\Code\Git\ada_project\driving\src\nav.adb:112:9" }
+node: { title: "nav__turn_right" label: "Turn_Right\nF:\Code\Git\ada_project\driving\src\nav.adb:100:5\n8 bytes (static)" }
+edge: { sourcename: "nav__turn_right" targetname: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m2" label: "F:\Code\Git\ada_project\driving\src\nav.adb:104:9" }
+edge: { sourcename: "nav__turn_right" targetname: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m1" label: "F:\Code\Git\ada_project\driving\src\nav.adb:103:9" }
+node: { title: "nav__turn_left" label: "Turn_Left\nF:\Code\Git\ada_project\driving\src\nav.adb:91:5\n8 bytes (static)" }
+edge: { sourcename: "nav__turn_left" targetname: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m2" label: "F:\Code\Git\ada_project\driving\src\nav.adb:95:9" }
+edge: { sourcename: "nav__turn_left" targetname: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m1" label: "F:\Code\Git\ada_project\driving\src\nav.adb:94:9" }
+node: { title: "nav__drive_backward" label: "Drive_Backward\nF:\Code\Git\ada_project\driving\src\nav.adb:82:5\n8 bytes (static)" }
+edge: { sourcename: "nav__drive_backward" targetname: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m2" label: "F:\Code\Git\ada_project\driving\src\nav.adb:86:9" }
+edge: { sourcename: "nav__drive_backward" targetname: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m1" label: "F:\Code\Git\ada_project\driving\src\nav.adb:85:9" }
+node: { title: "nav__drive_forward" label: "Drive_Forward\nF:\Code\Git\ada_project\driving\src\nav.adb:73:5\n8 bytes (static)" }
+edge: { sourcename: "nav__drive_forward" targetname: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m2" label: "F:\Code\Git\ada_project\driving\src\nav.adb:77:9" }
+edge: { sourcename: "nav__drive_forward" targetname: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m1" label: "F:\Code\Git\ada_project\driving\src\nav.adb:76:9" }
+node: { title: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m2__2" label: "Write_To_M2\nF:\Code\Git\ada_project\driving\src\nav.adb:61:5\n16 bytes (static)" }
+edge: { sourcename: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m2__2" targetname: "microbit__ios__set" label: "F:\Code\Git\ada_project\driving\src\nav.adb:66:21" }
+edge: { sourcename: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m2__2" targetname: "microbit__ios__set" label: "F:\Code\Git\ada_project\driving\src\nav.adb:65:21" }
+node: { title: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m1__2" label: "Write_To_M1\nF:\Code\Git\ada_project\driving\src\nav.adb:52:4\n16 bytes (static)" }
+edge: { sourcename: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m1__2" targetname: "microbit__ios__set" label: "F:\Code\Git\ada_project\driving\src\nav.adb:57:21" }
+edge: { sourcename: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m1__2" targetname: "microbit__ios__set" label: "F:\Code\Git\ada_project\driving\src\nav.adb:56:21" }
+node: { title: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m2" label: "Write_To_M2\nF:\Code\Git\ada_project\driving\src\nav.adb:40:5\n16 bytes (static)" }
+edge: { sourcename: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m2" targetname: "microbit__ios__set" label: "F:\Code\Git\ada_project\driving\src\nav.adb:47:21" }
 edge: { sourcename: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m2" targetname: "microbit__ios__set" label: "F:\Code\Git\ada_project\driving\src\nav.adb:46:21" }
-edge: { sourcename: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m2" targetname: "microbit__ios__set" label: "F:\Code\Git\ada_project\driving\src\nav.adb:45:21" }
-edge: { sourcename: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m2" targetname: "microbit__ios__write" label: "F:\Code\Git\ada_project\driving\src\nav.adb:43:21" }
-node: { title: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m1" label: "Write_To_M1\nF:\Code\Git\ada_project\driving\src\nav.adb:28:5\n16 bytes (static)" }
+edge: { sourcename: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m2" targetname: "microbit__ios__write" label: "F:\Code\Git\ada_project\driving\src\nav.adb:44:21" }
+node: { title: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m1" label: "Write_To_M1\nF:\Code\Git\ada_project\driving\src\nav.adb:29:5\n16 bytes (static)" }
+edge: { sourcename: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m1" targetname: "microbit__ios__set" label: "F:\Code\Git\ada_project\driving\src\nav.adb:36:21" }
 edge: { sourcename: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m1" targetname: "microbit__ios__set" label: "F:\Code\Git\ada_project\driving\src\nav.adb:35:21" }
-edge: { sourcename: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m1" targetname: "microbit__ios__set" label: "F:\Code\Git\ada_project\driving\src\nav.adb:34:21" }
-edge: { sourcename: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m1" targetname: "microbit__ios__write" label: "F:\Code\Git\ada_project\driving\src\nav.adb:32:21" }
+edge: { sourcename: "F:\Code\Git\ada_project\driving\src\nav.adb:nav__write_to_m1" targetname: "microbit__ios__write" label: "F:\Code\Git\ada_project\driving\src\nav.adb:33:21" }
 }

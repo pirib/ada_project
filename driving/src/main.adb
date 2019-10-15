@@ -5,41 +5,37 @@
 -- PACKAGES
 
 -- Microbit
-
-
 with MicroBit.Time;
-with MicroBit.Accelerometer;
 
 
 -- User
-
 with Nav;  -- Package with driving instructions
 with Sensor;  -- Package with sensor instructions
-with Accelerometer;
+with Accelerometer;  use type accelerometer.acc_data;
+
 
 procedure Main is
 
     -- PINS
-
 
     -- VARS
 
 begin
 
 
+
     --          EXAMPLES
     --          ========
 
-
     --          ACCELEROMETER
     --          =============
+    --              Accelerometer.Initialize;
+    --              acc:
+    --              loop
+    --          	accelerometer.show_on_display;
+    --          	MicroBit.Time.Delay_Ms(100);
     --
-    --          acc:
-    --          loop
-    --  	    accelerometer.use_display;
-    --  	    MicroBit.Time.Delay_Ms(100);
-    --
-    --          end loop acc;
+    --              end loop acc;
 
     --          DRIVING
     --          =======
