@@ -26,6 +26,8 @@ package ada_main is
    --  system%s
    --  ada.exceptions%s
    --  ada.exceptions%b
+   --  system.img_int%s
+   --  system.img_int%b
    --  system.machine_code%s
    --  system.parameters%s
    --  system.storage_elements%s

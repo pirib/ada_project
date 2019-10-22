@@ -23,13 +23,13 @@ RV NO_DISPATCHING_CALLS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U sensor%b		sensor.adb		0e1e48db NE OO PK
+U sensor%b		sensor.adb		4b5327bd NE OO PK
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W microbit%s		microbit.ads		microbit.ali
 W microbit.ios%s	microbit-ios.adb	microbit-ios.ali
 W microbit.time%s	microbit-time.adb	microbit-time.ali
 
-U sensor%s		sensor.ads		b0ba9946 EE NE OO PK
+U sensor%s		sensor.ads		08a8ca05 EE NE OO PK
 
 D ada.ads		20190518152826 76789da1 ada%s
 D a-tags.ads		20190518152826 2dde273c ada.tags%s
@@ -54,15 +54,14 @@ D nrf51_svd-rtc.ads	20190914074758 7ec0736e nrf51_svd.rtc%s
 D nrf51_svd-spi.ads	20190914074758 d8f87c63 nrf51_svd.spi%s
 D nrf51_svd-timer.ads	20190914074758 31dae6f3 nrf51_svd.timer%s
 D nrf51_svd-twi.ads	20190914074758 87adf514 nrf51_svd.twi%s
-D sensor.ads		20191015125522 b0ba9946 sensor%s
-D sensor.adb		20191015125808 16577b96 sensor%b
+D sensor.ads		20191016090522 08a8ca05 sensor%s
+D sensor.adb		20191016090530 eb0847b3 sensor%b
 D system.ads		20190518152826 e69b74bd system%s
 D s-stoele.ads		20190518152826 2dc34a04 system.storage_elements%s
 D s-unstyp.ads		20190518152826 34867c83 system.unsigned_types%s
 G a e
 G c Z s b [read sensor 8 14 none]
 G r c none [read sensor 8 14 none] [set microbit__ios 52 14 none]
-G r c none [read sensor 8 14 none] [delay_ms microbit__time 41 14 none]
 G r c none [read sensor 8 14 none] [hal_delay microbit__time 64 13 none]
 G r c none [read sensor 8 14 none] [set microbit__ios 55 13 none]
 X 4 hal-gpio.ads
@@ -74,7 +73,7 @@ X 6 hal-spi.ads
 X 7 hal-time.ads
 34h9*Delays
 36P9*Any_Delays(34R9)
-38x14*Delay_Microseconds 25|24R33 34R45
+38x14*Delay_Microseconds 25|21R33 24R33 34R45
 X 9 microbit.ads
 35K9*MicroBit 67e13 25|1r6 1r24 2r6 20r9 21r9 23r9 24r9 25r9 30r16 34r21
 . 35r24
@@ -85,17 +84,16 @@ X 10 microbit-ios.ads
 55V13*Set{boolean} 25|30s29 35s37
 X 11 microbit-time.ads
 35K18*Time 81e18 25|2w15 21r18 24r18 34r30
-41U14*Delay_Ms 25|21s23
-64V13*HAL_Delay{7|36P9} 25|24s23 34s35
+64V13*HAL_Delay{7|36P9} 25|21s23 24s23 34s35
 X 24 sensor.ads
 2K9*Sensor 10l5 10e11 25|5b14 50l5 50t11
-4I10*travel_time_us<integer> 6r24 8r26 25|13r23 16r26
+4I10*travel_time_us<integer> 6r24
 6i5*travel_time_stop{4I10}
-8V14*read{4I10} 25|16b14 47l9 47t13
+8V14*read{integer} 25|16b14 47l9 47t13
 X 25 sensor.adb
 9i5 sensor_TRIG_pin{10|36I9} 20r26 23r26 25r26
 10i5 sensor_ECHO_pin{10|36I9} 30r33 35r41
-13i5 duration_echo_us{24|4I10} 18m9 36m25 36r45 38r32 42r24
+13i5 duration_echo_us{integer} 18m9 36m25 36r45 38r32 42r24
 27l9 outerloop 45l18 45e27
 32l17 innerloop 40l26 40e35
 

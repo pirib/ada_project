@@ -6,6 +6,7 @@
 
 -- Microbit
 with MicroBit.Time;
+with Microbit.Display;
 
 
 -- User
@@ -22,7 +23,11 @@ procedure Main is
 
 begin
 
-   Accelerometer.Initialize;
+    --   Accelerometer.Initialize;
+
+    MicroBit.Display.Display( Integer'Image(  Integer(Sensor.read) ) );
+    --MicroBit.Display.Display( String(Integer(sensor.travel_time_us'Image(Sensor.read)))  );
+    MicroBit.Time.Delay_Ms(2000);
 
     -- loop
     --
@@ -50,16 +55,18 @@ begin
     --THIS IS WORKING: PHASE 1, OF FUNCTIONAL SENSOR CODE
     -----------------------------------------------------------------------
 
-    loop
 
-	if Sensor.read > Sensor.travel_time_stop then
-	    Nav.drive_forward;
-	elsif  Sensor.read < Sensor.travel_time_stop then
-	    Nav.drive_backward;
-	end if;
-    end loop;
-
-
+    --      loop
+    --
+    --  	if Sensor.read > Sensor.travel_time_stop then
+    --  	    Nav.drive_forward;
+    --  	elsif  Sensor.read <= Sensor.travel_time_stop then
+    --  	    Nav.turn_left;
+    --  	end if;
+    --
+    --  	Microbit.Time.Delay_ms(500);
+    --
+    --      end loop;
 
 
     --          EXAMPLES
@@ -100,7 +107,7 @@ begin
     --
     --          END LOOP driving;
 
-    null;
+    --    null;
 end Main;
 
 
