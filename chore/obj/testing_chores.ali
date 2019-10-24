@@ -8,11 +8,11 @@ RN
 RV NO_IO
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U testing_chores%b	testing_chores.adb	1507c686 NE OO PK IL
+U testing_chores%b	testing_chores.adb	ab45eb9e NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 
-U testing_chores%s	testing_chores.ads	0b4eef5e EE NE OO PK IL
+U testing_chores%s	testing_chores.ads	a163a39d EE NE OO PK IL
 
 D ada.ads		20190518041256 76789da1 ada%s
 D a-except.ads		20190518041256 291912d5 ada.exceptions%s
@@ -36,16 +36,20 @@ D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
 D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
-D testing_chores.ads	20191024125118 0b4eef5e testing_chores%s
-D testing_chores.adb	20191024125300 b0bdfcb5 testing_chores%b
+D testing_chores.ads	20191024181514 a163a39d testing_chores%s
+D testing_chores.adb	20191024182344 a4d29d6e testing_chores%b
 G a e
-G c Z s b [print_success testing_chores 3 15 none]
+G c Z s b [print_sensor testing_chores 3 15 none]
+G c Z s b [print_accelerometer testing_chores 5 15 none]
+G c Z s b [print_nav testing_chores 7 15 none]
 X 1 ada.ads
-16K9*Ada 20e8 24|1r6 8r9
+16K9*Ada 20e8 24|1r6 9r9 17r9 25r9
 X 6 a-textio.ads
-57K13*Text_IO 727e16 24|1w10 8r13
-508U14*Put_Line 24|8s21
+57K13*Text_IO 727e16 24|1w10 9r13 17r13 25r13
+508U14*Put_Line 24|9s21 17s21 25s21
 X 23 testing_chores.ads
-1K9*testing_chores 6l5 6e19 24|4b14 13l5 13t19
-3U15*print_success 24|6b15 10l9 10t22
+1K9*testing_chores 9l5 9e19 24|4b14 30l5 30t19
+3U15*print_sensor 24|6b15 11l9 11t21
+5U15*print_accelerometer 24|14b15 19l9 19t28
+7U15*print_nav 24|22b15 27l9 27t18
 

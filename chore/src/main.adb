@@ -1,3 +1,6 @@
+-- TODO write description comments inside the packages under the declarations
+
+
 with Ada.Text_IO;
 with Ada.Integer_Text_IO;
 
@@ -11,39 +14,32 @@ with testing_chores;
 
 procedure Main is
 
-    sensor : Scheduling_Scheme.chore;
-    servo : Scheduling_Scheme.chore;
-    drive : Scheduling_Scheme.chore;
+    sensor : Scheduling_Scheme.chore := (task_name => "sensor" ,
+					 start_time => 0,
+					 deadline => 100,
+					 errand => testing_chores.print_sensor'Access
+					);
 
+    acc : Scheduling_Scheme.chore := (task_name => "accell" ,
+					 start_time => 0,
+					 deadline => 200,
+					 errand => testing_chores.print_accelerometer'Access
+					);
 
+    nav : Scheduling_Scheme.chore := (task_name => "naviga" ,
+					 start_time => 0,
+					 deadline => 150,
+					 errand => testing_chores.print_nav'Access
+					);
 begin
 
-    sensor.task_name := "senso";
-    sensor.start_time := 0;
-    sensor.deadline := 50;
-    sensor.period := 100;
-    sensor.assign_procedure(testing_chores.print_success'Access);
-
-    servo.task_name := "servo";
-    sensor.start_time := 0;
-    sensor.deadline := 50;
-    sensor.period := 100;
-    sensor.assign_procedure(testing_chores.print_success'Access);
+    sensor.errand.all;
+    acc.errand.all;
+    nav.errand.all;
 
 
-    drive.task_name := "drive";
-    sensor.start_time := 0;
-    sensor.deadline := 50;
-    sensor.period := 100;
-    sensor.assign_procedure(testing_chores.print_success'Access);
-
-
-    sensor.assigned_procedure.all;
-    null;
-
+null;
 end Main;
-
-
 
 
 

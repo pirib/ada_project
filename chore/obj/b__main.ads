@@ -37,7 +37,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#d013cd17#;
+   u00001 : constant Version_32 := 16#91f77d2b#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#050ff2f0#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -303,9 +303,9 @@ package ada_main is
    pragma Export (C, u00132, "system__val_unsB");
    u00133 : constant Version_32 := 16#33208002#;
    pragma Export (C, u00133, "system__val_unsS");
-   u00134 : constant Version_32 := 16#7127cdf4#;
+   u00134 : constant Version_32 := 16#65ef47a8#;
    pragma Export (C, u00134, "scheduling_schemeB");
-   u00135 : constant Version_32 := 16#1cb71bdb#;
+   u00135 : constant Version_32 := 16#91c6a5b2#;
    pragma Export (C, u00135, "scheduling_schemeS");
    u00136 : constant Version_32 := 16#039168f8#;
    pragma Export (C, u00136, "system__stream_attributesB");
@@ -315,9 +315,9 @@ package ada_main is
    pragma Export (C, u00138, "system__strings__stream_opsB");
    u00139 : constant Version_32 := 16#ec029138#;
    pragma Export (C, u00139, "system__strings__stream_opsS");
-   u00140 : constant Version_32 := 16#1507c686#;
+   u00140 : constant Version_32 := 16#ab45eb9e#;
    pragma Export (C, u00140, "testing_choresB");
-   u00141 : constant Version_32 := 16#0b4eef5e#;
+   u00141 : constant Version_32 := 16#a163a39d#;
    pragma Export (C, u00141, "testing_choresS");
    u00142 : constant Version_32 := 16#e31b7c4e#;
    pragma Export (C, u00142, "system__memoryB");
