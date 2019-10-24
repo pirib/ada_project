@@ -15,12 +15,12 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U scheduling_scheme%b	scheduling_scheme.adb	2b8e21c8 OO PK
+U scheduling_scheme%b	scheduling_scheme.adb	7127cdf4 OO PK
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 
-U scheduling_scheme%s	scheduling_scheme.ads	39ef657a EE OO PF PK
+U scheduling_scheme%s	scheduling_scheme.ads	1cb71bdb EE OO PF PK
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.streams%s		a-stream.adb		a-stream.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -42,8 +42,8 @@ D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20190518041256 eff36322 ada.unchecked_deallocation%s
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D scheduling_scheme.ads	20191022140314 39ef657a scheduling_scheme%s
-D scheduling_scheme.adb	20191022140314 4ade187b scheduling_scheme%b
+D scheduling_scheme.ads	20191024132922 1cb71bdb scheduling_scheme%s
+D scheduling_scheme.adb	20191024132848 352f8ae6 scheduling_scheme%b
 D system.ads		20190518041258 32a08138 system%s
 D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
 D s-exctab.ads		20190518041256 54135002 system.exception_table%s
@@ -64,33 +64,31 @@ D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
 G a e
 G c Z s b [foo scheduling_scheme 28 15 none]
 G c Z s b [assign_procedure scheduling_scheme 30 15 none]
-G c Z s b [testing_shit scheduling_scheme 32 15 none]
 G c Z s s [choreDA scheduling_scheme 11 10 none]
 G c Z s s [choreDF scheduling_scheme 11 10 none]
 G c Z s s [choreIP scheduling_scheme 11 10 none]
 X 1 ada.ads
-16K9*Ada 20e8 14|1r6 2r6 8r9 9r9 19r9
+16K9*Ada 20e8 14|1r6 2r6 11r9 12r9
 X 3 a-inteio.ads
-18K13*Integer_Text_IO[8|46] 14|2w10 8r13
+18K13*Integer_Text_IO[8|46] 14|2w10 11r13
 X 7 a-textio.ads
-57K13*Text_IO 727e16 14|1w10 9r13 19r13
-508U14*Put_Line 14|9s21 19s21
+57K13*Text_IO 727e16 14|1w10 12r13
+508U14*Put_Line 14|12s21
 X 8 a-tiinio.ads
-80U14*Put 14|8s29[3|18]
+80U14*Put 14|11s29[3|18]
 X 13 scheduling_scheme.ads
-6K9*Scheduling_Scheme 34l5 34e22 14|4b14 22l5 22t22
-9P10*procedure_pointer 22r29 30r59 14|12r57
-11R10*chore 24e15 28p15 28r34 30p15 30r48 14|6r34 12r47
-15a9*task_name{string} 14|9r35
-16i9*start_time{integer} 14|8r38
+6K9*Scheduling_Scheme 33l5 33e22 14|6b14 21l5 21t22
+9P10*procedure_pointer 22r29 30r59 14|15r57
+11R10*chore 24e15 28p15 28r34 30p15 30r48 14|9r34 15r47
+15a9*task_name{string} 14|12r35
+16i9*start_time{integer} 14|11r38
 17i9*deadline{integer}
 18i9*period{integer}
 19i9*priority{integer}
-22p9*assigned_procedure{9P10} 14|14m14
-28U15*Foo 28=20 14|6b15 10l9 10t12
-28r20 Self{11R10} 14|6b20 8r33 9r30
-30U15*assign_procedure 30=34 30>56 14|12b15 15l9 15t25
-30r34 Self{11R10} 14|12b33 14m9
-30p56 P{9P10} 14|12b54 14r36
-32U15*testing_shit 14|17b15 20l9 20t21
+22p9*assigned_procedure{9P10} 14|17m14
+28U15*Foo 28=20 14|9b15 13l9 13t12
+28r20 Self{11R10} 14|9b20 11r33 12r30
+30U15*assign_procedure 30=34 30>56 14|15b15 18l9 18t25
+30r34 Self{11R10} 14|15b33 17m9
+30p56 P{9P10} 14|15b54 17r36
 

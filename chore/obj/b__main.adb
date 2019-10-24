@@ -29,6 +29,7 @@ package body ada_main is
    E111 : Short_Integer; pragma Import (Ada, E111, "system__file_io_E");
    E099 : Short_Integer; pragma Import (Ada, E099, "ada__text_io_E");
    E135 : Short_Integer; pragma Import (Ada, E135, "scheduling_scheme_E");
+   E141 : Short_Integer; pragma Import (Ada, E141, "testing_chores_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -210,6 +211,7 @@ package body ada_main is
       Scheduling_Scheme'Elab_Spec;
       Scheduling_Scheme'Elab_Body;
       E135 := E135 + 1;
+      E141 := E141 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -246,6 +248,7 @@ package body ada_main is
 
 --  BEGIN Object file/option list
    --   F:\Code\Git\ada_project\chore\obj\Scheduling_Scheme.o
+   --   F:\Code\Git\ada_project\chore\obj\testing_chores.o
    --   F:\Code\Git\ada_project\chore\obj\main.o
    --   -LF:\Code\Git\ada_project\chore\obj\
    --   -LF:\Code\Git\ada_project\chore\obj\

@@ -29,6 +29,5 @@ package Scheduling_Scheme is
 
     procedure assign_procedure ( Self : in out chore ; P: procedure_pointer);
 
-    procedure testing_shit;
 
 end Scheduling_Scheme;

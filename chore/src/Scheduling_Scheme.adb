@@ -1,7 +1,10 @@
 with Ada.Text_IO;
 with Ada.Integer_Text_IO;
 
+
+
 package body Scheduling_Scheme is
+
 
     procedure Foo (Self : in out chore) is
     begin
@@ -14,9 +17,5 @@ package body Scheduling_Scheme is
 	self.assigned_procedure := P;
     end assign_procedure;
 
-    procedure testing_shit is
-    begin
-	Ada.Text_IO.Put_Line("it worked!");
-    end testing_shit;
 
 end Scheduling_Scheme;
