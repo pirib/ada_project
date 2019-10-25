@@ -26,5 +26,10 @@ package body testing_chores is
     
     end print_nav;
 
+    procedure rts is
+    begin
+	null;
+    end rts;
+
 
 end testing_chores;

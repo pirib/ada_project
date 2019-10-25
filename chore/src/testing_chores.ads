@@ -6,4 +6,6 @@ package testing_chores is
 
     procedure print_nav;
 
+    procedure rts;
+
 end testing_chores;

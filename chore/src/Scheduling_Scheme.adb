@@ -1,17 +1,13 @@
--- TODO Make a procedure printing out all information about a chore
+package body Scheduling_scheme is
 
-with Ada.Text_IO;
-with Ada.Integer_Text_IO;
-
-
-
-package body Scheduling_Scheme is
-
-
-    procedure assign_errand (Self : in out chore; P: procedure_pointer ) is
+    procedure start (Self : in out schedule) is
     begin
-	self.errand := P;
-    end assign_errand;
-    -- Suraphel, you can edit it
 
-end Scheduling_Scheme;
+	for I in 1..3 loop
+	    self.normal_behaviour(I).run;
+	end loop;
+
+    end start;
+
+
+end Scheduling_scheme;

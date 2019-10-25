@@ -28,8 +28,9 @@ package body ada_main is
    E112 : Short_Integer; pragma Import (Ada, E112, "ada__finalization_E");
    E111 : Short_Integer; pragma Import (Ada, E111, "system__file_io_E");
    E099 : Short_Integer; pragma Import (Ada, E099, "ada__text_io_E");
-   E135 : Short_Integer; pragma Import (Ada, E135, "scheduling_scheme_E");
-   E141 : Short_Integer; pragma Import (Ada, E141, "testing_chores_E");
+   E135 : Short_Integer; pragma Import (Ada, E135, "chore_class_E");
+   E141 : Short_Integer; pragma Import (Ada, E141, "scheduling_scheme_E");
+   E143 : Short_Integer; pragma Import (Ada, E143, "testing_chores_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -40,26 +41,33 @@ package body ada_main is
 
    procedure finalize_library is
    begin
-      E135 := E135 - 1;
+      E141 := E141 - 1;
       declare
          procedure F1;
          pragma Import (Ada, F1, "scheduling_scheme__finalize_spec");
       begin
          F1;
       end;
-      E099 := E099 - 1;
+      E135 := E135 - 1;
       declare
          procedure F2;
-         pragma Import (Ada, F2, "ada__text_io__finalize_spec");
+         pragma Import (Ada, F2, "chore_class__finalize_spec");
       begin
          F2;
       end;
+      E099 := E099 - 1;
       declare
          procedure F3;
-         pragma Import (Ada, F3, "system__file_io__finalize_body");
+         pragma Import (Ada, F3, "ada__text_io__finalize_spec");
+      begin
+         F3;
+      end;
+      declare
+         procedure F4;
+         pragma Import (Ada, F4, "system__file_io__finalize_body");
       begin
          E111 := E111 - 1;
-         F3;
+         F4;
       end;
       declare
          procedure Reraise_Library_Exception_If_Any;
@@ -208,10 +216,13 @@ package body ada_main is
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E099 := E099 + 1;
-      Scheduling_Scheme'Elab_Spec;
-      Scheduling_Scheme'Elab_Body;
+      chore_class'elab_spec;
+      chore_class'elab_body;
       E135 := E135 + 1;
+      scheduling_scheme'elab_spec;
+      scheduling_scheme'elab_body;
       E141 := E141 + 1;
+      E143 := E143 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -247,7 +258,8 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   F:\Code\Git\ada_project\chore\obj\Scheduling_Scheme.o
+   --   F:\Code\Git\ada_project\chore\obj\chore_class.o
+   --   F:\Code\Git\ada_project\chore\obj\scheduling_scheme.o
    --   F:\Code\Git\ada_project\chore\obj\testing_chores.o
    --   F:\Code\Git\ada_project\chore\obj\main.o
    --   -LF:\Code\Git\ada_project\chore\obj\
