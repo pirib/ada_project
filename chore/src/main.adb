@@ -42,7 +42,11 @@ procedure Main is
 				errand => testing_chores.print_nav'Access
 			       );
 
-    ss : Scheduling_scheme.schedule := (normal_behaviour => (sensor, acc, nav) );
+    ss : Scheduling_scheme.schedule := (normal_behaviour => (sensor, acc, nav),
+					sensor_data => <>,
+					nav_data => <>,
+					acc_data => <>
+				       );
 
     --    not_horizontal : Scheduling_scheme.chore_queue := ( sensor, acc, rts );
 

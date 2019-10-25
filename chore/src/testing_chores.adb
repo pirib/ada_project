@@ -3,32 +3,35 @@ with Ada.Text_IO;
 
 package body testing_chores is
 
-    procedure print_sensor is
+    function print_sensor return Integer is
     begin
 
 	Ada.Text_IO.Put_Line("SENSOR READING");
+	return 1;
 	
     end print_sensor;
    
     
-    procedure print_accelerometer is
+    function print_accelerometer  return Integer is
     begin
 
 	Ada.Text_IO.Put_Line("ACCELEROMETER READING");
+	return 2;
     
     end print_accelerometer;
 
 
-    procedure print_nav is
+    function print_nav  return Integer is
     begin
 
 	Ada.Text_IO.Put_Line("DRIVING");
+	return 3;
     
     end print_nav;
 
-    procedure rts is
+    function rts return Integer is
     begin
-	null;
+	return 4;
     end rts;
 
 

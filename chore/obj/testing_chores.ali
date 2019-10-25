@@ -8,11 +8,11 @@ RN
 RV NO_IO
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U testing_chores%b	testing_chores.adb	16f0d515 NE OO PK IL
+U testing_chores%b	testing_chores.adb	191e1025 NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 
-U testing_chores%s	testing_chores.ads	f6f99ce6 EE NE OO PK IL
+U testing_chores%s	testing_chores.ads	498ddec6 EE NE OO PK IL
 
 D ada.ads		20190518041256 76789da1 ada%s
 D a-except.ads		20190518041256 291912d5 ada.exceptions%s
@@ -36,22 +36,22 @@ D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
 D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
-D testing_chores.ads	20191025104318 f6f99ce6 testing_chores%s
-D testing_chores.adb	20191025104336 4efd9c9e testing_chores%b
+D testing_chores.ads	20191025122636 498ddec6 testing_chores%s
+D testing_chores.adb	20191025122430 fe671b8e testing_chores%b
 G a e
-G c Z s b [print_sensor testing_chores 3 15 none]
-G c Z s b [print_accelerometer testing_chores 5 15 none]
-G c Z s b [print_nav testing_chores 7 15 none]
-G c Z s b [rts testing_chores 9 15 none]
+G c Z s b [print_sensor testing_chores 3 14 none]
+G c Z s b [print_accelerometer testing_chores 5 14 none]
+G c Z s b [print_nav testing_chores 7 14 none]
+G c Z s b [rts testing_chores 9 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 24|1r6 9r9 17r9 25r9
+16K9*Ada 20e8 24|1r6 9r9 18r9 27r9
 X 6 a-textio.ads
-57K13*Text_IO 727e16 24|1w10 9r13 17r13 25r13
-508U14*Put_Line 24|9s21 17s21 25s21
+57K13*Text_IO 727e16 24|1w10 9r13 18r13 27r13
+508U14*Put_Line 24|9s21 18s21 27s21
 X 23 testing_chores.ads
-1K9*testing_chores 11l5 11e19 24|4b14 35l5 35t19
-3U15*print_sensor 24|6b15 11l9 11t21
-5U15*print_accelerometer 24|14b15 19l9 19t28
-7U15*print_nav 24|22b15 27l9 27t18
-9U15*rts 24|29b15 32l9 32t12
+1K9*testing_chores 11l5 11e19 24|4b14 38l5 38t19
+3V14*print_sensor{integer} 24|6b14 12l9 12t21
+5V14*print_accelerometer{integer} 24|15b14 21l9 21t28
+7V14*print_nav{integer} 24|24b14 30l9 30t18
+9V14*rts{integer} 24|32b14 35l9 35t12
 

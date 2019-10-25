@@ -1,6 +1,6 @@
 package chore_class is
 
-    type procedure_pointer is access procedure;
+    type function_pointer is access function return Integer;
     -- chore_procedure is now a pointer to a procedure
 
 
@@ -15,13 +15,13 @@ package chore_class is
 	-- priority:   Integer  := 0;
 
 	-- this is the procedure under scrutiny
-	errand: procedure_pointer;
+	errand: function_pointer;
 
     end record;
 
     --  If you define a procedure taking a chore in the same package, it will be a method.
 
-    procedure run (Self : in out chore);
+    function run (Self : in out chore) return Integer;
 
     -- procedure assign_errand ( Self : in out chore ; P: procedure_pointer);
     -- Procedure assigning the value of errand variable of a chore

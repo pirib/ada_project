@@ -10,9 +10,9 @@ package body chore_class is
     --      end assign_errand;
     -- Suraphel, you can edit it
 
-    procedure run (Self : in out chore) is
+    function run (Self : in out chore) return Integer is
     begin
-	self.errand.all;
+	return self.errand.all;
     end run;
 
 end chore_class;

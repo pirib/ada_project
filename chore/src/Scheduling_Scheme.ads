@@ -11,6 +11,10 @@ package Scheduling_scheme is
      
 	normal_behaviour : chore_queue;
      
+	sensor_data : Integer := 0;
+	acc_data : Integer  := 0;
+	nav_data : Integer  := 0;
+     
     end record;
 
 

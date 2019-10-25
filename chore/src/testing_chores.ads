@@ -1,11 +1,11 @@
 package testing_chores is
 
-    procedure print_sensor;
+    function print_sensor return Integer;
 
-    procedure print_accelerometer;
+    function print_accelerometer return Integer;
 
-    procedure print_nav;
+    function print_nav return Integer;
 
-    procedure rts;
+    function rts return Integer;
 
 end testing_chores;
