@@ -4,6 +4,7 @@
 -- TODO Turn the range of the chore_queue into a variable / Suraphel
 -- TODO explore linked lists as replacement for the array used to host the HPS queue
 -- TODO Explore an emergency exit construct for HPS https://stackoverflow.com/questions/23176305/ada-83only-how-to-end-an-entire-program-which-has-multiple-procedures/23178220#23178220
+-- TODO Explore a possibility of using enums to replace id&task_name in chores
 
 with Ada.Text_IO;
 with Ada.Integer_Text_IO;
