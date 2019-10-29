@@ -12,7 +12,7 @@ package chore is
 	priority:         Integer := 0;
 	start_time:       Integer := 0;
 
-	execution_time:   Integer := 0;  -- this is basically a deadline
+	execution_time:   Integer := 0;  -- this is WCET, basically a deadline
 	period:           Integer := -1;  -- -1 if the task is aperiodic
 
 	-- this is the procedure under scrutiny

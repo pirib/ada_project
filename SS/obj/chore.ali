@@ -41,8 +41,8 @@ D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
 D a-tiinio.ads		20190518041256 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20190518041256 eff36322 ada.unchecked_deallocation%s
-D chore.ads		20191029135220 0dce1fba chore%s
-D chore.adb		20191029135838 567d4832 chore%b
+D chore.ads		20191029192706 0dce1fba chore%s
+D chore.adb		20191029180358 567d4832 chore%b
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
 D system.ads		20190518041258 32a08138 system%s

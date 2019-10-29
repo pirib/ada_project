@@ -258,13 +258,13 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   F:\Code\Git\ada_project\SS\obj\chore.o
-   --   F:\Code\Git\ada_project\SS\obj\external_package.o
-   --   F:\Code\Git\ada_project\SS\obj\hps.o
-   --   F:\Code\Git\ada_project\SS\obj\main.o
-   --   -LF:\Code\Git\ada_project\SS\obj\
-   --   -LF:\Code\Git\ada_project\SS\obj\
-   --   -LD:/software/gnat2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/
+   --   C:\Users\surim\Desktop\ada_project-master\SS\obj\chore.o
+   --   C:\Users\surim\Desktop\ada_project-master\SS\obj\external_package.o
+   --   C:\Users\surim\Desktop\ada_project-master\SS\obj\hps.o
+   --   C:\Users\surim\Desktop\ada_project-master\SS\obj\main.o
+   --   -LC:\Users\surim\Desktop\ada_project-master\SS\obj\
+   --   -LC:\Users\surim\Desktop\ada_project-master\SS\obj\
+   --   -LD:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/
    --   -static
    --   -lgnat
    --   -Wl,--stack=0x2000000

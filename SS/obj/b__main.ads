@@ -315,11 +315,11 @@ package ada_main is
    pragma Export (C, u00138, "system__strings__stream_opsB");
    u00139 : constant Version_32 := 16#ec029138#;
    pragma Export (C, u00139, "system__strings__stream_opsS");
-   u00140 : constant Version_32 := 16#10cdcd77#;
+   u00140 : constant Version_32 := 16#0677698b#;
    pragma Export (C, u00140, "external_packageB");
    u00141 : constant Version_32 := 16#b0fd96c2#;
    pragma Export (C, u00141, "external_packageS");
-   u00142 : constant Version_32 := 16#12179ede#;
+   u00142 : constant Version_32 := 16#b846a9f8#;
    pragma Export (C, u00142, "hpsB");
    u00143 : constant Version_32 := 16#0295427a#;
    pragma Export (C, u00143, "hpsS");

@@ -61,7 +61,12 @@ procedure Main is
 
 
     -- This is the queue of HPS
-    ss : HPS.schedule := (execution_queue => (acc, acc, acc),
+   ss : HPS.schedule :=(
+--       (period_start_time => <>,
+--                           period_cnt => <>,
+--                           current_time => <>,
+--                           estimated_time => <>,
+                         execution_queue => (acc, acc, acc),
 			  counter_accelerometer => <>
 			 );
 
