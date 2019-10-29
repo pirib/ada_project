@@ -15,13 +15,13 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U chore%b		chore.adb		d7d0fc81 OO PK IL
+U chore%b		chore.adb		030c0b41 OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 
-U chore%s		chore.ads		0874ef4e EE OO PF PK IL
+U chore%s		chore.ads		0dce1fba EE OO PF PK IL
 Z ada.exceptions%s	a-except.adb		a-except.ali
 Z ada.streams%s		a-stream.adb		a-stream.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -41,8 +41,8 @@ D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
 D a-tiinio.ads		20190518041256 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20190518041256 eff36322 ada.unchecked_deallocation%s
-D chore.ads		20191027090608 0874ef4e chore%s
-D chore.adb		20191026090930 871b4f06 chore%b
+D chore.ads		20191029135220 0dce1fba chore%s
+D chore.adb		20191029135838 567d4832 chore%b
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
 D system.ads		20190518041258 32a08138 system%s
@@ -63,7 +63,7 @@ D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
 G a e
-G c Z s b [run chore 25 15 none]
+G c Z s b [execute chore 23 14 none]
 G c Z s s [choreDA chore 7 10 none]
 G c Z s s [choreDF chore 7 10 none]
 G c Z s s [choreIP chore 7 10 none]
@@ -74,16 +74,18 @@ X 3 a-inteio.ads
 X 7 a-textio.ads
 57K13*Text_IO 727e16 12|1w10
 X 11 chore.ads
-1K9*chore 27l5 27e10 12|5b14 13l5 13t10
-3P10*function_pointer 21r17
-7R10*chore 23e15 25p15 25r34 12|7r34
+1K9*chore 25l5 25e10 12|5b14 14l5 14t10
+3P10*function_pointer(integer) 3>48 19r17
+3i48 Deadline{integer}
+7R10*chore 21e15 23p14 23r37 12|7r37
 9a9*task_name{string}
 10i9*id{integer}
-11i9*priority{integer}
-15i9*start_time{integer}
-16i9*execution_time{integer}
-17i9*period{integer}
-21p9*errand{3P10} 12|9r14
-25U15*run 25=20 12|7b15 10l9 10t12
-25r20 Self{7R10} 12|7b20 9r9
+12i9*priority{integer}
+13i9*start_time{integer}
+15i9*execution_time{integer}
+16i9*period{integer}
+19p9*errand{3P10} 12|9r21
+23V14*execute{integer} 23=23 23>45 12|7b14 10l9 10t16
+23r23 Self{7R10} 12|7b23 9r16
+23i45 Deadline{integer} 12|7b45 9r32
 

@@ -8,11 +8,11 @@ RN
 RV NO_IO
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U external_package%b	external_package.adb	b5978478 NE OO PK IL
+U external_package%b	external_package.adb	10cdcd77 NE OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 
-U external_package%s	external_package.ads	d613af0d EE NE OO PK IL
+U external_package%s	external_package.ads	b0fd96c2 EE NE OO PK IL
 
 D ada.ads		20190518041256 76789da1 ada%s
 D a-except.ads		20190518041256 291912d5 ada.exceptions%s
@@ -21,8 +21,8 @@ D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
 D a-tags.ads		20190518041258 491b781d ada.tags%s
 D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
-D external_package.ads	20191026092556 d613af0d external_package%s
-D external_package.adb	20191026092918 cd70fe18 external_package%b
+D external_package.ads	20191029134702 b0fd96c2 external_package%s
+D external_package.adb	20191029134750 0ec48ed8 external_package%b
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
 D system.ads		20190518041258 32a08138 system%s
@@ -39,19 +39,20 @@ D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
 D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
 G a e
-G c Z s b [print_sensor external_package 3 15 none]
-G c Z s b [print_accelerometer external_package 5 15 none]
-G c Z s b [print_nav external_package 7 15 none]
-G c Z s b [ignore external_package 9 15 none]
+G c Z s b [print_sensor external_package 3 14 none]
+G c Z s b [print_accelerometer external_package 5 14 none]
+G c Z s b [print_nav external_package 7 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 9|1r6 9r9 17r9 25r9
+16K9*Ada 20e8 9|1r6 9r13 18r9 26r9
 X 6 a-textio.ads
-57K13*Text_IO 727e16 9|1w10 9r13 17r13 25r13
-508U14*Put_Line 9|9s21 17s21 25s21
+57K13*Text_IO 727e16 9|1w10 9r17 18r13 26r13
+508U14*Put_Line 9|9s25 18s21 26s21
 X 8 external_package.ads
-1K9*external_package 11l5 11e21 9|4b14 34l5 34t21
-3U15*print_sensor 9|6b15 11l9 11t21
-5U15*print_accelerometer 9|14b15 19l9 19t28
-7U15*print_nav 9|22b15 27l9 27t18
-9U15*ignore 9|29b15 32l9 32t15
+1K9*external_package 9l5 9e21 9|3b14 32l5 32t21
+3V14*print_sensor{integer} 3>28 9|5b14 12l9 12t21
+3i28 Deadline{integer} 9|5b28 8r15
+5V14*print_accelerometer{integer} 5>35 9|15b14 20l9 20t28
+5i35 Deadline{integer} 9|15b35
+7V14*print_nav{integer} 7>25 9|23b14 28l9 28t18
+7i25 Deadline{integer} 9|23b25
 

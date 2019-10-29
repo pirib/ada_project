@@ -258,12 +258,12 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   F:\Code\Git\ada_project\FPS\obj\chore.o
-   --   F:\Code\Git\ada_project\FPS\obj\external_package.o
-   --   F:\Code\Git\ada_project\FPS\obj\hps.o
-   --   F:\Code\Git\ada_project\FPS\obj\main.o
-   --   -LF:\Code\Git\ada_project\FPS\obj\
-   --   -LF:\Code\Git\ada_project\FPS\obj\
+   --   F:\Code\Git\ada_project\SS\obj\chore.o
+   --   F:\Code\Git\ada_project\SS\obj\external_package.o
+   --   F:\Code\Git\ada_project\SS\obj\hps.o
+   --   F:\Code\Git\ada_project\SS\obj\main.o
+   --   -LF:\Code\Git\ada_project\SS\obj\
+   --   -LF:\Code\Git\ada_project\SS\obj\
    --   -LD:/software/gnat2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/
    --   -static
    --   -lgnat

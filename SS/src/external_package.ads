@@ -1,9 +1,9 @@
 package external_package is
 
-    procedure print_sensor;
+    function print_sensor (Deadline : Integer) return Integer;
 
-    procedure print_accelerometer;
+    function print_accelerometer (Deadline : Integer) return Integer;
 
-    procedure print_nav;
+    function print_nav (Deadline : Integer) return Integer;
 
 end external_package;

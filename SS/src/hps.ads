@@ -11,7 +11,6 @@ package HPS is
     type schedule is tagged record
      
 	execution_queue : chore_queue;
-	
 	counter_accelerometer : Integer  := 0;
      
     end record;

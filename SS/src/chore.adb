@@ -4,10 +4,11 @@ with Ada.Integer_Text_IO;
 
 package body chore is
 
-    procedure execute (Self : in out chore) is
+    function execute (Self : in out chore ; Deadline : Integer) return Integer is
     begin
-	self.errand.all;
+	return self.errand.all(Deadline);
     end execute;
+
     -- Run the errand of the chore. AKA execute the task.
 
 end chore;

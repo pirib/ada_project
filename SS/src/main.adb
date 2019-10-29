@@ -1,7 +1,9 @@
+-- Done:
 -- External Packages > rewrite procedures as functions with Deadline param, a while loop and a return
-
 -- Chores > Rewrite procedure pointers to function (remember returns).
 
+
+-- Pending:
 -- HPS > Counter for accelerometer period. Priority assignment. Execution logic.
 
 
@@ -38,43 +40,41 @@ procedure Main is
 			  errand => external_package.print_accelerometer'Access
 			 );
 
---      sensor : chore.chore := (task_name => "sensor  " ,
---  			     id => 1,
---  			     start_time => <>,
---  			     period => 300,
---  			     priority => 2,
---  			     execution_time => 100,
---  			     errand => external_package.print_sensor'Access
---  			    );
---
---      nav : chore.chore := (task_name => "navigati" ,
---  			  id => 3,
---  			  start_time => <>,
---  			  period => 300,
---  			  priority => 1,
---  			  execution_time => 100,
---  			  errand => external_package.print_nav'Access
---  			 );
+    --      sensor : chore.chore := (task_name => "sensor  " ,
+    --  			     id => 1,
+    --  			     start_time => <>,
+    --  			     period => 300,
+    --  			     priority => 2,
+    --  			     execution_time => 100,
+    --  			     errand => external_package.print_sensor'Access
+    --  			    );
+    --
+    --      nav : chore.chore := (task_name => "navigati" ,
+    --  			  id => 3,
+    --  			  start_time => <>,
+    --  			  period => 300,
+    --  			  priority => 1,
+    --  			  execution_time => 100,
+    --  			  errand => external_package.print_nav'Access
+    --  			 );
 
 
 
     -- This is the queue of HPS
-    ss : HPS.schedule := (execution_queue => (sensor, nav, acc),
-			  counter_sensor => <>,
-			  counter_accelerometer => <>,
-			  counter_navigation => <>
+    ss : HPS.schedule := (execution_queue => (acc, acc, acc),
+			  counter_accelerometer => <>
 			 );
 
 
 begin
 
     -- Looping just once. When running on native ADA, for
-    FOR I in 1 .. 7 LOOP
-	Ada.Integer_Text_IO.Put(I);
-	Ada.Text_IO.Put(" ");
-	ss.run;
-    END LOOP;
-
+--      FOR I in 1 .. 7 LOOP
+--  	Ada.Integer_Text_IO.Put(I);
+--  	Ada.Text_IO.Put(" ");
+--  	ss.run;
+--      END LOOP;
+null;
 end Main;
 
 

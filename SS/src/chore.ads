@@ -1,6 +1,6 @@
 package chore is
 
-    type function_pointer is access procedure;
+    type function_pointer is access function  (Deadline : Integer)  return Integer;
     -- chore_procedure is now a pointer to a procedure
 
 
@@ -20,6 +20,6 @@ package chore is
 
     end record;
 
-    procedure execute (Self : in out chore);
+    function execute (Self : in out chore ; Deadline : Integer) return Integer;
 
 end chore;

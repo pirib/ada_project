@@ -2,27 +2,39 @@ with Ada.Text_IO;
 
 package body external_package is
 
-    procedure print_sensor is
+    function print_sensor (Deadline : Integer) return Integer is
     begin
-
-	Ada.Text_IO.Put_Line("SENSOR READING");
+	
+	while 0 < Deadline loop
+	    Ada.Text_IO.Put_Line("SENSOR READING");
+	    return 1;
+	end loop;
+	return -1;
 	
     end print_sensor;
    
     
-    procedure print_accelerometer is
+    function print_accelerometer (Deadline : Integer) return Integer is
     begin
 
-	Ada.Text_IO.Put_Line("ACCELEROMETER READING");
-    
+	while 0 < Deadline loop
+	    Ada.Text_IO.Put_Line("ACCELEROMETER READING");
+	    return 1;
+	end loop;
+	return -1;
+
     end print_accelerometer;
 
 
-    procedure print_nav is
+    function print_nav (Deadline : Integer) return Integer is
     begin
 
-	Ada.Text_IO.Put_Line("DRIVING");
-    
+	while 0 < Deadline loop
+	    Ada.Text_IO.Put_Line("DRIVING");
+	    return 1;
+	end loop;
+	return -1;
+
     end print_nav;
     
  

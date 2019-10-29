@@ -4,6 +4,8 @@ with external_package;
 
 package body HPS is
 
+    answer : Integer;
+
     procedure run (Self : in out schedule) is
 	highest_priority_task_id : Integer := 0;
 	highest_priorty_task_priority: Integer := 0;
@@ -22,7 +24,7 @@ package body HPS is
 	FOR I in queue_length LOOP
 	    if self.execution_queue(I).id = highest_priority_task_id
 	    then
-		self.execution_queue(I).execute;
+		Answer := self.execution_queue(I).execute( self.execution_queue(I).execution_time);
 	    end if;
 	END LOOP;
 
