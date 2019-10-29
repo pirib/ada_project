@@ -23,6 +23,8 @@ procedure Main is
 
 begin
 
+select
+
     --   Accelerometer.Initialize;
 
     MicroBit.Display.Display( Integer'Image(  Integer(Sensor.read) ) );
