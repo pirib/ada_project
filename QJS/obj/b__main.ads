@@ -303,7 +303,7 @@ package ada_main is
    pragma Export (C, u00132, "system__val_unsB");
    u00133 : constant Version_32 := 16#33208002#;
    pragma Export (C, u00133, "system__val_unsS");
-   u00134 : constant Version_32 := 16#1f3515d8#;
+   u00134 : constant Version_32 := 16#01c0f7c3#;
    pragma Export (C, u00134, "choreB");
    u00135 : constant Version_32 := 16#11f70123#;
    pragma Export (C, u00135, "choreS");
@@ -319,7 +319,7 @@ package ada_main is
    pragma Export (C, u00140, "external_packageB");
    u00141 : constant Version_32 := 16#b0fd96c2#;
    pragma Export (C, u00141, "external_packageS");
-   u00142 : constant Version_32 := 16#d86a174f#;
+   u00142 : constant Version_32 := 16#5dda07ca#;
    pragma Export (C, u00142, "hpsB");
    u00143 : constant Version_32 := 16#18d3a98b#;
    pragma Export (C, u00143, "hpsS");
