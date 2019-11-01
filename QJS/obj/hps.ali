@@ -1,0 +1,104 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DISPATCHING_CALLS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U hps%b			hps.adb			d86a174f OO PK IU
+
+U hps%s			hps.ads			18d3a98b EE OO PF PK IU
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W chore%s		chore.adb		chore.ali
+W external_package%s	external_package.adb	external_package.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+D ada.ads		20190518041256 76789da1 ada%s
+D a-except.ads		20190518041256 291912d5 ada.exceptions%s
+D a-inteio.ads		20190518041258 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20190518041256 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041258 491b781d ada.tags%s
+D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
+D a-tiinio.ads		20190518041256 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20190518041256 eff36322 ada.unchecked_deallocation%s
+D chore.ads		20191101093146 11f70123 chore%s
+D external_package.ads	20191029134702 b0fd96c2 external_package%s
+D hps.ads		20191101101310 e16662a3 hps%s
+D hps.adb		20191101101506 390c75ec hps%b
+D interfac.ads		20190518041256 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
+D system.ads		20190518041258 32a08138 system%s
+D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041256 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041258 078245e4 system.file_control_block%s
+D s-parame.ads		20190518041258 48ec542b system.parameters%s
+D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041258 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041256 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20190518041256 aedef97e system.stream_attributes%s
+D s-string.ads		20190518041256 8fe54fb7 system.strings%s
+D s-ststop.ads		20190518041256 5fbf1b38 system.strings.stream_ops%s
+D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [run hps 19 15 none]
+G c Z s s [Tchore_queueBIP hps 10 5 none]
+G c Z s s [scheduleDA hps 12 10 none]
+G c Z s s [scheduleDF hps 12 10 none]
+G c Z s s [scheduleIP hps 12 10 none]
+G r c none [run hps 19 15 none] [execute chore 18 14 none]
+G r s chore [Tchore_queueBIP hps 10 5 none] [choreIP chore 7 10 none]
+G r s chore [scheduleIP hps 12 10 none] [choreIP chore 7 10 none]
+X 1 ada.ads
+16K9*Ada 20e8 13|2r6 3r6
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[8|46] 13|3w10
+X 7 a-textio.ads
+57K13*Text_IO 727e16 13|2w10
+X 11 chore.ads
+1K9*chore 20e10 13|1w6 1r17 10r41
+7R10*chore 16e15 13|10r47
+11i9*deadline{integer} 14|18r80 24r80 30r80
+18V14*execute{integer} 14|18s51 24s51 30s51
+X 12 external_package.ads
+1K9*external_package 9e21 13|4w6
+X 13 hps.ads
+7K9*HPS 22l5 22e8 14|1b14 41l5 41t8
+10A10*chore_queue(11|7R10)<integer> 14r23
+12R10*schedule 16e15 19p15 19r34 14|3r34
+14a9*major_queue{10A10} 14|18m36 18r65 24m36 24r65 30m36 30r65
+19U15*run 19=20 14|3b15 38l9 38t12
+19r20 Self{12R10} 14|3b20 18m31 18r31 18r60 24m31 24r31 24r60 30m31 30r31
+. 30r60
+X 14 hps.adb
+4i9 highest_priority_task_id{integer}
+5i9 highest_priorty_task_priority{integer}
+7i9 minor_queue_id{integer} 16r16 22r16 28r16
+9i9 Answer{integer} 18m21 24m21 30m21
+17i21 I{integer} 18r48 18r77
+23i21 I{integer} 24r48 24r77
+29i21 I{integer} 30r48 30r77
+

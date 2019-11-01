@@ -17,5 +17,4 @@ package HPS is
 
     procedure run (Self : in out schedule);
     
-
 end HPS;
