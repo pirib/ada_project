@@ -1,0 +1,154 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_DISPATCHING_CALLS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U hps%b			hps.adb			928d4c08 OO PK IU
+
+U hps%s			hps.ads			7f2c079a EE OO PF PK IU
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.streams%s		a-stream.adb		a-stream.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W chore%s		chore.adb		chore.ali
+W external_package%s	external_package.adb	external_package.ali
+Z system%s		system.ads		system.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-inteio.ads		20190518041256 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20190518041254 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-textio.ads		20190518041256 aef4d56d ada.text_io%s
+D a-tiinio.ads		20190518041254 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20190518041255 eff36322 ada.unchecked_deallocation%s
+D chore.ads		20191101134932 11f70123 chore%s
+D external_package.ads	20191101125336 b0fd96c2 external_package%s
+D hps.ads		20191101191518 8699ccb2 hps%s
+D hps.adb		20191101193318 141480ba hps%b
+D interfac.ads		20190518041254 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
+D system.ads		20190518041255 4635ec04 system%s
+D s-crtl.ads		20190518041254 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041256 078245e4 system.file_control_block%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20190518041255 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20190518041254 aedef97e system.stream_attributes%s
+D s-string.ads		20190518041255 8fe54fb7 system.strings%s
+D s-ststop.ads		20190518041254 5fbf1b38 system.strings.stream_ops%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041255 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [run hps 19 14 none]
+G c Z s b [start_ac_period hps 24 13 none]
+G c Z s b [estimated_time hps 30 13 none]
+G c Z s b [run_if_schedulable hps 38 14 none]
+G c Z s b [nxt_queue hps 52 14 none]
+G c Z s s [Tchore_queueBIP hps 10 4 none]
+G c Z s s [scheduleDA hps 12 9 none]
+G c Z s s [scheduleDF hps 12 9 none]
+G c Z s s [scheduleIP hps 12 9 none]
+G r c none [run hps 19 14 none] [execute chore 18 14 none]
+G r c none [start_ac_period hps 24 13 none] [execute chore 18 14 none]
+G r c none [run_if_schedulable hps 38 14 none] [execute chore 18 14 none]
+G r s chore [Tchore_queueBIP hps 10 4 none] [choreIP chore 7 10 none]
+G r s chore [scheduleIP hps 12 9 none] [choreIP chore 7 10 none]
+X 1 ada.ads
+16K9*Ada 20e8 13|2r6 3r6
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[8|46] 13|3w10
+X 7 a-textio.ads
+57K13*Text_IO 727e16 13|2w10
+X 11 chore.ads
+1K9*chore 20e10 13|1w6 1r17 10r40
+7R10*chore 16e15 13|10r46
+10i9*id{integer} 14|12r60 53r80
+11i7*deadline{integer} 14|27r59 54r87
+18V14*execute{integer} 14|12s31 53s42 54s49
+X 12 external_package.ads
+1K9*external_package 9e21 13|4w6
+X 13 hps.ads
+7K9*HPS 24E13 57l5 57e8 14|4b14 169l5 169t8
+10A9*chore_queue(11|7R10)<integer> 14r21
+12R9*schedule 16e14 19p14 19r33 24p13 24r44 30p13 30r43 38p14 38r48 14|6r44
+. 20r43 40r48 61r33
+14a7*major_queue{10A9} 14|12m16 12r45 27r44 53m18 53r56 54m25 54r63
+19U14*run 19=19 14|61b14 166l8 166t11
+19r19 Self{12R9} 14|61b19 97m53 97r53 100m48 100r48 104m35 122m53 122r53
+. 125m48 125r48 129m35 147m48 147r48 151m35
+24V13 start_AC_period{integer} 24=30 25>30 26>30 14|6b13 17t7 97s37 122s37
+24r30 Self{12R9} 14|6b30 12m11 12r11 12r40
+25i30 AC_id{integer} 14|7b30 12r66
+26i30 I{integer} 14|8b30 12r28 12r57
+30V13 estimated_time{integer} 30=29 31>28 32>30 14|20b13 29t7 100s33 125s33
+. 147s33
+30r29 Self{12R9} 14|20b29 27r39
+31i28 period_start_time{integer} 14|21b29 27r70
+32i30 I{integer} 14|22b29 27r56
+38U14 run_if_schedulable 38=34 39>34 40>34 41>34 42>34 43>34 44<34 45<34
+. 46<34 14|40b14 58t7 104s16 129s16 151s16
+38r34 Self{12R9} 14|40b34 53m13 53r13 53r51 54m20 54r20 54r58
+39i34 period_cnt{integer} 14|41b34 52r11
+40i34 estimate_time{integer} 14|42b34 52r24
+41i34 index_loop{integer} 14|43b34 53r30 53r68 54r37 54r75
+42i34 AC_id{integer} 14|44b34 53r86
+43i34 nxt_queue_var{integer} 14|45b34 56r20
+44i34 minor_queue_id{integer} 14|46b34 56m35
+45b34 exit_queue_flag{boolean} 14|47b34 56m51
+46i34 Answer{integer} 14|48b34 54m10
+52U14 nxt_queue 52>25 53<25 54<25 14|31b14 37t7 56s10 109s19 134s19 156s19
+52i25 nxt_queue{integer} 14|31b25 35r25
+53i25 minor_queue_id{integer} 14|32b25 35m7
+54b25 exit_queue_flag{boolean} 14|33b25 36m7
+X 14 hps.adb
+10i7 period_start_time{integer} 13m10 14r17 16r14
+24i7 current_time{integer} 27r24
+25i7 estimate_time{integer} 27m7 28r14
+62i7 highest_priority_task_id{integer}
+63i7 highest_priorty_task_priority{integer}
+65i7 minor_queue_id{integer} 91r13 105m54 109m47 117r13 130m54 134m48 141r13
+. 152m54 156m48
+68i7 normal_behavior_q{integer} 105r35 130r35 134r29 152r35 156r29
+69i7 non_horizontal_q{integer} 109r29
+70i7 sensor_check_q{integer}
+72i7 Answer{integer} 106m46 108r20 131m46 133r20 153m46 155r20
+75i7 AC_id_que_1{integer} 97r59 104r71 151r71
+76i7 AC_id_que_2{integer} 122r59 129r71
+79b7 exit_flag{boolean} 92m13 106m35 108r36 109m63 112r42 118m13 131m35 133r35
+. 134m64 137r41 142m13 153m35 155r35 156m64 159r39
+82i7 period_start_time{integer} 97m16 100r54 122m16 125r54 147r54
+83i7 period_cnt{integer} 104r41 129r41 151r41
+84i7 estimate_time{integer} 100m16 104r53 125m16 129r53 147m16 151r53
+94l13 normal_behavior 112r21 113l22 113e37
+94i35 I{integer} 97r72 100r73 104r68
+120l13 non_horizontal 137r21 138l22 138e36
+120i34 I{integer} 122r72 125r73 129r68
+144l13 sensor_check 159r21 161l22 161e34
+144i32 I{integer} 147r73 151r68
+
