@@ -16,6 +16,11 @@
 -- TODO Explore a possibility of using enums to replace id&task_name in chores
 
 
+-- Qustion 1 from Nicholas: How do the car handle whether to turn left/right when using the servo turning the sensor?
+--           Do we make additional separat queue for each movement: turn left, turn right, drive backwards?
+-- Question 2: If deadline is missed --> fail safe with moving to SC_q?
+
+
 with Ada.Text_IO;
 with Ada.Integer_Text_IO;
 
