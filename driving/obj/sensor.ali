@@ -55,7 +55,7 @@ D nrf51_svd-spi.ads	20190914074758 d8f87c63 nrf51_svd.spi%s
 D nrf51_svd-timer.ads	20190914074758 31dae6f3 nrf51_svd.timer%s
 D nrf51_svd-twi.ads	20190914074758 87adf514 nrf51_svd.twi%s
 D sensor.ads		20191016090522 08a8ca05 sensor%s
-D sensor.adb		20191016090530 eb0847b3 sensor%b
+D sensor.adb		20191016093942 eb0847b3 sensor%b
 D system.ads		20190518152826 e69b74bd system%s
 D s-stoele.ads		20190518152826 2dc34a04 system.storage_elements%s
 D s-unstyp.ads		20190518152826 34867c83 system.unsigned_types%s
@@ -73,27 +73,27 @@ X 6 hal-spi.ads
 X 7 hal-time.ads
 34h9*Delays
 36P9*Any_Delays(34R9)
-38x14*Delay_Microseconds 25|21R33 24R33 34R45
+38x14*Delay_Microseconds 25|55R33 58R33 68R45
 X 9 microbit.ads
-35K9*MicroBit 67e13 25|1r6 1r24 2r6 20r9 21r9 23r9 24r9 25r9 30r16 34r21
-. 35r24
+35K9*MicroBit 67e13 25|1r6 1r24 2r6 54r9 55r9 57r9 58r9 59r9 64r16 68r21
+. 69r24
 X 10 microbit-ios.ads
-34K18*IOs 98e17 25|1w15 1r33 20r18 23r18 25r18 30r25 35r33
+34K18*IOs 98e17 25|1w15 1r33 54r18 57r18 59r18 64r25 69r33
 36I9*Pin_Id<short_short_integer> 25|9r31 10r31
-52U14*Set 25|20s22 23s22 25s22
-55V13*Set{boolean} 25|30s29 35s37
+52U14*Set 25|54s22 57s22 59s22
+55V13*Set{boolean} 25|64s29 69s37
 X 11 microbit-time.ads
-35K18*Time 81e18 25|2w15 21r18 24r18 34r30
-64V13*HAL_Delay{7|36P9} 25|21s23 24s23 34s35
+35K18*Time 81e18 25|2w15 55r18 58r18 68r30
+64V13*HAL_Delay{7|36P9} 25|55s23 58s23 68s35
 X 24 sensor.ads
-2K9*Sensor 10l5 10e11 25|5b14 50l5 50t11
+2K9*Sensor 10l5 10e11 25|5b14 84l5 84t11
 4I10*travel_time_us<integer> 6r24
 6i5*travel_time_stop{4I10}
-8V14*read{integer} 25|16b14 47l9 47t13
+8V14*read{integer} 25|50b14 81l9 81t13
 X 25 sensor.adb
-9i5 sensor_TRIG_pin{10|36I9} 20r26 23r26 25r26
-10i5 sensor_ECHO_pin{10|36I9} 30r33 35r41
-13i5 duration_echo_us{integer} 18m9 36m25 36r45 38r32 42r24
-27l9 outerloop 45l18 45e27
-32l17 innerloop 40l26 40e35
+9i5 sensor_TRIG_pin{10|36I9} 54r26 57r26 59r26
+10i5 sensor_ECHO_pin{10|36I9} 64r33 69r41
+13i5 duration_echo_us{integer} 52m9 70m25 70r45 72r32 76r24
+61l9 outerloop 79l18 79e27
+66l17 innerloop 74l26 74e35
 

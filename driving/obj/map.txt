@@ -13,7 +13,7 @@ F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\li
 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-ios.o)
                               F:\Code\Git\ada_project\driving\obj\nav.o (microbit__ios__set)
 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-time.o)
-                              main.o (microbit__time__delay_ms)
+                              F:\Code\Git\ada_project\driving\obj\accelerometer.o (microbit__time__clock)
 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(mma8653.o)
                               F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-accelerometer.o) (mma8653__mma8653_accelerometerIP)
 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-adc.o)
@@ -143,6 +143,8 @@ Discarded input sections
                 0x0000000000000000       0x20 F:\Code\Git\ada_project\driving\obj\accelerometer.o
  .text.accelerometer__get_z
                 0x0000000000000000       0x20 F:\Code\Git\ada_project\driving\obj\accelerometer.o
+ .text.accelerometer__check_acc
+                0x0000000000000000       0x54 F:\Code\Git\ada_project\driving\obj\accelerometer.o
  .rodata.accelerometer__tilt_max_y
                 0x0000000000000000        0x2 F:\Code\Git\ada_project\driving\obj\accelerometer.o
  .rodata.accelerometer__tilt_min_y
@@ -163,15 +165,15 @@ Discarded input sections
  .text.nav__write_to_m2__2
                 0x0000000000000000       0x30 F:\Code\Git\ada_project\driving\obj\nav.o
  .text.nav__drive_forward
-                0x0000000000000000       0x20 F:\Code\Git\ada_project\driving\obj\nav.o
+                0x0000000000000000       0x68 F:\Code\Git\ada_project\driving\obj\nav.o
  .text.nav__drive_backward
-                0x0000000000000000       0x20 F:\Code\Git\ada_project\driving\obj\nav.o
+                0x0000000000000000       0x68 F:\Code\Git\ada_project\driving\obj\nav.o
  .text.nav__turn_left
-                0x0000000000000000       0x20 F:\Code\Git\ada_project\driving\obj\nav.o
+                0x0000000000000000       0x68 F:\Code\Git\ada_project\driving\obj\nav.o
  .text.nav__turn_right
-                0x0000000000000000       0x20 F:\Code\Git\ada_project\driving\obj\nav.o
+                0x0000000000000000       0x68 F:\Code\Git\ada_project\driving\obj\nav.o
  .text.nav__stop
-                0x0000000000000000       0x18 F:\Code\Git\ada_project\driving\obj\nav.o
+                0x0000000000000000       0x60 F:\Code\Git\ada_project\driving\obj\nav.o
  .rodata.nav__m1anal_pin
                 0x0000000000000000        0x1 F:\Code\Git\ada_project\driving\obj\nav.o
  .rodata.nav__m1in1_pin
@@ -1324,25 +1326,25 @@ END GROUP
                 0x0000000000000000                __vectors
  *(.text .text.* .gnu.linkonce.t*)
  .text._ada_main
-                0x00000000000000c0       0x60 main.o
+                0x00000000000000c0       0x64 main.o
                 0x00000000000000c0                _ada_main
  .text.ada_main__Tsec_default_sized_stacksBIP
-                0x0000000000000120       0x48 b__main.o
-                0x0000000000000120                ada_main__Tsec_default_sized_stacksBIP
- .text.adainit  0x0000000000000168      0x1ec b__main.o
-                0x0000000000000168                adainit
- .text.main     0x0000000000000354       0x1c b__main.o
-                0x0000000000000354                main
+                0x0000000000000124       0x48 b__main.o
+                0x0000000000000124                ada_main__Tsec_default_sized_stacksBIP
+ .text.adainit  0x000000000000016c      0x1ec b__main.o
+                0x000000000000016c                adainit
+ .text.main     0x0000000000000358       0x1c b__main.o
+                0x0000000000000358                main
  .text.ada_main___elabb
-                0x0000000000000370       0x20 b__main.o
-                0x0000000000000370                ada_main___elabb
+                0x0000000000000374       0x20 b__main.o
+                0x0000000000000374                ada_main___elabb
  .text.sensor__read
-                0x0000000000000390       0xa4 F:\Code\Git\ada_project\driving\obj\sensor.o
-                0x0000000000000390                sensor__read
+                0x0000000000000394       0xa4 F:\Code\Git\ada_project\driving\obj\sensor.o
+                0x0000000000000394                sensor__read
  .text.cortex_m__nvic__enable
-                0x0000000000000434       0x20 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(cortex_m-nvic.o)
-                0x0000000000000434                cortex_m__nvic__enable
- *fill*         0x0000000000000454      0x1ac 
+                0x0000000000000438       0x20 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(cortex_m-nvic.o)
+                0x0000000000000438                cortex_m__nvic__enable
+ *fill*         0x0000000000000458      0x1a8 
  .text          0x0000000000000600       0x58 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(crt0.o)
                 0x0000000000000600                __gnat_irq_trap
                 0x0000000000000600                __unknown_interrupt_handler
@@ -2328,299 +2330,299 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000      0x980
+.debug_aranges  0x0000000000000000      0x988
  *(.debug_aranges)
  .debug_aranges
                 0x0000000000000000       0x20 main.o
  .debug_aranges
                 0x0000000000000020       0x30 b__main.o
  .debug_aranges
-                0x0000000000000050       0x48 F:\Code\Git\ada_project\driving\obj\accelerometer.o
+                0x0000000000000050       0x50 F:\Code\Git\ada_project\driving\obj\accelerometer.o
  .debug_aranges
-                0x0000000000000098       0x60 F:\Code\Git\ada_project\driving\obj\nav.o
+                0x00000000000000a0       0x60 F:\Code\Git\ada_project\driving\obj\nav.o
  .debug_aranges
-                0x00000000000000f8       0x20 F:\Code\Git\ada_project\driving\obj\sensor.o
+                0x0000000000000100       0x20 F:\Code\Git\ada_project\driving\obj\sensor.o
  .debug_aranges
-                0x0000000000000118       0x50 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(cortex_m-nvic.o)
+                0x0000000000000120       0x50 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(cortex_m-nvic.o)
  .debug_aranges
-                0x0000000000000168       0x40 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-accelerometer.o)
+                0x0000000000000170       0x40 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-accelerometer.o)
  .debug_aranges
-                0x00000000000001a8       0x88 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-display.o)
+                0x00000000000001b0       0x88 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-display.o)
  .debug_aranges
-                0x0000000000000230       0x38 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-i2c.o)
+                0x0000000000000238       0x38 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-i2c.o)
  .debug_aranges
-                0x0000000000000268       0xa0 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-ios.o)
+                0x0000000000000270       0xa0 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-ios.o)
  .debug_aranges
-                0x0000000000000308       0x98 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-time.o)
+                0x0000000000000310       0x98 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-time.o)
  .debug_aranges
-                0x00000000000003a0       0x48 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(mma8653.o)
+                0x00000000000003a8       0x48 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(mma8653.o)
  .debug_aranges
-                0x00000000000003e8       0x48 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-adc.o)
+                0x00000000000003f0       0x48 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-adc.o)
  .debug_aranges
-                0x0000000000000430       0x70 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-clock.o)
+                0x0000000000000438       0x70 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-clock.o)
  .debug_aranges
-                0x00000000000004a0       0x20 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-device.o)
+                0x00000000000004a8       0x20 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-device.o)
  .debug_aranges
-                0x00000000000004c0       0x48 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-events.o)
+                0x00000000000004c8       0x48 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-events.o)
  .debug_aranges
-                0x0000000000000508       0x40 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio-tasks_and_events.o)
+                0x0000000000000510       0x40 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio-tasks_and_events.o)
  .debug_aranges
-                0x0000000000000548       0x68 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio.o)
+                0x0000000000000550       0x68 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio.o)
  .debug_aranges
-                0x00000000000005b0       0x50 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-interrupts.o)
+                0x00000000000005b8       0x50 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-interrupts.o)
  .debug_aranges
-                0x0000000000000600       0x50 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-ppi.o)
+                0x0000000000000608       0x50 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-ppi.o)
  .debug_aranges
-                0x0000000000000650       0x60 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-rtc.o)
+                0x0000000000000658       0x60 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-rtc.o)
  .debug_aranges
-                0x00000000000006b0       0x78 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-spi_master.o)
+                0x00000000000006b8       0x78 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-spi_master.o)
  .debug_aranges
-                0x0000000000000728       0x30 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-tasks.o)
+                0x0000000000000730       0x30 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-tasks.o)
  .debug_aranges
-                0x0000000000000758       0xb8 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-timers.o)
+                0x0000000000000760       0xb8 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-timers.o)
  .debug_aranges
-                0x0000000000000810       0x68 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-twi.o)
+                0x0000000000000818       0x68 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-twi.o)
  .debug_aranges
-                0x0000000000000878       0x18 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-gpio.o)
+                0x0000000000000880       0x18 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-gpio.o)
  .debug_aranges
-                0x0000000000000890       0x18 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-twi.o)
+                0x0000000000000898       0x18 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-twi.o)
  .debug_aranges
-                0x00000000000008a8       0x18 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-gpio.o)
+                0x00000000000008b0       0x18 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-gpio.o)
  .debug_aranges
-                0x00000000000008c0       0x18 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-i2c.o)
+                0x00000000000008c8       0x18 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-i2c.o)
  .debug_aranges
-                0x00000000000008d8       0x18 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-spi.o)
+                0x00000000000008e0       0x18 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-spi.o)
  .debug_aranges
-                0x00000000000008f0       0x18 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-time.o)
+                0x00000000000008f8       0x18 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-time.o)
  .debug_aranges
-                0x0000000000000908       0x18 D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(a-except.o)
+                0x0000000000000910       0x18 D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(a-except.o)
  .debug_aranges
-                0x0000000000000920       0x20 D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(s-assert.o)
+                0x0000000000000928       0x20 D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(s-assert.o)
  .debug_aranges
-                0x0000000000000940       0x20 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_divsi3.o)
+                0x0000000000000948       0x20 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_divsi3.o)
  .debug_aranges
-                0x0000000000000960       0x20 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_dvmd_tls.o)
+                0x0000000000000968       0x20 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_dvmd_tls.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0xd321
+.debug_info     0x0000000000000000     0xd461
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000       0x49 main.o
  .debug_info    0x0000000000000049      0x55f b__main.o
- .debug_info    0x00000000000005a8      0x115 F:\Code\Git\ada_project\driving\obj\accelerometer.o
- .debug_info    0x00000000000006bd      0x224 F:\Code\Git\ada_project\driving\obj\nav.o
- .debug_info    0x00000000000008e1       0xc4 F:\Code\Git\ada_project\driving\obj\sensor.o
- .debug_info    0x00000000000009a5      0x2e1 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(cortex_m-nvic.o)
- .debug_info    0x0000000000000c86      0x264 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-accelerometer.o)
- .debug_info    0x0000000000000eea      0x8df F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-display.o)
- .debug_info    0x00000000000017c9      0xadb F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-i2c.o)
- .debug_info    0x00000000000022a4     0x1118 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-ios.o)
- .debug_info    0x00000000000033bc      0x557 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-time.o)
- .debug_info    0x0000000000003913      0x835 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(mma8653.o)
- .debug_info    0x0000000000004148      0x225 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-adc.o)
- .debug_info    0x000000000000436d      0x1e4 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-clock.o)
- .debug_info    0x0000000000004551     0x228b F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-device.o)
- .debug_info    0x00000000000067dc      0x807 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-events.o)
- .debug_info    0x0000000000006fe3      0x369 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio-tasks_and_events.o)
- .debug_info    0x000000000000734c      0x66a F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio.o)
- .debug_info    0x00000000000079b6      0x2b9 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-interrupts.o)
- .debug_info    0x0000000000007c6f      0x2bc F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-ppi.o)
- .debug_info    0x0000000000007f2b      0xce6 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-rtc.o)
- .debug_info    0x0000000000008c11      0xef9 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-spi_master.o)
- .debug_info    0x0000000000009b0a      0x834 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-tasks.o)
- .debug_info    0x000000000000a33e      0xc88 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-timers.o)
- .debug_info    0x000000000000afc6      0xf67 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-twi.o)
- .debug_info    0x000000000000bf2d      0x6c6 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-gpio.o)
- .debug_info    0x000000000000c5f3      0x889 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-twi.o)
- .debug_info    0x000000000000ce7c       0x3a F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-gpio.o)
- .debug_info    0x000000000000ceb6       0x5d F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-i2c.o)
- .debug_info    0x000000000000cf13       0x56 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-spi.o)
- .debug_info    0x000000000000cf69       0x3a F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-time.o)
- .debug_info    0x000000000000cfa3      0x157 D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(a-except.o)
- .debug_info    0x000000000000d0fa      0x1db D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(s-assert.o)
- .debug_info    0x000000000000d2d5       0x26 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_divsi3.o)
- .debug_info    0x000000000000d2fb       0x26 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_dvmd_tls.o)
+ .debug_info    0x00000000000005a8      0x170 F:\Code\Git\ada_project\driving\obj\accelerometer.o
+ .debug_info    0x0000000000000718      0x309 F:\Code\Git\ada_project\driving\obj\nav.o
+ .debug_info    0x0000000000000a21       0xc4 F:\Code\Git\ada_project\driving\obj\sensor.o
+ .debug_info    0x0000000000000ae5      0x2e1 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(cortex_m-nvic.o)
+ .debug_info    0x0000000000000dc6      0x264 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-accelerometer.o)
+ .debug_info    0x000000000000102a      0x8df F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-display.o)
+ .debug_info    0x0000000000001909      0xadb F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-i2c.o)
+ .debug_info    0x00000000000023e4     0x1118 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-ios.o)
+ .debug_info    0x00000000000034fc      0x557 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-time.o)
+ .debug_info    0x0000000000003a53      0x835 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(mma8653.o)
+ .debug_info    0x0000000000004288      0x225 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-adc.o)
+ .debug_info    0x00000000000044ad      0x1e4 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-clock.o)
+ .debug_info    0x0000000000004691     0x228b F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-device.o)
+ .debug_info    0x000000000000691c      0x807 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-events.o)
+ .debug_info    0x0000000000007123      0x369 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio-tasks_and_events.o)
+ .debug_info    0x000000000000748c      0x66a F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio.o)
+ .debug_info    0x0000000000007af6      0x2b9 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-interrupts.o)
+ .debug_info    0x0000000000007daf      0x2bc F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-ppi.o)
+ .debug_info    0x000000000000806b      0xce6 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-rtc.o)
+ .debug_info    0x0000000000008d51      0xef9 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-spi_master.o)
+ .debug_info    0x0000000000009c4a      0x834 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-tasks.o)
+ .debug_info    0x000000000000a47e      0xc88 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-timers.o)
+ .debug_info    0x000000000000b106      0xf67 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-twi.o)
+ .debug_info    0x000000000000c06d      0x6c6 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-gpio.o)
+ .debug_info    0x000000000000c733      0x889 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-twi.o)
+ .debug_info    0x000000000000cfbc       0x3a F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-gpio.o)
+ .debug_info    0x000000000000cff6       0x5d F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-i2c.o)
+ .debug_info    0x000000000000d053       0x56 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-spi.o)
+ .debug_info    0x000000000000d0a9       0x3a F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-time.o)
+ .debug_info    0x000000000000d0e3      0x157 D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(a-except.o)
+ .debug_info    0x000000000000d23a      0x1db D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(s-assert.o)
+ .debug_info    0x000000000000d415       0x26 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_divsi3.o)
+ .debug_info    0x000000000000d43b       0x26 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_dvmd_tls.o)
 
-.debug_abbrev   0x0000000000000000     0x33a7
+.debug_abbrev   0x0000000000000000     0x33ee
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000       0x44 main.o
  .debug_abbrev  0x0000000000000044      0x202 b__main.o
- .debug_abbrev  0x0000000000000246       0x8e F:\Code\Git\ada_project\driving\obj\accelerometer.o
- .debug_abbrev  0x00000000000002d4       0x9e F:\Code\Git\ada_project\driving\obj\nav.o
- .debug_abbrev  0x0000000000000372       0x7f F:\Code\Git\ada_project\driving\obj\sensor.o
- .debug_abbrev  0x00000000000003f1      0x1bc F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(cortex_m-nvic.o)
- .debug_abbrev  0x00000000000005ad      0x171 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-accelerometer.o)
- .debug_abbrev  0x000000000000071e      0x28f F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-display.o)
- .debug_abbrev  0x00000000000009ad      0x298 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-i2c.o)
- .debug_abbrev  0x0000000000000c45      0x415 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-ios.o)
- .debug_abbrev  0x000000000000105a      0x20f F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-time.o)
- .debug_abbrev  0x0000000000001269      0x238 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(mma8653.o)
- .debug_abbrev  0x00000000000014a1      0x102 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-adc.o)
- .debug_abbrev  0x00000000000015a3       0xdf F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-clock.o)
- .debug_abbrev  0x0000000000001682      0x2ea F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-device.o)
- .debug_abbrev  0x000000000000196c       0xf6 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-events.o)
- .debug_abbrev  0x0000000000001a62      0x12a F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio-tasks_and_events.o)
- .debug_abbrev  0x0000000000001b8c      0x1ed F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio.o)
- .debug_abbrev  0x0000000000001d79      0x17c F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-interrupts.o)
- .debug_abbrev  0x0000000000001ef5      0x147 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-ppi.o)
- .debug_abbrev  0x000000000000203c      0x2eb F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-rtc.o)
- .debug_abbrev  0x0000000000002327      0x330 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-spi_master.o)
- .debug_abbrev  0x0000000000002657       0xc2 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-tasks.o)
- .debug_abbrev  0x0000000000002719      0x35b F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-timers.o)
- .debug_abbrev  0x0000000000002a74      0x354 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-twi.o)
- .debug_abbrev  0x0000000000002dc8      0x1c1 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-gpio.o)
- .debug_abbrev  0x0000000000002f89      0x190 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-twi.o)
- .debug_abbrev  0x0000000000003119       0x1b F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-gpio.o)
- .debug_abbrev  0x0000000000003134       0x28 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-i2c.o)
- .debug_abbrev  0x000000000000315c       0x28 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-spi.o)
- .debug_abbrev  0x0000000000003184       0x1b F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-time.o)
- .debug_abbrev  0x000000000000319f       0xd3 D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(a-except.o)
- .debug_abbrev  0x0000000000003272      0x10d D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(s-assert.o)
- .debug_abbrev  0x000000000000337f       0x14 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_divsi3.o)
- .debug_abbrev  0x0000000000003393       0x14 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_dvmd_tls.o)
+ .debug_abbrev  0x0000000000000246       0xc4 F:\Code\Git\ada_project\driving\obj\accelerometer.o
+ .debug_abbrev  0x000000000000030a       0xaf F:\Code\Git\ada_project\driving\obj\nav.o
+ .debug_abbrev  0x00000000000003b9       0x7f F:\Code\Git\ada_project\driving\obj\sensor.o
+ .debug_abbrev  0x0000000000000438      0x1bc F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(cortex_m-nvic.o)
+ .debug_abbrev  0x00000000000005f4      0x171 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-accelerometer.o)
+ .debug_abbrev  0x0000000000000765      0x28f F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-display.o)
+ .debug_abbrev  0x00000000000009f4      0x298 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-i2c.o)
+ .debug_abbrev  0x0000000000000c8c      0x415 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-ios.o)
+ .debug_abbrev  0x00000000000010a1      0x20f F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-time.o)
+ .debug_abbrev  0x00000000000012b0      0x238 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(mma8653.o)
+ .debug_abbrev  0x00000000000014e8      0x102 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-adc.o)
+ .debug_abbrev  0x00000000000015ea       0xdf F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-clock.o)
+ .debug_abbrev  0x00000000000016c9      0x2ea F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-device.o)
+ .debug_abbrev  0x00000000000019b3       0xf6 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-events.o)
+ .debug_abbrev  0x0000000000001aa9      0x12a F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio-tasks_and_events.o)
+ .debug_abbrev  0x0000000000001bd3      0x1ed F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio.o)
+ .debug_abbrev  0x0000000000001dc0      0x17c F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-interrupts.o)
+ .debug_abbrev  0x0000000000001f3c      0x147 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-ppi.o)
+ .debug_abbrev  0x0000000000002083      0x2eb F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-rtc.o)
+ .debug_abbrev  0x000000000000236e      0x330 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-spi_master.o)
+ .debug_abbrev  0x000000000000269e       0xc2 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-tasks.o)
+ .debug_abbrev  0x0000000000002760      0x35b F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-timers.o)
+ .debug_abbrev  0x0000000000002abb      0x354 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-twi.o)
+ .debug_abbrev  0x0000000000002e0f      0x1c1 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-gpio.o)
+ .debug_abbrev  0x0000000000002fd0      0x190 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-twi.o)
+ .debug_abbrev  0x0000000000003160       0x1b F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-gpio.o)
+ .debug_abbrev  0x000000000000317b       0x28 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-i2c.o)
+ .debug_abbrev  0x00000000000031a3       0x28 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-spi.o)
+ .debug_abbrev  0x00000000000031cb       0x1b F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-time.o)
+ .debug_abbrev  0x00000000000031e6       0xd3 D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(a-except.o)
+ .debug_abbrev  0x00000000000032b9      0x10d D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(s-assert.o)
+ .debug_abbrev  0x00000000000033c6       0x14 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_divsi3.o)
+ .debug_abbrev  0x00000000000033da       0x14 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_dvmd_tls.o)
 
-.debug_line     0x0000000000000000     0x3fa1
+.debug_line     0x0000000000000000     0x3fdc
  *(.debug_line)
- .debug_line    0x0000000000000000       0x65 main.o
- .debug_line    0x0000000000000065      0x101 b__main.o
- .debug_line    0x0000000000000166      0x113 F:\Code\Git\ada_project\driving\obj\accelerometer.o
- .debug_line    0x0000000000000279       0xf6 F:\Code\Git\ada_project\driving\obj\nav.o
- .debug_line    0x000000000000036f       0x8a F:\Code\Git\ada_project\driving\obj\sensor.o
- .debug_line    0x00000000000003f9      0x186 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(cortex_m-nvic.o)
- .debug_line    0x000000000000057f      0x1f6 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-accelerometer.o)
- .debug_line    0x0000000000000775      0x53b F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-display.o)
- .debug_line    0x0000000000000cb0      0x293 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-i2c.o)
- .debug_line    0x0000000000000f43      0x6a5 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-ios.o)
- .debug_line    0x00000000000015e8      0x35b F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-time.o)
- .debug_line    0x0000000000001943      0x1a3 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(mma8653.o)
- .debug_line    0x0000000000001ae6      0x195 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-adc.o)
- .debug_line    0x0000000000001c7b      0x19c F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-clock.o)
- .debug_line    0x0000000000001e17      0x2b8 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-device.o)
- .debug_line    0x00000000000020cf      0x16f F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-events.o)
- .debug_line    0x000000000000223e      0x1e1 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio-tasks_and_events.o)
- .debug_line    0x000000000000241f      0x3a8 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio.o)
- .debug_line    0x00000000000027c7      0x13f F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-interrupts.o)
- .debug_line    0x0000000000002906      0x201 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-ppi.o)
- .debug_line    0x0000000000002b07      0x293 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-rtc.o)
- .debug_line    0x0000000000002d9a      0x49f F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-spi_master.o)
- .debug_line    0x0000000000003239       0xc2 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-tasks.o)
- .debug_line    0x00000000000032fb      0x3e7 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-timers.o)
- .debug_line    0x00000000000036e2      0x3d2 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-twi.o)
- .debug_line    0x0000000000003ab4       0xb8 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-gpio.o)
- .debug_line    0x0000000000003b6c      0x100 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-twi.o)
- .debug_line    0x0000000000003c6c       0x1d F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-gpio.o)
- .debug_line    0x0000000000003c89       0x1d F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-i2c.o)
- .debug_line    0x0000000000003ca6       0x1d F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-spi.o)
- .debug_line    0x0000000000003cc3       0x1d F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-time.o)
- .debug_line    0x0000000000003ce0       0xad D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(a-except.o)
- .debug_line    0x0000000000003d8d      0x13f D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(s-assert.o)
- .debug_line    0x0000000000003ecc       0x74 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_divsi3.o)
- .debug_line    0x0000000000003f40       0x61 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_dvmd_tls.o)
+ .debug_line    0x0000000000000000       0x66 main.o
+ .debug_line    0x0000000000000066      0x101 b__main.o
+ .debug_line    0x0000000000000167      0x129 F:\Code\Git\ada_project\driving\obj\accelerometer.o
+ .debug_line    0x0000000000000290      0x11a F:\Code\Git\ada_project\driving\obj\nav.o
+ .debug_line    0x00000000000003aa       0x8a F:\Code\Git\ada_project\driving\obj\sensor.o
+ .debug_line    0x0000000000000434      0x186 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(cortex_m-nvic.o)
+ .debug_line    0x00000000000005ba      0x1f6 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-accelerometer.o)
+ .debug_line    0x00000000000007b0      0x53b F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-display.o)
+ .debug_line    0x0000000000000ceb      0x293 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-i2c.o)
+ .debug_line    0x0000000000000f7e      0x6a5 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-ios.o)
+ .debug_line    0x0000000000001623      0x35b F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-time.o)
+ .debug_line    0x000000000000197e      0x1a3 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(mma8653.o)
+ .debug_line    0x0000000000001b21      0x195 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-adc.o)
+ .debug_line    0x0000000000001cb6      0x19c F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-clock.o)
+ .debug_line    0x0000000000001e52      0x2b8 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-device.o)
+ .debug_line    0x000000000000210a      0x16f F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-events.o)
+ .debug_line    0x0000000000002279      0x1e1 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio-tasks_and_events.o)
+ .debug_line    0x000000000000245a      0x3a8 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio.o)
+ .debug_line    0x0000000000002802      0x13f F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-interrupts.o)
+ .debug_line    0x0000000000002941      0x201 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-ppi.o)
+ .debug_line    0x0000000000002b42      0x293 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-rtc.o)
+ .debug_line    0x0000000000002dd5      0x49f F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-spi_master.o)
+ .debug_line    0x0000000000003274       0xc2 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-tasks.o)
+ .debug_line    0x0000000000003336      0x3e7 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-timers.o)
+ .debug_line    0x000000000000371d      0x3d2 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-twi.o)
+ .debug_line    0x0000000000003aef       0xb8 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-gpio.o)
+ .debug_line    0x0000000000003ba7      0x100 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-twi.o)
+ .debug_line    0x0000000000003ca7       0x1d F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-gpio.o)
+ .debug_line    0x0000000000003cc4       0x1d F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-i2c.o)
+ .debug_line    0x0000000000003ce1       0x1d F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-spi.o)
+ .debug_line    0x0000000000003cfe       0x1d F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-time.o)
+ .debug_line    0x0000000000003d1b       0xad D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(a-except.o)
+ .debug_line    0x0000000000003dc8      0x13f D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(s-assert.o)
+ .debug_line    0x0000000000003f07       0x74 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_divsi3.o)
+ .debug_line    0x0000000000003f7b       0x61 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_dvmd_tls.o)
 
-.debug_frame    0x0000000000000000     0x24ac
+.debug_frame    0x0000000000000000     0x24e0
  *(.debug_frame)
  .debug_frame   0x0000000000000000       0x34 main.o
  .debug_frame   0x0000000000000034       0x8c b__main.o
- .debug_frame   0x00000000000000c0       0xcc F:\Code\Git\ada_project\driving\obj\accelerometer.o
- .debug_frame   0x000000000000018c      0x11c F:\Code\Git\ada_project\driving\obj\nav.o
- .debug_frame   0x00000000000002a8       0x2c F:\Code\Git\ada_project\driving\obj\sensor.o
- .debug_frame   0x00000000000002d4       0xf0 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(cortex_m-nvic.o)
- .debug_frame   0x00000000000003c4       0xb0 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-accelerometer.o)
- .debug_frame   0x0000000000000474      0x210 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-display.o)
- .debug_frame   0x0000000000000684       0x8c F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-i2c.o)
- .debug_frame   0x0000000000000710      0x28c F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-ios.o)
- .debug_frame   0x000000000000099c      0x294 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-time.o)
- .debug_frame   0x0000000000000c30      0x180 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(mma8653.o)
- .debug_frame   0x0000000000000db0       0xcc F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-adc.o)
- .debug_frame   0x0000000000000e7c      0x150 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-clock.o)
- .debug_frame   0x0000000000000fcc       0x2c F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-device.o)
- .debug_frame   0x0000000000000ff8       0xd0 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-events.o)
- .debug_frame   0x00000000000010c8       0xb0 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio-tasks_and_events.o)
- .debug_frame   0x0000000000001178      0x1fc F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio.o)
- .debug_frame   0x0000000000001374       0xec F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-interrupts.o)
- .debug_frame   0x0000000000001460       0xf4 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-ppi.o)
- .debug_frame   0x0000000000001554      0x150 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-rtc.o)
- .debug_frame   0x00000000000016a4      0x234 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-spi_master.o)
- .debug_frame   0x00000000000018d8       0x70 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-tasks.o)
- .debug_frame   0x0000000000001948      0x318 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-timers.o)
- .debug_frame   0x0000000000001c60      0x1e4 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-twi.o)
- .debug_frame   0x0000000000001e44      0x454 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-gpio.o)
- .debug_frame   0x0000000000002298      0x170 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-twi.o)
- .debug_frame   0x0000000000002408       0x50 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-spi.o)
- .debug_frame   0x0000000000002458       0x34 D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(s-assert.o)
- .debug_frame   0x000000000000248c       0x20 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_divsi3.o)
+ .debug_frame   0x00000000000000c0       0xec F:\Code\Git\ada_project\driving\obj\accelerometer.o
+ .debug_frame   0x00000000000001ac      0x130 F:\Code\Git\ada_project\driving\obj\nav.o
+ .debug_frame   0x00000000000002dc       0x2c F:\Code\Git\ada_project\driving\obj\sensor.o
+ .debug_frame   0x0000000000000308       0xf0 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(cortex_m-nvic.o)
+ .debug_frame   0x00000000000003f8       0xb0 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-accelerometer.o)
+ .debug_frame   0x00000000000004a8      0x210 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-display.o)
+ .debug_frame   0x00000000000006b8       0x8c F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-i2c.o)
+ .debug_frame   0x0000000000000744      0x28c F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-ios.o)
+ .debug_frame   0x00000000000009d0      0x294 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-time.o)
+ .debug_frame   0x0000000000000c64      0x180 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(mma8653.o)
+ .debug_frame   0x0000000000000de4       0xcc F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-adc.o)
+ .debug_frame   0x0000000000000eb0      0x150 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-clock.o)
+ .debug_frame   0x0000000000001000       0x2c F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-device.o)
+ .debug_frame   0x000000000000102c       0xd0 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-events.o)
+ .debug_frame   0x00000000000010fc       0xb0 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio-tasks_and_events.o)
+ .debug_frame   0x00000000000011ac      0x1fc F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio.o)
+ .debug_frame   0x00000000000013a8       0xec F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-interrupts.o)
+ .debug_frame   0x0000000000001494       0xf4 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-ppi.o)
+ .debug_frame   0x0000000000001588      0x150 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-rtc.o)
+ .debug_frame   0x00000000000016d8      0x234 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-spi_master.o)
+ .debug_frame   0x000000000000190c       0x70 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-tasks.o)
+ .debug_frame   0x000000000000197c      0x318 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-timers.o)
+ .debug_frame   0x0000000000001c94      0x1e4 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-twi.o)
+ .debug_frame   0x0000000000001e78      0x454 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-gpio.o)
+ .debug_frame   0x00000000000022cc      0x170 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-twi.o)
+ .debug_frame   0x000000000000243c       0x50 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-spi.o)
+ .debug_frame   0x000000000000248c       0x34 D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(s-assert.o)
+ .debug_frame   0x00000000000024c0       0x20 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_divsi3.o)
 
-.debug_str      0x0000000000000000     0xa896
+.debug_str      0x0000000000000000     0xa8c3
  *(.debug_str)
  .debug_str     0x0000000000000000      0x22d main.o
                                         0x232 (size before relaxing)
  .debug_str     0x000000000000022d      0x920 b__main.o
                                         0x991 (size before relaxing)
- .debug_str     0x0000000000000b4d      0x14c F:\Code\Git\ada_project\driving\obj\accelerometer.o
-                                        0x359 (size before relaxing)
- .debug_str     0x0000000000000c99      0x1f4 F:\Code\Git\ada_project\driving\obj\nav.o
-                                        0x3cc (size before relaxing)
- .debug_str     0x0000000000000e8d       0xce F:\Code\Git\ada_project\driving\obj\sensor.o
+ .debug_str     0x0000000000000b4d      0x191 F:\Code\Git\ada_project\driving\obj\accelerometer.o
+                                        0x3c4 (size before relaxing)
+ .debug_str     0x0000000000000cde      0x1f4 F:\Code\Git\ada_project\driving\obj\nav.o
+                                        0x426 (size before relaxing)
+ .debug_str     0x0000000000000ed2       0xce F:\Code\Git\ada_project\driving\obj\sensor.o
                                         0x2e1 (size before relaxing)
- .debug_str     0x0000000000000f5b      0x491 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(cortex_m-nvic.o)
+ .debug_str     0x0000000000000fa0      0x491 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(cortex_m-nvic.o)
                                         0x4e8 (size before relaxing)
- .debug_str     0x00000000000013ec      0x321 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-accelerometer.o)
+ .debug_str     0x0000000000001431      0x321 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-accelerometer.o)
                                         0x50d (size before relaxing)
- .debug_str     0x000000000000170d      0xa7e F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-display.o)
+ .debug_str     0x0000000000001752      0xa7e F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-display.o)
                                         0xdc6 (size before relaxing)
- .debug_str     0x000000000000218b      0xd47 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-i2c.o)
+ .debug_str     0x00000000000021d0      0xd47 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-i2c.o)
                                        0x10f3 (size before relaxing)
- .debug_str     0x0000000000002ed2     0x1533 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-ios.o)
+ .debug_str     0x0000000000002f17     0x1533 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-ios.o)
                                        0x1e15 (size before relaxing)
- .debug_str     0x0000000000004405      0x40e F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-time.o)
+ .debug_str     0x000000000000444a      0x3f6 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-time.o)
                                         0x836 (size before relaxing)
- .debug_str     0x0000000000004813      0x4b4 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(mma8653.o)
+ .debug_str     0x0000000000004840      0x4b4 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(mma8653.o)
                                         0xab8 (size before relaxing)
- .debug_str     0x0000000000004cc7      0x2b3 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-adc.o)
+ .debug_str     0x0000000000004cf4      0x2b3 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-adc.o)
                                         0x588 (size before relaxing)
- .debug_str     0x0000000000004f7a      0x2f3 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-clock.o)
+ .debug_str     0x0000000000004fa7      0x2f3 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-clock.o)
                                         0x5a7 (size before relaxing)
- .debug_str     0x000000000000526d     0x14f2 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-device.o)
+ .debug_str     0x000000000000529a     0x14f2 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-device.o)
                                        0x2ff7 (size before relaxing)
- .debug_str     0x000000000000675f      0xa56 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-events.o)
+ .debug_str     0x000000000000678c      0xa56 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-events.o)
                                         0xe8e (size before relaxing)
- .debug_str     0x00000000000071b5      0x520 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio-tasks_and_events.o)
+ .debug_str     0x00000000000071e2      0x520 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio-tasks_and_events.o)
                                         0x88d (size before relaxing)
- .debug_str     0x00000000000076d5      0x501 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio.o)
+ .debug_str     0x0000000000007702      0x501 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio.o)
                                         0xb9d (size before relaxing)
- .debug_str     0x0000000000007bd6      0x1f3 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-interrupts.o)
+ .debug_str     0x0000000000007c03      0x1f3 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-interrupts.o)
                                         0x8e9 (size before relaxing)
- .debug_str     0x0000000000007dc9      0x2d1 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-ppi.o)
+ .debug_str     0x0000000000007df6      0x2d1 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-ppi.o)
                                         0x5bb (size before relaxing)
- .debug_str     0x000000000000809a      0x1f3 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-rtc.o)
+ .debug_str     0x00000000000080c7      0x1f3 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-rtc.o)
                                        0x114c (size before relaxing)
- .debug_str     0x000000000000828d      0x586 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-spi_master.o)
+ .debug_str     0x00000000000082ba      0x586 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-spi_master.o)
                                         0xff8 (size before relaxing)
- .debug_str     0x0000000000008813      0xaaa F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-tasks.o)
+ .debug_str     0x0000000000008840      0xaaa F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-tasks.o)
                                         0xf72 (size before relaxing)
- .debug_str     0x00000000000092bd      0x34e F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-timers.o)
+ .debug_str     0x00000000000092ea      0x34e F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-timers.o)
                                        0x11ef (size before relaxing)
- .debug_str     0x000000000000960b      0x264 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-twi.o)
+ .debug_str     0x0000000000009638      0x264 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-twi.o)
                                        0x14bc (size before relaxing)
- .debug_str     0x000000000000986f      0x68c F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-gpio.o)
+ .debug_str     0x000000000000989c      0x68c F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-gpio.o)
                                         0xbf6 (size before relaxing)
- .debug_str     0x0000000000009efb       0x90 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-twi.o)
+ .debug_str     0x0000000000009f28       0x90 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51_svd-twi.o)
                                         0xee0 (size before relaxing)
- .debug_str     0x0000000000009f8b       0x42 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-gpio.o)
+ .debug_str     0x0000000000009fb8       0x42 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-gpio.o)
                                         0x263 (size before relaxing)
- .debug_str     0x0000000000009fcd       0x41 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-i2c.o)
+ .debug_str     0x0000000000009ffa       0x41 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-i2c.o)
                                         0x2be (size before relaxing)
- .debug_str     0x000000000000a00e       0x41 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-spi.o)
+ .debug_str     0x000000000000a03b       0x41 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-spi.o)
                                         0x2ac (size before relaxing)
- .debug_str     0x000000000000a04f       0x42 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-time.o)
+ .debug_str     0x000000000000a07c       0x42 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(hal-time.o)
                                         0x263 (size before relaxing)
- .debug_str     0x000000000000a091      0x3d8 D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(a-except.o)
+ .debug_str     0x000000000000a0be      0x3d8 D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(a-except.o)
                                         0x43f (size before relaxing)
- .debug_str     0x000000000000a469      0x3a7 D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(s-assert.o)
+ .debug_str     0x000000000000a496      0x3a7 D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(s-assert.o)
                                         0x4b5 (size before relaxing)
- .debug_str     0x000000000000a810       0x86 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_divsi3.o)
- .debug_str     0x000000000000a896       0x86 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_dvmd_tls.o)
+ .debug_str     0x000000000000a83d       0x86 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_divsi3.o)
+ .debug_str     0x000000000000a8c3       0x86 d:/software/gnatelf/bin/../lib/gcc/arm-eabi/7.4.1/thumb/v6-m\libgcc.a(_dvmd_tls.o)
 
 .debug_loc      0x0000000000000000       0x48
  *(.debug_loc)
@@ -2632,34 +2634,34 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000      0x710
+.debug_ranges   0x0000000000000000      0x718
  *(.debug_ranges)
  .debug_ranges  0x0000000000000000       0x10 main.o
  .debug_ranges  0x0000000000000010       0x20 b__main.o
- .debug_ranges  0x0000000000000030       0x38 F:\Code\Git\ada_project\driving\obj\accelerometer.o
- .debug_ranges  0x0000000000000068       0x50 F:\Code\Git\ada_project\driving\obj\nav.o
- .debug_ranges  0x00000000000000b8       0x28 F:\Code\Git\ada_project\driving\obj\sensor.o
- .debug_ranges  0x00000000000000e0       0x40 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(cortex_m-nvic.o)
- .debug_ranges  0x0000000000000120       0x30 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-accelerometer.o)
- .debug_ranges  0x0000000000000150       0x78 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-display.o)
- .debug_ranges  0x00000000000001c8       0x28 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-i2c.o)
- .debug_ranges  0x00000000000001f0       0x90 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-ios.o)
- .debug_ranges  0x0000000000000280       0x88 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-time.o)
- .debug_ranges  0x0000000000000308       0x38 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(mma8653.o)
- .debug_ranges  0x0000000000000340       0x38 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-adc.o)
- .debug_ranges  0x0000000000000378       0x60 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-clock.o)
- .debug_ranges  0x00000000000003d8       0x10 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-device.o)
- .debug_ranges  0x00000000000003e8       0x38 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-events.o)
- .debug_ranges  0x0000000000000420       0x30 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio-tasks_and_events.o)
- .debug_ranges  0x0000000000000450       0x58 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio.o)
- .debug_ranges  0x00000000000004a8       0x40 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-interrupts.o)
- .debug_ranges  0x00000000000004e8       0x40 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-ppi.o)
- .debug_ranges  0x0000000000000528       0x50 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-rtc.o)
- .debug_ranges  0x0000000000000578       0x68 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-spi_master.o)
- .debug_ranges  0x00000000000005e0       0x20 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-tasks.o)
- .debug_ranges  0x0000000000000600       0xa8 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-timers.o)
- .debug_ranges  0x00000000000006a8       0x58 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-twi.o)
- .debug_ranges  0x0000000000000700       0x10 D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(s-assert.o)
+ .debug_ranges  0x0000000000000030       0x40 F:\Code\Git\ada_project\driving\obj\accelerometer.o
+ .debug_ranges  0x0000000000000070       0x50 F:\Code\Git\ada_project\driving\obj\nav.o
+ .debug_ranges  0x00000000000000c0       0x28 F:\Code\Git\ada_project\driving\obj\sensor.o
+ .debug_ranges  0x00000000000000e8       0x40 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(cortex_m-nvic.o)
+ .debug_ranges  0x0000000000000128       0x30 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-accelerometer.o)
+ .debug_ranges  0x0000000000000158       0x78 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-display.o)
+ .debug_ranges  0x00000000000001d0       0x28 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-i2c.o)
+ .debug_ranges  0x00000000000001f8       0x90 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-ios.o)
+ .debug_ranges  0x0000000000000288       0x88 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(microbit-time.o)
+ .debug_ranges  0x0000000000000310       0x38 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(mma8653.o)
+ .debug_ranges  0x0000000000000348       0x38 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-adc.o)
+ .debug_ranges  0x0000000000000380       0x60 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-clock.o)
+ .debug_ranges  0x00000000000003e0       0x10 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-device.o)
+ .debug_ranges  0x00000000000003f0       0x38 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-events.o)
+ .debug_ranges  0x0000000000000428       0x30 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio-tasks_and_events.o)
+ .debug_ranges  0x0000000000000458       0x58 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-gpio.o)
+ .debug_ranges  0x00000000000004b0       0x40 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-interrupts.o)
+ .debug_ranges  0x00000000000004f0       0x40 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-ppi.o)
+ .debug_ranges  0x0000000000000530       0x50 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-rtc.o)
+ .debug_ranges  0x0000000000000580       0x68 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-spi_master.o)
+ .debug_ranges  0x00000000000005e8       0x20 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-tasks.o)
+ .debug_ranges  0x0000000000000608       0xa8 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-timers.o)
+ .debug_ranges  0x00000000000006b0       0x58 F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\libada_drivers_library.a(nrf51-twi.o)
+ .debug_ranges  0x0000000000000708       0x10 D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a(s-assert.o)
 
 .comment        0x0000000000000000       0x3d
  .comment       0x0000000000000000       0x3d main.o

@@ -23,7 +23,6 @@ procedure Main is
 
 begin
 
-select
 
     --   Accelerometer.Initialize;
 
@@ -109,7 +108,9 @@ select
     --
     --          END LOOP driving;
 
-    --    null;
+
+    null;
+
 end Main;
 
 

@@ -1,3 +1,5 @@
+with Microbit.Time;            use type MicroBit.Time.Time_Ms;
+
 
 package accelerometer is
 
@@ -15,5 +17,7 @@ package accelerometer is
     function get_x return acc_data;
     function get_y return acc_data;
     function get_z return acc_data;
+
+    function check_acc (Deadline : MicroBit.Time.Time_Ms) return Integer;
 
 end accelerometer;

@@ -1,4 +1,6 @@
-with MicroBit.IOs; use MicroBit.IOs;   -- Visible to the body of Drive
+with MicroBit.IOs; use MicroBit.IOs;
+
+
 
 package body Nav is
 
@@ -76,48 +78,73 @@ package body Nav is
 
 
 
-    procedure drive_forward is
+    function drive_forward (Deadline : MicroBit.Time.Time_Ms) return Integer is
+	start_time : constant MicroBit.Time.Time_Ms := MicroBit.Time.Clock;
     begin
 
-	write_to_m1(high, True);
-	write_to_m2(high, True);
-
+	while MicroBit.Time.Clock - start_time < Deadline loop
+	    write_to_m1(high, True);
+	    write_to_m2(high, True);
+	    return 1;
+	end loop;
+	return -1;
+	
     end drive_forward;
 
 
-    procedure drive_backward is
+    function drive_backward (Deadline : MicroBit.Time.Time_Ms) return Integer is
+	start_time : constant MicroBit.Time.Time_Ms := MicroBit.Time.Clock;
     begin
-
-	write_to_m1(high, False);
-	write_to_m2(high, False);
-
+	
+	while MicroBit.Time.Clock - start_time < Deadline loop
+	    write_to_m1(high, False);
+	    write_to_m2(high, False);
+	    return 1;
+	end loop;
+	return -1;
+	
     end drive_backward;
     
     
-    procedure turn_left is
+    function turn_left (Deadline : MicroBit.Time.Time_Ms) return Integer is
+	start_time : constant MicroBit.Time.Time_Ms := MicroBit.Time.Clock;
     begin
 
-	write_to_m1(high, True);
-	write_to_m2(high, False);
+	while MicroBit.Time.Clock - start_time < Deadline loop
+	    write_to_m1(high, True);
+	    write_to_m2(high, False);
+	    return 1;
+	end loop;
+	return -1;
 	
     end turn_left;
 
 
-    procedure turn_right is
+    function turn_right (Deadline : MicroBit.Time.Time_Ms) return Integer is
+	start_time : constant MicroBit.Time.Time_Ms := MicroBit.Time.Clock;
     begin
-	
-	write_to_m1(high, False);
-	write_to_m2(high, True);
 
+	while MicroBit.Time.Clock - start_time < Deadline loop
+	    write_to_m1(high, False);
+	    write_to_m2(high, True);
+	    return 1;
+	end loop;
+	return -1;
+	
     end turn_right;
 
 
-    procedure stop is
+    function stop (Deadline : MicroBit.Time.Time_Ms) return Integer is
+	start_time : constant MicroBit.Time.Time_Ms := MicroBit.Time.Clock;
     begin
-	
-	write_to_m1(False, False);
-	write_to_m2(False, False);
 
+	while MicroBit.Time.Clock - start_time < Deadline loop
+	    write_to_m1(False, False);
+	    write_to_m2(False, False);
+	    return 1;
+	end loop;
+	return -1;
+	
     end stop;
     
     

@@ -4,8 +4,8 @@ node: { title: "microbit__display__display__2" label: "Display\nF:\Code\Git\ada_
 node: { title: "system__img_int__image_integer" label: "Image_Integer\nD:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\gnat\s-imgint.ads:39:14" shape : ellipse }
 node: { title: "sensor__read" label: "Read\nF:\Code\Git\ada_project\driving\src\sensor.ads:8:14" shape : ellipse }
 node: { title: "_ada_main" label: "Main\nF:\Code\Git\ada_project\driving\src\main.adb:18:1\n56 bytes (static)" }
-edge: { sourcename: "_ada_main" targetname: "microbit__time__delay_ms" label: "F:\Code\Git\ada_project\driving\src\main.adb:30:18" }
-edge: { sourcename: "_ada_main" targetname: "microbit__display__display__2" label: "F:\Code\Git\ada_project\driving\src\main.adb:28:21" }
-edge: { sourcename: "_ada_main" targetname: "system__img_int__image_integer" label: "F:\Code\Git\ada_project\driving\src\main.adb:28:38" }
-edge: { sourcename: "_ada_main" targetname: "sensor__read" label: "F:\Code\Git\ada_project\driving\src\main.adb:28:61" }
+edge: { sourcename: "_ada_main" targetname: "microbit__time__delay_ms" label: "F:\Code\Git\ada_project\driving\src\main.adb:31:18" }
+edge: { sourcename: "_ada_main" targetname: "microbit__display__display__2" label: "F:\Code\Git\ada_project\driving\src\main.adb:29:21" }
+edge: { sourcename: "_ada_main" targetname: "system__img_int__image_integer" label: "F:\Code\Git\ada_project\driving\src\main.adb:29:38" }
+edge: { sourcename: "_ada_main" targetname: "sensor__read" label: "F:\Code\Git\ada_project\driving\src\main.adb:29:61" }
 }

@@ -4,13 +4,11 @@ with MicroBit.Display;
 with MicroBit.Accelerometer;   use MicroBit.Accelerometer;
 with MMA8653;                  use MMA8653;
 
-
 package body accelerometer is
 
     -- Renaming some of Microbit accelerometer procedures for more modularity
     procedure Initialize renames MicroBit.Accelerometer.Initialize;
     function Initialized return Boolean renames MicroBit.Accelerometer.Initialized;
-    
     
     -- Used by display. Declared up here so doesnt have to redefine them on each procedure call.
     dx : Integer := 2;   
@@ -70,4 +68,21 @@ package body accelerometer is
     end get_z;
 
 
+    function check_acc (Deadline : MicroBit.Time.Time_Ms) return Integer is
+	start_time : constant MicroBit.Time.Time_Ms := MicroBit.Time.Clock;
+    begin
+	while MicroBit.Time.Clock - start_time < Deadline loop
+	    return Integer(get_y);
+	end loop;
+	return -350; -- Bad value to indicate that we need to jump to NH
+    
+    end check_acc;
+
+
 end accelerometer;
+
+
+
+
+
+

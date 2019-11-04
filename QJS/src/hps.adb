@@ -72,10 +72,10 @@ package body HPS is
 		    Answer := self.major_queue(I).execute( self.major_queue(I).deadline );
 		    current_task_id := self.major_queue(I).id;
 
-		    if current_task_id = 1 and answer = -1 then -- If the value from AC is bad
+		    if current_task_id = 1 and Answer = -1 then -- If the value from AC is bad
 			current_queue_id := NH_q;
 
-		    elsif current_task_id = 1 and answer = -1 then -- If the value from SS is bad
+		    elsif current_task_id = 2 and Answer = -1 then -- If the value from SS is bad
 			current_queue_id := SC_q;
 
 		    end if;
