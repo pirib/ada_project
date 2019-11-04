@@ -1,4 +1,2 @@
-main.adb:13:06: warning: unit "Nav" is not referenced
-main.adb:14:23: warning: use clause for type "travel_time_us" defined at sensor.ads:4 has no effect
-main.adb:15:23: warning: use clause for type "acc_data" defined at accelerometer.ads:6 has no effect
-main.adb:29:47: warning: redundant conversion, expression is of type "Integer"
+main.adb:8:14: warning: unit "MicroBit.Time" is not referenced
+main.adb:13:23: warning: use clause for type "travel_time_us" defined at sensor.ads:6 has no effect

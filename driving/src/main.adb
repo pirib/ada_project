@@ -6,30 +6,97 @@
 
 -- Microbit
 with MicroBit.Time;
-with Microbit.Display;
 
 
--- User
+-- EXTERNAL PACKAGES
 with Nav;
 with Sensor;          use type sensor.travel_time_us;
-with Accelerometer;   use type accelerometer.acc_data;
+with Accelerometer;
 
+-- SCHEDULING
+with Chore;
+with QJS;
 
 procedure Main is
 
-    -- PINS
+    -- Initializing tasks
 
-    -- VARS
+    AC : constant chore.chore := (task_name => "acceller" ,
+				  id => 1,
+				  deadline => <>,
+				  errand => accelerometer.check_acc'Access
+				 );
+
+    SS : constant chore.chore := (task_name => "sensorst" ,
+				  id => 2,
+				  deadline => <>,
+				  errand => nav.drive_forward'Access  -- Needs changing
+				 );
+
+    DF : constant chore.chore := (task_name => "forward " ,
+				  id => 3,
+				  deadline => <>,
+				  errand => nav.drive_forward'Access
+				 );
+
+    DS : constant chore.chore := (task_name => "stopstop" ,
+				  id => 4,
+				  deadline => <>,
+				  errand => nav.stop'Access
+				 );
+
+    TL : constant chore.chore := (task_name => "turnleft" ,
+				  id => 5,
+				  deadline => <>,
+				  errand => nav.turn_left'Access
+				 );
+
+    TR : constant chore.chore := (task_name => "turnrigh" ,
+				  id => 6,
+				  deadline => <>,
+				  errand => nav.turn_right'Access
+				 );
+
+    TA : constant chore.chore := (task_name => "turnarou" ,
+				  id => 7,
+				  deadline => <>,
+				  errand => nav.drive_forward'Access -- NEEDS CHANGING
+				 );
+
+    SL : constant chore.chore := (task_name => "sensleft" ,
+				  id => 8,
+				  deadline => <>,
+				  errand => nav.drive_forward'Access  -- NEEDS CHANGING
+				 );
+
+    SR : constant chore.chore := (task_name => "sensrigh" ,
+				  id => 9,
+				  deadline => <>,
+				  errand => nav.drive_forward'Access  -- NEEDS CHANGING
+				 );
+
+
+    Schedule : QJS.schedule := (major_queue => (AC, SS, DF, DS, AC, DS, SL, SR, TA, TL, TR) );
+
+    --   NB:  AC SS DF
+    --   NH:    DS AC
+    --   SC:      DS SL SR TA
+    --   TR:        TR
+    --   TL:          TL
+    --   ERROR:
 
 begin
 
+    Accelerometer.Initialize;
 
-    --   Accelerometer.Initialize;
+    Schedule.run;
 
-    MicroBit.Display.Display( Integer'Image(  Integer(Sensor.read) ) );
+
+    -- ============================================================
+    -- OLD STUFF
+    -- =============================================================
+
     --MicroBit.Display.Display( String(Integer(sensor.travel_time_us'Image(Sensor.read)))  );
-    MicroBit.Time.Delay_Ms(2000);
-
     -- loop
     --
     --        if Accelerometer.get_y < Accelerometer.tilt_max_y and

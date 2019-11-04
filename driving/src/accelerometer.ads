@@ -1,4 +1,4 @@
-with Microbit.Time;            use type MicroBit.Time.Time_Ms;
+with Microbit.Time;    use type MicroBit.Time.Time_Ms;
 
 
 package accelerometer is

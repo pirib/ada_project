@@ -23,7 +23,7 @@ RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U accelerometer%b	accelerometer.adb	28745171 NE OO PK IL
+U accelerometer%b	accelerometer.adb	98d65fad NE OO PK IL
 W microbit%s		microbit.ads		microbit.ali
 W microbit.accelerometer%s  microbit-accelerometer.adb  microbit-accelerometer.ali
 W microbit.display%s	microbit-display.adb	microbit-display.ali
@@ -33,8 +33,8 @@ U accelerometer%s	accelerometer.ads	1e520488 EE NE OO PK IL
 W microbit%s		microbit.ads		microbit.ali
 W microbit.time%s	microbit-time.adb	microbit-time.ali
 
-D accelerometer.ads	20191104104624 75ee854e accelerometer%s
-D accelerometer.adb	20191104104738 f2983492 accelerometer%b
+D accelerometer.ads	20191104120822 75ee854e accelerometer%s
+D accelerometer.adb	20191104104926 423a3a4e accelerometer%b
 D ada.ads		20190518152826 76789da1 ada%s
 D a-tags.ads		20190518152826 2dde273c ada.tags%s
 D a-unccon.ads		20190518152826 0e9b276f ada.unchecked_conversion%s
@@ -111,7 +111,7 @@ X 10 hal-time.ads
 X 11 interfac.ads
 77M9*Unsigned_64
 X 12 microbit.ads
-35K9*MicroBit 1|1r6 1r41 21r36 2|3r6 4r6 4r36 10r34 11r49 21r9 47r9 71r36
+35K9*MicroBit 1|1r6 1r33 21r36 2|3r6 4r6 4r36 10r34 11r49 21r9 47r9 71r36
 . 72r31 72r56 74r15 12|67e13
 X 13 microbit-accelerometer.ads
 34K18*Accelerometer 2|4w15 4r45 10r43 11r58 13|46e27
@@ -124,8 +124,8 @@ X 14 microbit-display.ads
 36U14*Set 2|47s26
 42U14*Clear 2|21s26
 X 15 microbit-time.ads
-35K18*Time 1|1w15 1r50 21r45 2|71r45 72r40 72r65 74r24 15|81e18
-37M12*Time_Ms{6|160M9} 1|1r55 21r50 2|71r50 72r45
+35K18*Time 1|1w15 1r42 21r45 2|71r45 72r40 72r65 74r24 15|81e18
+37M12*Time_Ms{6|160M9} 1|1r47 21r50 2|71r50 72r45
 39V13*Clock{37M12} 2|72s70 74s29
 X 16 mma8653.ads
 37K9*MMA8653 2|5w6 5r36 16|144e12

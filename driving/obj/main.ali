@@ -23,29 +23,30 @@ RN
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		9c4465e4 NE OO SU
+U main%b		main.adb		76a5ff9c NE OO SU
 W accelerometer%s	accelerometer.adb	accelerometer.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W chore%s		chore.adb		chore.ali
 W microbit%s		microbit.ads		microbit.ali
-W microbit.display%s	microbit-display.adb	microbit-display.ali
 W microbit.time%s	microbit-time.adb	microbit-time.ali
 W nav%s			nav.adb			nav.ali
+W qjs%s			qjs.adb			qjs.ali
 W sensor%s		sensor.adb		sensor.ali
-Z system.img_int%s	s-imgint.adb		s-imgint.ali
 
-D accelerometer.ads	20191104104624 75ee854e accelerometer%s
+D accelerometer.ads	20191104120822 75ee854e accelerometer%s
 D ada.ads		20190518152826 76789da1 ada%s
 D a-tags.ads		20190518152826 2dde273c ada.tags%s
+D chore.ads		20191104123536 69cb48f9 chore%s
 D hal.ads		20190914074758 2b42c80e hal%s
 D hal-gpio.ads		20190914074758 7f0c2ffe hal.gpio%s
 D hal-i2c.ads		20190914074758 0ed73138 hal.i2c%s
 D hal-spi.ads		20190914074758 fe139819 hal.spi%s
 D hal-time.ads		20190914074758 f5295cd7 hal.time%s
 D interfac.ads		20190518152826 5ab55268 interfaces%s
-D main.adb		20191104091642 8155c327 main%b
+D main.adb		20191104124022 77448305 main%b
 D microbit.ads		20190914074758 4ce6a4c2 microbit%s
-D microbit-display.ads	20190914074758 74556d74 microbit.display%s
 D microbit-time.ads	20191004151342 6bbc81c6 microbit.time%s
-D nav.ads		20191104101756 7fbe053a nav%s
+D nav.ads		20191104120814 7fbe053a nav%s
 D nrf51.ads		20190914074758 548f0fe8 nrf51%s
 D nrf51-device.ads	20190914074758 3066f1b0 nrf51.device%s
 D nrf51-gpio.ads	20190914074758 8e815cce nrf51.gpio%s
@@ -58,41 +59,64 @@ D nrf51_svd-rtc.ads	20190914074758 7ec0736e nrf51_svd.rtc%s
 D nrf51_svd-spi.ads	20190914074758 d8f87c63 nrf51_svd.spi%s
 D nrf51_svd-timer.ads	20190914074758 31dae6f3 nrf51_svd.timer%s
 D nrf51_svd-twi.ads	20190914074758 87adf514 nrf51_svd.twi%s
-D sensor.ads		20191016090522 08a8ca05 sensor%s
+D qjs.ads		20191104123402 8fa29bfc qjs%s
+D sensor.ads		20191104124056 8664ae2e sensor%s
 D system.ads		20190518152826 e69b74bd system%s
-D s-imgint.ads		20190518152826 02dbe0c2 system.img_int%s
 D s-stoele.ads		20190518152826 2dc34a04 system.storage_elements%s
 D s-unstyp.ads		20190518152826 34867c83 system.unsigned_types%s
 G a e
-G c Z b b [main standard 18 11 none]
-G r c none [main standard 18 11 none] [read sensor 8 14 none]
-G r c none [main standard 18 11 none] [display microbit__display 51 14 none]
-G r c none [main standard 18 11 none] [delay_ms microbit__time 41 14 none]
+G c Z b b [main standard 20 11 none]
+G r c none [main standard 20 11 none] [initialize accelerometer 12 15 none]
+G r c none [main standard 20 11 none] [run qjs 16 15 none]
 X 1 accelerometer.ads
-4K9*accelerometer 23e18 10|15w6 15r32
-6I10*acc_data<short_integer> 10|15r46
-X 5 hal-gpio.ads
+4K9*accelerometer 23e18 11|14w6 27r45 90r5
+12U15*Initialize 11|90s19
+21V14*check_acc{integer} 11|27r59
+X 4 chore.ads
+3K9*chore 22e10 11|17w6 24r19 30r19 36r19 42r19 48r19 54r19 60r19 66r19 72r19
+5P10*function_pointer(integer)
+9R10*chore 18e15 11|24r25 30r25 36r25 42r25 48r25 54r25 60r25 66r25 72r25
+11a9*task_name{string} 11|24m35 30m35 36m35 42m35 48m35 54m35 60m35 66m35
+. 72m35
+12i9*id{integer} 11|25m35 31m35 37m35 43m35 49m35 55m35 61m35 67m35 73m35
+16p9*errand{5P10} 11|27m35 33m35 39m35 45m35 51m35 57m35 63m35 69m35 75m35
+X 6 hal-gpio.ads
 47h9*GPIO_Point
-X 6 hal-i2c.ads
+X 7 hal-i2c.ads
 48h9*I2C_Port
-X 7 hal-spi.ads
+X 8 hal-spi.ads
 48h9*SPI_Port
-X 8 hal-time.ads
+X 9 hal-time.ads
 34h9*Delays
-X 10 main.adb
-18U11*Main 18b11 114l5 114t9
-X 11 microbit.ads
-35K9*MicroBit 10|8r6 9r6 29r5 31r5 11|67e13
-X 12 microbit-display.ads
-32K18*Display 10|9w15 29r14 12|69e21
-51U14*Display 10|29s22
+X 11 main.adb
+20U11*Main 20b11 181l5 181t9
+24r5 AC{4|9R10} 79r49 79r65
+30r5 SS{4|9R10} 79r53
+36r5 DF{4|9R10} 79r57
+42r5 DS{4|9R10} 79r61 79r69
+48r5 TL{4|9R10} 79r85
+54r5 TR{4|9R10} 79r89
+60r5 TA{4|9R10} 79r81
+66r5 SL{4|9R10} 79r73
+72r5 SR{4|9R10} 79r77
+79r5 Schedule{27|9R10} 92m5 92r5
+X 12 microbit.ads
+35K9*MicroBit 11|8r6 12|67e13
 X 13 microbit-time.ads
-35K18*Time 10|8w15 31r14 13|81e18
-41U14*Delay_Ms 10|31s19
+35K18*Time 11|8w15 13|81e18
 X 14 nav.ads
-4K9*Nav 10|13w6 14|12e8
-X 27 sensor.ads
-2K9*Sensor 10|14w6 14r32 29r55 27|10e11
-4I10*travel_time_us<integer> 10|14r39
-8V14*read{integer} 10|29s62
+4K9*Nav 11|12w6 33r45 39r45 45r45 51r45 57r45 63r45 69r45 75r45 14|12e8
+6V14*drive_forward{integer} 11|33r49 39r49 63r49 69r49 75r49
+8V14*turn_left{integer} 11|51r49
+9V14*turn_right{integer} 11|57r49
+10V14*stop{integer} 11|45r49
+X 27 qjs.ads
+4K9*QJS 11|18w6 79r16 27|19e8
+7A10*chore_queue(4|9R10)<integer>
+9R10*schedule 11|79r20 27|13e15
+11a9*major_queue{7A10} 11|79m33
+16U15*run 11|92s14
+X 28 sensor.ads
+4K9*Sensor 11|13w6 13r32 28|21e11
+6I10*travel_time_us<integer> 11|13r39
 
