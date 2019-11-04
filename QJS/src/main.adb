@@ -16,11 +16,8 @@
 -- TODO Explore a possibility of using enums to replace id&task_name in chores
 
 
--- Qustion 1 from Nicholas: How do the car handle whether to turn left/right when using the servo turning the sensor?
---           Do we make additional separat queue for each movement: turn left, turn right, drive backwards?
+-- Qustion from Nicholas:
 -- Question 2: If deadline is missed --> fail safe with moving to SC_q?
--- Question 3: We are setting time constraint in the external_package.adb?
--- Question 4: instead of making the task forward --> make drive, within drive it determines direction?
 -- Question 5: What values to return in external_package.adb and chore.adb for exit loop logic in hps.run to make sense?
 
 
@@ -46,7 +43,7 @@ procedure Main is
 			 errand => external_package.print_accelerometer'Access
 			);
 
-    SS : chore.chore := (task_name => "sensor  " ,
+    SS : chore.chore := (task_name => "sensorst" ,
 			 id => 2,
 			 deadline => <>,
 			 errand => external_package.print_sensor'Access
@@ -64,19 +61,19 @@ procedure Main is
 			 errand => external_package.print_nav'Access
 			);
 
-    DL : chore.chore := (task_name => "turnleft" ,
+    TL : chore.chore := (task_name => "turnleft" ,
 			 id => 5,
 			 deadline => <>,
 			 errand => external_package.print_nav'Access
 			);
 
-    DR : chore.chore := (task_name => "turnrigh" ,
+    TR : chore.chore := (task_name => "turnrigh" ,
 			 id => 6,
 			 deadline => <>,
 			 errand => external_package.print_nav'Access
 			);
 
-    DB : chore.chore := (task_name => "backward" ,
+    TA : chore.chore := (task_name => "turnarou" ,
 			 id => 7,
 			 deadline => <>,
 			 errand => external_package.print_nav'Access
@@ -95,8 +92,13 @@ procedure Main is
 			);
 
     -- This is the queue of HPS
-    QJS : HPS.schedule := (major_queue => (AC, SS, DF, DS, AC, DS, SS) );
-
+    QJS : HPS.schedule := (major_queue => (AC, SS, DF, DS, AC, DS, SL, SR, TA, TL, TR) );
+--   NB:  AC SS DF
+--   NH:    DS AC
+--   SC:      DS SL SR TA
+--   TR:        TR
+--   TL:          TL
+--   ERROR:
 begin
 
     QJS.run;
