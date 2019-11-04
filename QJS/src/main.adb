@@ -64,6 +64,35 @@ procedure Main is
 			 errand => external_package.print_nav'Access
 			);
 
+    DL : chore.chore := (task_name => "turnleft" ,
+			 id => 5,
+			 deadline => <>,
+			 errand => external_package.print_nav'Access
+			);
+
+    DR : chore.chore := (task_name => "turnrigh" ,
+			 id => 6,
+			 deadline => <>,
+			 errand => external_package.print_nav'Access
+			);
+
+    DB : chore.chore := (task_name => "backward" ,
+			 id => 7,
+			 deadline => <>,
+			 errand => external_package.print_nav'Access
+			);
+
+    SL : chore.chore := (task_name => "sensleft" ,
+			 id => 8,
+			 deadline => <>,
+			 errand => external_package.print_nav'Access
+			);
+
+    SR : chore.chore := (task_name => "sensrigh" ,
+			 id => 9,
+			 deadline => <>,
+			 errand => external_package.print_nav'Access
+			);
 
     -- This is the queue of HPS
     QJS : HPS.schedule := (major_queue => (AC, SS, DF, DS, AC, DS, SS) );
