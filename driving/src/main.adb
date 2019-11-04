@@ -1,6 +1,5 @@
--- TODO: implement watchdog
--- TODO: make write_to_m1 and write_to_m2 private
-
+-- TODO add servo code for SS, SL, SR tasks/functions
+-- TODO Turn Around code
 
 -- PACKAGES
 
@@ -30,7 +29,7 @@ procedure Main is
     SS : constant chore.chore := (task_name => "sensorst" ,
 				  id => 2,
 				  deadline => <>,
-				  errand => nav.drive_forward'Access  -- Needs changing
+				  errand => sensor.sensor_straight'Access
 				 );
 
     DF : constant chore.chore := (task_name => "forward " ,
@@ -66,13 +65,13 @@ procedure Main is
     SL : constant chore.chore := (task_name => "sensleft" ,
 				  id => 8,
 				  deadline => <>,
-				  errand => nav.drive_forward'Access  -- NEEDS CHANGING
+				  errand => sensor.sensor_left'Access
 				 );
 
     SR : constant chore.chore := (task_name => "sensrigh" ,
 				  id => 9,
 				  deadline => <>,
-				  errand => nav.drive_forward'Access  -- NEEDS CHANGING
+				  errand => sensor.sensor_right'Access
 				 );
 
 

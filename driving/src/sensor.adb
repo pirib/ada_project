@@ -1,6 +1,8 @@
 with MicroBit.IOs; use MicroBit.IOs;
 
 
+
+
 package body Sensor is
 
     --  PINS
@@ -46,38 +48,59 @@ package body Sensor is
 
 
     function read (Deadline : MicroBit.Time.Time_Ms) return Integer is
+	start_time : constant MicroBit.Time.Time_Ms := MicroBit.Time.Clock;
     begin
-	duration_echo_us := 0;
 
-	MicroBit.IOs.Set(sensor_TRIG_pin, False);
-	MicroBit.Time.HAL_Delay.Delay_Microseconds(10);
+	while MicroBit.Time.Clock - start_time < Deadline loop
+	    duration_echo_us := 0;
 
-	MicroBit.IOs.Set(sensor_TRIG_pin, True);
-	MicroBit.Time.HAL_Delay.Delay_Microseconds(10);
-	MicroBit.IOs.Set(sensor_TRIG_pin, False);
+	    MicroBit.IOs.Set(sensor_TRIG_pin, False);
+	    MicroBit.Time.HAL_Delay.Delay_Microseconds(10);
 
-	outerloop:
-	loop
+	    MicroBit.IOs.Set(sensor_TRIG_pin, True);
+	    MicroBit.Time.HAL_Delay.Delay_Microseconds(10);
+	    MicroBit.IOs.Set(sensor_TRIG_pin, False);
 
-	    if MicroBit.IOs.Set(sensor_ECHO_pin) then
+	    outerloop:
+	    loop
 
-		innerloop:
-		loop
-		    MicroBit.Time.HAL_Delay.Delay_Microseconds(1);
-		    if MicroBit.IOs.Set(sensor_ECHO_pin) then
-			duration_echo_us := duration_echo_us + 1;
-		    else
-			return duration_echo_us;
-		    end if;
-		end loop innerloop;
-	    else
-		return duration_echo_us;
-	    end if;
+		if MicroBit.IOs.Set(sensor_ECHO_pin) then
+
+		    innerloop:
+		    loop
+			MicroBit.Time.HAL_Delay.Delay_Microseconds(1);
+			if MicroBit.IOs.Set(sensor_ECHO_pin) then
+			    duration_echo_us := duration_echo_us + 1;
+			else
+			    return duration_echo_us;
+			end if;
+		    end loop innerloop;
+		else
+		    return duration_echo_us;
+		end if;
 	    
-	end loop outerloop;
+	    end loop outerloop;
 
+	end loop;
     end read;
 
+    function sensor_straight (Deadline :  MicroBit.Time.Time_Ms) return Integer is
+    begin
+	-- Set servo here
+	return read(Deadline);
+    end sensor_straight;
+   
+    function sensor_left (Deadline :  MicroBit.Time.Time_Ms) return Integer is
+    begin
+	-- Set servo here
+	return read(Deadline);
+    end sensor_left;
 
+    function sensor_right (Deadline :  MicroBit.Time.Time_Ms) return Integer is
+    begin
+	-- Set servo here
+	return read(Deadline);
+    end sensor_right;
+    
    
 end Sensor;

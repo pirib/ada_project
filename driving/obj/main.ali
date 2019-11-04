@@ -23,7 +23,7 @@ RN
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		76a5ff9c NE OO SU
+U main%b		main.adb		3cb3e652 NE OO SU
 W accelerometer%s	accelerometer.adb	accelerometer.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W chore%s		chore.adb		chore.ali
@@ -60,7 +60,7 @@ D nrf51_svd-spi.ads	20190914074758 d8f87c63 nrf51_svd.spi%s
 D nrf51_svd-timer.ads	20190914074758 31dae6f3 nrf51_svd.timer%s
 D nrf51_svd-twi.ads	20190914074758 87adf514 nrf51_svd.twi%s
 D qjs.ads		20191104123402 8fa29bfc qjs%s
-D sensor.ads		20191104124056 8664ae2e sensor%s
+D sensor.ads		20191104125038 cc72b7e0 sensor%s
 D system.ads		20190518152826 e69b74bd system%s
 D s-stoele.ads		20190518152826 2dc34a04 system.storage_elements%s
 D s-unstyp.ads		20190518152826 34867c83 system.unsigned_types%s
@@ -117,6 +117,6 @@ X 27 qjs.ads
 11a9*major_queue{7A10} 11|79m33
 16U15*run 11|92s14
 X 28 sensor.ads
-4K9*Sensor 11|13w6 13r32 28|21e11
+4K9*Sensor 11|13w6 13r32 28|20e11
 6I10*travel_time_us<integer> 11|13r39
 
