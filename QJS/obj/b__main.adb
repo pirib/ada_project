@@ -7,18 +7,18 @@ with Ada.Exceptions;
 
 package body ada_main is
 
-   E072 : Short_Integer; pragma Import (Ada, E072, "system__os_lib_E");
+   E075 : Short_Integer; pragma Import (Ada, E075, "system__os_lib_E");
    E013 : Short_Integer; pragma Import (Ada, E013, "system__soft_links_E");
    E025 : Short_Integer; pragma Import (Ada, E025, "system__exception_table_E");
    E040 : Short_Integer; pragma Import (Ada, E040, "ada__containers_E");
-   E068 : Short_Integer; pragma Import (Ada, E068, "ada__io_exceptions_E");
-   E052 : Short_Integer; pragma Import (Ada, E052, "ada__strings_E");
-   E054 : Short_Integer; pragma Import (Ada, E054, "ada__strings__maps_E");
-   E058 : Short_Integer; pragma Import (Ada, E058, "ada__strings__maps__constants_E");
-   E078 : Short_Integer; pragma Import (Ada, E078, "interfaces__c_E");
+   E070 : Short_Integer; pragma Import (Ada, E070, "ada__io_exceptions_E");
+   E055 : Short_Integer; pragma Import (Ada, E055, "ada__strings_E");
+   E057 : Short_Integer; pragma Import (Ada, E057, "ada__strings__maps_E");
+   E061 : Short_Integer; pragma Import (Ada, E061, "ada__strings__maps__constants_E");
+   E045 : Short_Integer; pragma Import (Ada, E045, "interfaces__c_E");
    E027 : Short_Integer; pragma Import (Ada, E027, "system__exceptions_E");
-   E080 : Short_Integer; pragma Import (Ada, E080, "system__object_reader_E");
-   E047 : Short_Integer; pragma Import (Ada, E047, "system__dwarf_lines_E");
+   E081 : Short_Integer; pragma Import (Ada, E081, "system__object_reader_E");
+   E050 : Short_Integer; pragma Import (Ada, E050, "system__dwarf_lines_E");
    E021 : Short_Integer; pragma Import (Ada, E021, "system__soft_links__initialize_E");
    E039 : Short_Integer; pragma Import (Ada, E039, "system__traceback__symbolic_E");
    E103 : Short_Integer; pragma Import (Ada, E103, "ada__tags_E");
@@ -178,23 +178,23 @@ package body ada_main is
       Ada.Containers'Elab_Spec;
       E040 := E040 + 1;
       Ada.Io_Exceptions'Elab_Spec;
-      E068 := E068 + 1;
+      E070 := E070 + 1;
       Ada.Strings'Elab_Spec;
-      E052 := E052 + 1;
+      E055 := E055 + 1;
       Ada.Strings.Maps'Elab_Spec;
-      E054 := E054 + 1;
+      E057 := E057 + 1;
       Ada.Strings.Maps.Constants'Elab_Spec;
-      E058 := E058 + 1;
+      E061 := E061 + 1;
       Interfaces.C'Elab_Spec;
-      E078 := E078 + 1;
+      E045 := E045 + 1;
       System.Exceptions'Elab_Spec;
       E027 := E027 + 1;
       System.Object_Reader'Elab_Spec;
-      E080 := E080 + 1;
+      E081 := E081 + 1;
       System.Dwarf_Lines'Elab_Spec;
-      E047 := E047 + 1;
+      E050 := E050 + 1;
       System.Os_Lib'Elab_Body;
-      E072 := E072 + 1;
+      E075 := E075 + 1;
       System.Soft_Links.Initialize'Elab_Body;
       E021 := E021 + 1;
       E013 := E013 + 1;
@@ -258,16 +258,16 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   F:\Code\Git\ada_project\QJS\obj\chore.o
-   --   F:\Code\Git\ada_project\QJS\obj\external_package.o
-   --   F:\Code\Git\ada_project\QJS\obj\hps.o
-   --   F:\Code\Git\ada_project\QJS\obj\main.o
-   --   -LF:\Code\Git\ada_project\QJS\obj\
-   --   -LF:\Code\Git\ada_project\QJS\obj\
-   --   -LD:/software/gnat2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/
+   --   /home/nico/Downloads/Real-Time-Systems/car_project/QJS_0411_v1/obj/chore.o
+   --   /home/nico/Downloads/Real-Time-Systems/car_project/QJS_0411_v1/obj/external_package.o
+   --   /home/nico/Downloads/Real-Time-Systems/car_project/QJS_0411_v1/obj/hps.o
+   --   /home/nico/Downloads/Real-Time-Systems/car_project/QJS_0411_v1/obj/main.o
+   --   -L/home/nico/Downloads/Real-Time-Systems/car_project/QJS_0411_v1/obj/
+   --   -L/home/nico/Downloads/Real-Time-Systems/car_project/QJS_0411_v1/obj/
+   --   -L/home/nico/opt/GNAT/2019/lib/gcc/x86_64-pc-linux-gnu/8.3.1/adalib/
    --   -static
    --   -lgnat
-   --   -Wl,--stack=0x2000000
+   --   -ldl
 --  END Object file/option list   
 
 end ada_main;

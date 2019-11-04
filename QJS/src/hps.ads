@@ -7,7 +7,7 @@ with external_package;
 package HPS is
 
    
-    type chore_queue is array (1..7) of chore.chore;
+    type chore_queue is array (1..11) of chore.chore;
    
     type schedule is tagged record
      
