@@ -7,8 +7,8 @@ package body Sensor is
 
     --  PINS
 
-    sensor_TRIG_pin: constant Pin_Id := 3;  -- sending the sensor
-    sensor_ECHO_pin: constant Pin_Id := 4;  -- receiving from the sensor
+    sensor_TRIG_pin: constant Pin_Id := 4;  -- sending the sensor
+    sensor_ECHO_pin: constant Pin_Id := 3;  -- receiving from the sensor
 
     -- VARS
     duration_echo_us: travel_time_us; -- Duration of the pulse from ECHO pin measured in MicroSeconds

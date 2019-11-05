@@ -10,7 +10,7 @@ package chore is
 
 	task_name:        String(1..8) := "taskname";
 	id:               Integer := 0;
-	deadline:         Microbit.Time.Time_MS := 0;
+	deadline:         Microbit.Time.Time_MS := 500;
 
 	-- this is the procedure under scrutiny
 	errand: function_pointer;

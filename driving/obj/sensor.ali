@@ -23,7 +23,7 @@ RV NO_DISPATCHING_CALLS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U sensor%b		sensor.adb		36dfd74c NE OO PK
+U sensor%b		sensor.adb		a7d8db00 NE OO PK
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W microbit%s		microbit.ads		microbit.ali
 W microbit.ios%s	microbit-ios.adb	microbit-ios.ali
@@ -59,7 +59,7 @@ D nrf51_svd-spi.ads	20190914074758 d8f87c63 nrf51_svd.spi%s
 D nrf51_svd-timer.ads	20190914074758 31dae6f3 nrf51_svd.timer%s
 D nrf51_svd-twi.ads	20190914074758 87adf514 nrf51_svd.twi%s
 D sensor.ads		20191105100900 fa88ca7e sensor%s
-D sensor.adb		20191105102144 cd9a80b7 sensor%b
+D sensor.adb		20191105132616 5c9d8cfb sensor%b
 D system.ads		20190518152826 e69b74bd system%s
 D s-assert.ads		20190518152826 cd8d2c94 system.assertions%s
 D s-stoele.ads		20190518152826 2dc34a04 system.storage_elements%s

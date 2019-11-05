@@ -37,6 +37,9 @@ package body QJS is
 		    elsif current_task_id = 1 and answer = -1 then -- If the value from SS is bad
 			current_queue_id := SC_q;
 
+		    elsif answer = 0 then
+			current_queue_id := NB_q;
+
 		    end if;
 
 		    exit NB when current_queue_id /= NB_q;
@@ -54,6 +57,9 @@ package body QJS is
 
 		    if current_task_id = 1 and answer = 1 then -- If the value from AC is good
 			current_queue_id := NB_q;
+		    elsif answer = 0 then
+			current_queue_id := NB_q;
+
 		    end if;
 
 		    exit NH when current_queue_id /= NH_q;
@@ -71,6 +77,8 @@ package body QJS is
 
 		    if current_task_id = 2 and answer = 1 then -- If the value from SS is good
 			current_queue_id := NB_q;
+		    elsif answer = 0 then
+			current_queue_id := NB_q;
 		    end if;
 
 		    exit SC when current_queue_id /= SC_q;
@@ -86,6 +94,8 @@ package body QJS is
 
 		    if Answer = 1 then -- If the value from SS is good
 			current_queue_id := NB_q;
+		    elsif answer = 0 then
+			current_queue_id := NB_q;
 		    end if;
 
 		    exit TL when current_queue_id /= TL_q;
@@ -99,6 +109,8 @@ package body QJS is
 		    Answer := self.major_queue(I).execute( self.major_queue(I).deadline );
 
 		    if Answer = 1 then -- If the value from SS is good
+			current_queue_id := NB_q;
+		    elsif answer = 0 then
 			current_queue_id := NB_q;
 		    end if;
 

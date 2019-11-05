@@ -1,1 +1,3 @@
-nav.adb:173:13: warning: useless assignment to "temp", value overwritten at line 174
+nav.adb:81:21: warning: pragma Unreferenced given for "zero"
+nav.adb:82:21: warning: pragma Unreferenced given for "zero"
+nav.adb:178:13: warning: useless assignment to "temp", value overwritten at line 179

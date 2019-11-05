@@ -6,7 +6,7 @@ package Nav is
     procedure stop;
 --      procedure drive_left;
 --      procedure drive_right;
---      procedure drive_forward;
+      procedure drive_forward;
 --      procedure drive_backward;
 
     function drive_forward (Deadline : MicroBit.Time.Time_Ms) return Integer;

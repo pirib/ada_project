@@ -28,7 +28,7 @@ package body Nav is
     zero: constant Analog_Value := 0;
     low: constant Analog_Value := 150;
     med: constant Analog_Value := 200;
-    high: constant Analog_Value := 500;
+    high: constant Analog_Value := 700;
 
     -- Indicates that these objects are unreferenced on purpose.
     Pragma Unreferenced(zero, low, med); 
@@ -78,10 +78,15 @@ package body Nav is
 
     procedure stop is
     begin
-	write_to_m1(False, False);
-	write_to_m2(False, False);
+	write_to_m1(zero, False);
+	write_to_m2(zero, False);
     end stop;
     
+    procedure drive_forward is
+    begin
+	write_to_m1(high, True);
+	write_to_m2(high, True);
+    end drive_forward;
 
     function stop (Deadline : MicroBit.Time.Time_Ms) return Integer is
 	start_time : constant MicroBit.Time.Time_Ms := MicroBit.Time.Clock;

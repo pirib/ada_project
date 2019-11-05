@@ -11,12 +11,12 @@ node: { title: "memcpy" label: "builtin_memcpy\n<built-in>" shape : ellipse }
 node: { title: "chore__execute" label: "execute\nF:\Code\Git\ada_project\driving\src\chore.ads:20:14" shape : ellipse }
 node: { title: "chore__Oeq" label: "=\nF:\Code\Git\ada_project\driving\src\chore.ads:9:10" shape : ellipse }
 node: { title: "chore__choreIP" label: "choreip\nF:\Code\Git\ada_project\driving\src\chore.ads:9:10" shape : ellipse }
-node: { title: "qjs__run" label: "RUN\nF:\Code\Git\ada_project\driving\src\qjs.adb:5:4\n80 bytes (static)" }
-edge: { sourcename: "qjs__run" targetname: "chore__execute" label: "F:\Code\Git\ada_project\driving\src\qjs.adb:99:23" }
-edge: { sourcename: "qjs__run" targetname: "chore__execute" label: "F:\Code\Git\ada_project\driving\src\qjs.adb:85:23" }
-edge: { sourcename: "qjs__run" targetname: "chore__execute" label: "F:\Code\Git\ada_project\driving\src\qjs.adb:69:23" }
-edge: { sourcename: "qjs__run" targetname: "chore__execute" label: "F:\Code\Git\ada_project\driving\src\qjs.adb:52:23" }
-edge: { sourcename: "qjs__run" targetname: "chore__execute" label: "F:\Code\Git\ada_project\driving\src\qjs.adb:31:23" }
+node: { title: "qjs__run" label: "RUN\nF:\Code\Git\ada_project\driving\src\qjs.adb:5:5\n80 bytes (static)" }
+edge: { sourcename: "qjs__run" targetname: "chore__execute" label: "F:\Code\Git\ada_project\driving\src\qjs.adb:109:28" }
+edge: { sourcename: "qjs__run" targetname: "chore__execute" label: "F:\Code\Git\ada_project\driving\src\qjs.adb:93:28" }
+edge: { sourcename: "qjs__run" targetname: "chore__execute" label: "F:\Code\Git\ada_project\driving\src\qjs.adb:75:28" }
+edge: { sourcename: "qjs__run" targetname: "chore__execute" label: "F:\Code\Git\ada_project\driving\src\qjs.adb:55:28" }
+edge: { sourcename: "qjs__run" targetname: "chore__execute" label: "F:\Code\Git\ada_project\driving\src\qjs.adb:31:28" }
 node: { title: "qjs___assign" label: "QJS\nF:\Code\Git\ada_project\driving\src\qjs.ads:9:10\n24 bytes (static)" }
 edge: { sourcename: "qjs___assign" targetname: "memcpy" }
 node: { title: "qjs__Oeq" label: "=\nF:\Code\Git\ada_project\driving\src\qjs.ads:9:5\n24 bytes (static)" }

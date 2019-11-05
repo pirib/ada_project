@@ -17,25 +17,21 @@ package body chore is
 	    end if;
 
 
-	elsif self.id = 2 then -- SS
+	elsif self.id = 2 or self.id = 8 or self.id = 9 then -- SS
 
-	    if temp = 1 then
-		return 1; -- normal behavior value
+	    if temp < 10 then
+		return 1; -- there is a wall
 	    else
-		return -1; -- non horizontal value
+		return -1; -- there is no wall
 	    end if;
 
 
-	elsif self.id = 3 then -- DF
-	    return 1;  --task should only return normal behavior value
-
-
-	elsif self.id = 4 then  -- DS
+	elsif self.id = 3 or self.id = 4 or self.id = 5 or self.id = 6 or self.id = 7 then  -- DS
 	    return 1;  --task should only return normal behavior value
 
 	    -- This will produce an errr by default
 	else -- do error handling here: either call ERROR_q or restart from NB_q?
-	    return 0;
+	    return 1;
 
 	end if;
 

@@ -4,7 +4,9 @@
 -- PACKAGES
 
 -- Microbit
---with MicroBit.Time;
+with MicroBit.Time;
+with MicroBit;
+
 
 -- EXTERNAL PACKAGES
 with Nav;
@@ -83,13 +85,28 @@ procedure Main is
     --   TL:          TL
     --   ERROR:
 
+    testvalue : Integer;
 begin
 
-    Accelerometer.Initialize;
-
-    Schedule.run;
+     Accelerometer.Initialize;
 
 
+
+    --    Schedule.run;
+
+    --    testvalue := nav.drive_forward(500) ;
+    --      nav.drive_forward;
+    --      MicroBit.Time.Delay_Ms(10000);
+
+    LOOP
+	Schedule.run;
+--  	testvalue := nav.drive_forward(500) ;
+--  	MicroBit.Time.Delay_Ms(3000);
+--  	nav.stop;
+--  	MicroBit.Time.Delay_Ms(1000);
+--  	testvalue := nav.turn_left(1000);
+--  	MicroBit.Time.Delay_Ms(1000);
+    END LOOP;
     -- ============================================================
     -- OLD STUFF
     -- =============================================================
