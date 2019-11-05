@@ -1,4 +1,2 @@
-main.adb:7:14: warning: unit "MicroBit.Time" is not referenced
-main.adb:8:06: warning: no entities of "MicroBit" are referenced
-main.adb:87:05: warning: variable "testvalue" is never read and never assigned
-main.adb:193:05: warning: unreachable code
+main.adb:88:05: warning: variable "testvalue" is never read and never assigned
+main.adb:194:05: warning: unreachable code

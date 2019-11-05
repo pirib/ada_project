@@ -89,7 +89,7 @@ procedure Main is
 begin
 
      Accelerometer.Initialize;
-
+    MicroBit.Time.Delay_Ms(1000);
 
 
     --    Schedule.run;

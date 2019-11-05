@@ -34,7 +34,7 @@ package body QJS is
 		    if current_task_id = 1 and answer = -1 then -- If the value from AC is bad
 			current_queue_id := NH_q;
 
-		    elsif current_task_id = 1 and answer = -1 then -- If the value from SS is bad
+		    elsif current_task_id = 2 and answer = -1 then -- If the value from SS is bad
 			current_queue_id := SC_q;
 
 		    elsif answer = 0 then

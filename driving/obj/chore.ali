@@ -25,7 +25,7 @@ RV NO_STANDARD_STORAGE_POOLS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U chore%b		chore.adb		f182bb2b NE OO PK IL
+U chore%b		chore.adb		673205ba NE OO PK IL
 Z ada.tags%s		a-tags.adb		a-tags.ali
 
 U chore%s		chore.ads		2b8a9afd EE NE OO PK IL
@@ -38,7 +38,7 @@ Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
 D ada.ads		20190518152826 76789da1 ada%s
 D a-tags.ads		20190518152826 2dde273c ada.tags%s
 D chore.ads		20191105143956 40361b3b chore%s
-D chore.adb		20191105143858 b1b4a010 chore%b
+D chore.adb		20191105144936 27041e81 chore%b
 D hal.ads		20190914074758 2b42c80e hal%s
 D hal-gpio.ads		20190914074758 7f0c2ffe hal.gpio%s
 D hal-i2c.ads		20190914074758 0ed73138 hal.i2c%s
@@ -79,7 +79,7 @@ X 3 chore.ads
 . 29r75
 20m45 Deadline{12|37M12} 4|5b45 8r33
 X 4 chore.adb
-6i9 temp{integer} 8m9 13r16 13r30 22r16
+6i9 temp{integer} 8m9 13r16 13r31
 X 5 hal.ads
 160M9*UInt64<10|77M9>
 X 6 hal-gpio.ads

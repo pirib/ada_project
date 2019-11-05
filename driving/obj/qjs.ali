@@ -26,7 +26,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
 RV SPARK_05
 
-U qjs%b			qjs.adb			d9c2d427 NE OO PK IU
+U qjs%b			qjs.adb			1d7f3384 NE OO PK IU
 
 U qjs%s			qjs.ads			cf9480c7 EE NE OO PK IU
 Z ada.tags%s		a-tags.adb		a-tags.ali
@@ -58,7 +58,7 @@ D nrf51_svd-spi.ads	20190914074758 d8f87c63 nrf51_svd.spi%s
 D nrf51_svd-timer.ads	20190914074758 31dae6f3 nrf51_svd.timer%s
 D nrf51_svd-twi.ads	20190914074758 87adf514 nrf51_svd.twi%s
 D qjs.ads		20191104123402 8fa29bfc qjs%s
-D qjs.adb		20191105133630 56604fdb qjs%b
+D qjs.adb		20191105144614 92dda878 qjs%b
 D system.ads		20190518152826 e69b74bd system%s
 D s-stoele.ads		20190518152826 2dc34a04 system.storage_elements%s
 D s-unstyp.ads		20190518152826 34867c83 system.unsigned_types%s
