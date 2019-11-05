@@ -22,7 +22,7 @@ RN
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U nav%b			nav.adb			8fe43c60 NE OO PK
+U nav%b			nav.adb			dde2755e NE OO PK
 W microbit%s		microbit.ads		microbit.ali
 W microbit.ios%s	microbit-ios.adb	microbit-ios.ali
 
@@ -43,7 +43,7 @@ D microbit.ads		20191028100244 c9bb1867 microbit%s
 D microbit-ios.ads	20191028100244 c34f2bcd microbit.ios%s
 D microbit-time.ads	20191028100244 6bbc81c6 microbit.time%s
 D nav.ads		20191105145153 85e0bc78 nav%s
-D nav.adb		20191105160230 c94babd5 nav%b
+D nav.adb		20191105183744 9b4de2eb nav%b
 D nrf51.ads		20191028100244 548f0fe8 nrf51%s
 D nrf51-device.ads	20191028100244 a7d15d54 nrf51.device%s
 D nrf51-gpio.ads	20191028100244 8e815cce nrf51.gpio%s
@@ -166,9 +166,9 @@ X 14 nav.adb
 19i4 m2in2_pin{11|36I9} 55r25 66r25 75r25
 28i4 zero{11|58I9} 34r24 81r19 82r19 96r22 97r22
 29i4 low{11|58I9} 34r30
-30i4 med{11|58I9} 34r35
-31i4 high{11|58I9} 87r19 88r19 110r22 111r22 124r22 125r22 139r22 140r22
-. 157r22 158r22 177r22 178r19
+30i4 med{11|58I9} 34r35 110r22 111r22
+31i4 high{11|58I9} 87r19 88r19 124r22 125r22 139r22 140r22 157r22 158r22
+. 177r22 178r19
 37U14 write_to_m1 37b14 37>27 38>27 46l8 46t19 81s7 87s7 96s10 110s10 124s10
 . 139s10 157s10 177s10
 37i27 anal_value{11|58I9} 41r39

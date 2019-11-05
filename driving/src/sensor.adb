@@ -79,21 +79,22 @@ package body Sensor is
 
    function sensor_straight (Deadline :  MicroBit.Time.Time_Ms) return Integer is
    begin
-      Microbit.Servos.Go(1,45);
+      Microbit.Servos.Go(1,45); -- center angle = 45
+  
 	
       return read(Deadline);
    end sensor_straight;
    
    function sensor_left (Deadline :  MicroBit.Time.Time_Ms) return Integer is
    begin
-      Microbit.Servos.Go(1,90);
+      Microbit.Servos.Go(1,90); -- left angle = 90
 
       return read(Deadline);
    end sensor_left;
 
    function sensor_right (Deadline :  MicroBit.Time.Time_Ms) return Integer is
    begin
-      Microbit.Servos.Go(1,0);
+      Microbit.Servos.Go(1,0); -- right angle = 0
 	
       return read(Deadline);
    end sensor_right;

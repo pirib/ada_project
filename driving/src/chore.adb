@@ -19,7 +19,7 @@ package body chore is
 
 	elsif self.id = 2 or self.id = 8 or self.id = 9 then -- SS
 
-	    if temp < 100 then
+	    if temp < 70 then
 		return -1; -- there is a wall
 	    else
 		return 1; -- there is no wall

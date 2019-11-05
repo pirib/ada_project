@@ -27,8 +27,8 @@ package body Nav is
     
    zero: constant Analog_Value := 0;
    low: constant Analog_Value := 150;
-   med: constant Analog_Value := 200;
-   high: constant Analog_Value := 700;
+   med: constant Analog_Value := 350;
+   high: constant Analog_Value := 850;
 
    -- Indicates that these objects are unreferenced on purpose.
    Pragma Unreferenced(zero, low, med); 
@@ -107,8 +107,8 @@ package body Nav is
    begin
 
       while MicroBit.Time.Clock - start_time < Deadline loop
-         write_to_m1(high, True);
-         write_to_m2(high, True);
+         write_to_m1(med, True);
+         write_to_m2(med, True);
          return 1;
       end loop;
       return -1;
@@ -138,7 +138,7 @@ package body Nav is
       while MicroBit.Time.Clock - start_time < Deadline loop
          write_to_m1(high, True);
          write_to_m2(high, False);
-         MicroBit.Time.Delay_Ms(50);
+         MicroBit.Time.Delay_Ms(70);
          exit ddl when MicroBit.Time.Clock - start_time < Deadline;
          stop;
          return 1;
@@ -156,7 +156,7 @@ package body Nav is
       while MicroBit.Time.Clock - start_time < Deadline loop
          write_to_m1(high, False);
          write_to_m2(high, True);
-         MicroBit.Time.Delay_Ms(50);
+         MicroBit.Time.Delay_Ms(70);
          stop;
          exit ddl when MicroBit.Time.Clock - start_time < Deadline;
          return 1;
