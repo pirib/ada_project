@@ -1,7 +1,7 @@
 V "GNAT Lib v2019"
 A -O0
 A -gnatA
-A --RTS=D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\
+A --RTS=/home/nico/opt/GNAT/2019-arm-elf/arm-eabi/lib/gnat/zfp-cortex-m0/
 A -mlittle-endian
 A -mthumb
 A -mfloat-abi=soft
@@ -22,7 +22,7 @@ RN
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U nav%b			nav.adb			c81a9d67 NE OO PK
+U nav%b			nav.adb			8fe43c60 NE OO PK
 W microbit%s		microbit.ads		microbit.ali
 W microbit.ios%s	microbit-ios.adb	microbit-ios.ali
 
@@ -30,34 +30,37 @@ U nav%s			nav.ads			ee5c3dbe EE NE OO PK
 W microbit%s		microbit.ads		microbit.ali
 W microbit.time%s	microbit-time.adb	microbit-time.ali
 
-D ada.ads		20190518152826 76789da1 ada%s
-D a-tags.ads		20190518152826 2dde273c ada.tags%s
-D hal.ads		20190914074758 2b42c80e hal%s
-D hal-gpio.ads		20190914074758 7f0c2ffe hal.gpio%s
-D hal-i2c.ads		20190914074758 0ed73138 hal.i2c%s
-D hal-spi.ads		20190914074758 fe139819 hal.spi%s
-D hal-time.ads		20190914074758 f5295cd7 hal.time%s
-D interfac.ads		20190518152826 5ab55268 interfaces%s
-D microbit.ads		20190914074758 4ce6a4c2 microbit%s
-D microbit-ios.ads	20190914074758 c34f2bcd microbit.ios%s
-D microbit-time.ads	20191004151342 6bbc81c6 microbit.time%s
-D nav.ads		20191105135516 85e0bc78 nav%s
-D nav.adb		20191105142752 8eb50ad2 nav%b
-D nrf51.ads		20190914074758 548f0fe8 nrf51%s
-D nrf51-device.ads	20190914074758 3066f1b0 nrf51.device%s
-D nrf51-gpio.ads	20190914074758 8e815cce nrf51.gpio%s
-D nrf51-rtc.ads		20190914074758 8c8bcaa7 nrf51.rtc%s
-D nrf51-spi_master.ads	20190914074758 24910ac0 nrf51.spi_master%s
-D nrf51-timers.ads	20190914074758 6db9a45c nrf51.timers%s
-D nrf51-twi.ads		20190914074758 c6a4f1a2 nrf51.twi%s
-D nrf51_svd.ads		20190914074758 a764dc2d nrf51_svd%s
-D nrf51_svd-rtc.ads	20190914074758 7ec0736e nrf51_svd.rtc%s
-D nrf51_svd-spi.ads	20190914074758 d8f87c63 nrf51_svd.spi%s
-D nrf51_svd-timer.ads	20190914074758 31dae6f3 nrf51_svd.timer%s
-D nrf51_svd-twi.ads	20190914074758 87adf514 nrf51_svd.twi%s
-D system.ads		20190518152826 e69b74bd system%s
-D s-stoele.ads		20190518152826 2dc34a04 system.storage_elements%s
-D s-unstyp.ads		20190518152826 34867c83 system.unsigned_types%s
+D ada.ads		20190518110050 76789da1 ada%s
+D a-tags.ads		20190518110050 2dde273c ada.tags%s
+D hal.ads		20191028100244 2b42c80e hal%s
+D hal-gpio.ads		20191028100244 7f0c2ffe hal.gpio%s
+D hal-i2c.ads		20191028100244 0ed73138 hal.i2c%s
+D hal-spi.ads		20191028100244 fe139819 hal.spi%s
+D hal-time.ads		20191028100244 f5295cd7 hal.time%s
+D hal-uart.ads		20191028100244 d58316b4 hal.uart%s
+D interfac.ads		20190518110050 5ab55268 interfaces%s
+D microbit.ads		20191028100244 c9bb1867 microbit%s
+D microbit-ios.ads	20191028100244 c34f2bcd microbit.ios%s
+D microbit-time.ads	20191028100244 6bbc81c6 microbit.time%s
+D nav.ads		20191105145153 85e0bc78 nav%s
+D nav.adb		20191105160230 c94babd5 nav%b
+D nrf51.ads		20191028100244 548f0fe8 nrf51%s
+D nrf51-device.ads	20191028100244 a7d15d54 nrf51.device%s
+D nrf51-gpio.ads	20191028100244 8e815cce nrf51.gpio%s
+D nrf51-rtc.ads		20191028100244 8c8bcaa7 nrf51.rtc%s
+D nrf51-spi_master.ads	20191028100244 24910ac0 nrf51.spi_master%s
+D nrf51-timers.ads	20191028100244 6db9a45c nrf51.timers%s
+D nrf51-twi.ads		20191028100244 c6a4f1a2 nrf51.twi%s
+D nrf51-uart.ads	20191028100244 bcd9b881 nrf51.uart%s
+D nrf51_svd.ads		20191028100244 a764dc2d nrf51_svd%s
+D nrf51_svd-rtc.ads	20191028100244 7ec0736e nrf51_svd.rtc%s
+D nrf51_svd-spi.ads	20191028100244 d8f87c63 nrf51_svd.spi%s
+D nrf51_svd-timer.ads	20191028100244 31dae6f3 nrf51_svd.timer%s
+D nrf51_svd-twi.ads	20191028100244 87adf514 nrf51_svd.twi%s
+D nrf51_svd-uart.ads	20191028100244 bc286d36 nrf51_svd.uart%s
+D system.ads		20190518110049 e69b74bd system%s
+D s-stoele.ads		20190518110050 2dc34a04 system.storage_elements%s
+D s-unstyp.ads		20190518110050 34867c83 system.unsigned_types%s
 G a e
 G c Z s b [stop nav 6 15 none]
 G c Z s b [drive_forward nav 9 17 none]
@@ -67,10 +70,10 @@ G c Z s b [turn_left nav 14 14 none]
 G c Z s b [turn_right nav 15 14 none]
 G c Z s b [stop nav 16 14 none]
 G c Z s b [turn_around nav 17 14 none]
-G c Z b b [write_to_m1 nav 37 15 none]
-G c Z b b [write_to_m2 nav 48 15 none]
-G c Z b b [write_to_m1 nav 61 15 none]
-G c Z b b [write_to_m2 nav 70 15 none]
+G c Z b b [write_to_m1 nav 37 14 none]
+G c Z b b [write_to_m2 nav 48 14 none]
+G c Z b b [write_to_m1 nav 61 14 none]
+G c Z b b [write_to_m2 nav 70 14 none]
 G r c none [stop nav 6 15 none] [write microbit__ios 64 14 none]
 G r c none [stop nav 6 15 none] [set microbit__ios 52 14 none]
 G r c none [drive_forward nav 9 17 none] [write microbit__ios 64 14 none]
@@ -90,19 +93,19 @@ G r c none [turn_right nav 15 14 none] [write microbit__ios 64 14 none]
 G r c none [turn_right nav 15 14 none] [set microbit__ios 52 14 none]
 G r c none [turn_right nav 15 14 none] [delay_ms microbit__time 41 14 none]
 G r c none [stop nav 16 14 none] [clock microbit__time 39 13 none]
+G r c none [stop nav 16 14 none] [write microbit__ios 64 14 none]
 G r c none [stop nav 16 14 none] [set microbit__ios 52 14 none]
-G r c none [turn_around nav 17 14 none] [clock microbit__time 39 13 none]
 G r c none [turn_around nav 17 14 none] [write microbit__ios 64 14 none]
 G r c none [turn_around nav 17 14 none] [set microbit__ios 52 14 none]
 G r c none [turn_around nav 17 14 none] [delay_ms microbit__time 41 14 none]
-G r c none [write_to_m1 nav 37 15 none] [write microbit__ios 64 14 none]
-G r c none [write_to_m1 nav 37 15 none] [set microbit__ios 52 14 none]
-G r c none [write_to_m2 nav 48 15 none] [write microbit__ios 64 14 none]
-G r c none [write_to_m2 nav 48 15 none] [set microbit__ios 52 14 none]
-G r c none [write_to_m1 nav 61 15 none] [set microbit__ios 52 14 none]
-G r c none [write_to_m2 nav 70 15 none] [set microbit__ios 52 14 none]
+G r c none [write_to_m1 nav 37 14 none] [write microbit__ios 64 14 none]
+G r c none [write_to_m1 nav 37 14 none] [set microbit__ios 52 14 none]
+G r c none [write_to_m2 nav 48 14 none] [write microbit__ios 64 14 none]
+G r c none [write_to_m2 nav 48 14 none] [set microbit__ios 52 14 none]
+G r c none [write_to_m1 nav 61 14 none] [set microbit__ios 52 14 none]
+G r c none [write_to_m2 nav 70 14 none] [set microbit__ios 52 14 none]
 X 3 hal.ads
-160M9*UInt64<8|77M9>
+160M9*UInt64<9|77M9>
 X 4 hal-gpio.ads
 47h9*GPIO_Point
 X 5 hal-i2c.ads
@@ -111,81 +114,80 @@ X 6 hal-spi.ads
 48h9*SPI_Port
 X 7 hal-time.ads
 34h9*Delays
-X 8 interfac.ads
+X 8 hal-uart.ads
+48h9*UART_Port
+X 9 interfac.ads
 77M9*Unsigned_64
-X 9 microbit.ads
-35K9*MicroBit 67e13 12|1r6 1r33 12r40 13r41 14r36 15r37 16r31 17r39 13|1r6
-. 1r24 41r9 43r9 44r9 52r9 54r9 55r9 65r9 66r9 74r9 75r9 91r31 92r31 92r56
-. 95r15 105r40 106r31 106r56 109r15 119r41 120r31 120r56 123r15 133r36 134r31
-. 134r56 138r15 141r13 142r27 151r37 152r31 152r56 156r15 159r13 161r27 171r38
-. 172r31 172r56 177r15 180r27
-X 10 microbit-ios.ads
-34K18*IOs 98e17 13|1w15 1r33 41r18 43r18 44r18 52r18 54r18 55r18 65r18 66r18
-. 74r18 75r18
-36I9*Pin_Id<short_short_integer> 13|11r26 12r25 13r25 17r26 18r25 19r25
-52U14*Set 13|43s22 44s22 54s22 55s22 65s22 66s22 74s22 75s22
-58I9*Analog_Value<short_integer> 13|28r20 29r19 30r19 31r20 37r40 48r40
-64U14*Write 13|41s22 52s22
-X 11 microbit-time.ads
-35K18*Time 81e18 12|1w15 1r42 12r49 13r50 14r45 15r46 16r40 17r48 13|91r40
-. 92r40 92r65 95r24 105r49 106r40 106r65 109r24 119r50 120r40 120r65 123r24
-. 133r45 134r40 134r65 138r24 141r22 142r36 151r46 152r40 152r65 156r24 159r22
-. 161r36 171r47 172r40 172r65 177r24 180r36
-37M12*Time_Ms{3|160M9} 12|1r47 12r54 13r55 14r50 15r51 16r45 17r53 13|91r45
-. 92r45 105r54 106r45 119r55 120r45 133r50 134r45 151r51 152r45 171r52 172r45
-39V13*Clock{37M12} 13|92s70 95s29 106s70 109s29 120s70 123s29 134s70 138s29
-. 142s41 152s70 156s29 161s41 172s70 177s29 180s41
-41U14*Delay_Ms 13|141s27 159s27
-X 12 nav.ads
-4K9*Nav 19l5 19e8 13|5b14 188l5 188t8
-6U15*stop 13|79b15 83l9 83t13 143s13 160s13
-9U17*drive_forward 13|85b15 89l9 89t22
-12V14*drive_forward{integer} 12>29 13|105b14 116l9 116t22
-12m29 Deadline{11|37M12} 13|105b29 109r50
-13V14*drive_backward{integer} 13>30 13|119b14 130l9 130t23
-13m30 Deadline{11|37M12} 13|119b30 123r50
-14V14*turn_left{integer} 14>25 13|133b14 148l9 148t18
-14m25 Deadline{11|37M12} 13|133b25 138r50 142r62
-15V14*turn_right{integer} 15>26 13|151b14 166l9 166t19 178s21 179s21
-15m26 Deadline{11|37M12} 13|151b26 156r50 161r62
-16V14*stop{integer} 16>20 13|91b14 102l9 102t13
-16m20 Deadline{11|37M12} 13|91b20 95r50
-17V14*turn_around{integer} 17>28 13|171b14 185l9 185t20
-17m28 Deadline{11|37M12} 13|171b27 177r50 178r32 179r32 180r62
-X 13 nav.adb
-11i5 m1anal_pin{10|36I9} 41r29
-12i5 m1in1_pin{10|36I9} 43r27
-13i5 m1in2_pin{10|36I9} 44r27
-17i5 m2anal_pin{10|36I9} 52r29
-18i5 m2in1_pin{10|36I9} 54r27 65r27 74r27
-19i5 m2in2_pin{10|36I9} 55r27 66r27 75r27
-28i5 zero{10|58I9} 34r25 81r21 82r21
-29i5 low{10|58I9} 34r31
-30i5 med{10|58I9} 34r36
-31i5 high{10|58I9} 87r21 88r21 110r25 111r25 124r25 125r25 139r25 140r25
-. 157r25 158r25
-37U15 write_to_m1 37b15 37>28 38>28 46l9 46t20 81s9 87s9 110s13 124s13 139s13
-. 157s13
-37i28 anal_value{10|58I9} 41r41
-38b28 in_value{boolean} 43r39 44r43
-48U15 write_to_m2 48b15 48>28 49>28 57l9 57t20 82s9 88s9 111s13 125s13 140s13
-. 158s13
-48i28 anal_value{10|58I9} 52r41
-49b28 in_value{boolean} 54r39 55r43
-61U15 write_to_m1 61b15 61>28 62>28 68l9 68t20 96s13
-61b28 in_value1{boolean} 65r39
-62b28 in_value2{boolean} 66r39
-70U15 write_to_m2 70b15 70>28 71>28 77l9 77t20 97s13
-70b28 in_value1{boolean} 74r39
-71b28 in_value2{boolean} 75r39
-92m9 start_time{11|37M12} 95r37
-106m9 start_time{11|37M12} 109r37
-120m9 start_time{11|37M12} 123r37
-134m9 start_time{11|37M12} 138r37 142r49
-137l9 ddl 142r18 145l18 145e21
-152m9 start_time{11|37M12} 156r37 161r49
-155l9 ddl 161r18 163l18 163e21
-172m9 start_time{11|37M12} 177r37 180r49
-173i9 temp{integer} 178m13 179m13 183r16
-176l9 ddl 180r18 182l18 182e21
+X 10 microbit.ads
+35K9*MicroBit 70e13 13|1r6 1r33 12r40 13r41 14r36 15r37 16r31 17r39 14|1r6
+. 1r24 41r7 43r7 44r7 52r7 54r7 55r7 65r7 66r7 74r7 75r7 91r30 92r29 92r54
+. 95r13 105r39 106r29 106r54 109r13 119r40 120r29 120r54 123r13 133r35 134r29
+. 134r54 138r13 141r10 142r24 151r36 152r29 152r54 156r13 159r10 161r24 171r37
+. 180r10
+X 11 microbit-ios.ads
+34K18*IOs 98e17 14|1w15 1r33 41r16 43r16 44r16 52r16 54r16 55r16 65r16 66r16
+. 74r16 75r16
+36I9*Pin_Id<short_short_integer> 14|11r25 12r24 13r24 17r25 18r24 19r24
+52U14*Set 14|43s20 44s20 54s20 55s20 65s20 66s20 74s20 75s20
+58I9*Analog_Value<short_integer> 14|28r19 29r18 30r18 31r19 37r39 48r39
+64U14*Write 14|41s20 52s20
+X 12 microbit-time.ads
+35K18*Time 81e18 13|1w15 1r42 12r49 13r50 14r45 15r46 16r40 17r48 14|91r39
+. 92r38 92r63 95r22 105r48 106r38 106r63 109r22 119r49 120r38 120r63 123r22
+. 133r44 134r38 134r63 138r22 141r19 142r33 151r45 152r38 152r63 156r22 159r19
+. 161r33 171r46 180r19
+37M12*Time_Ms{3|160M9} 13|1r47 12r54 13r55 14r50 15r51 16r45 17r53 14|91r44
+. 92r43 105r53 106r43 119r54 120r43 133r49 134r43 151r50 152r43 171r51
+39V13*Clock{37M12} 14|92s68 95s27 106s68 109s27 120s68 123s27 134s68 138s27
+. 142s38 152s68 156s27 161s38
+41U14*Delay_Ms 14|141s24 159s24 180s24
+X 13 nav.ads
+4K9*Nav 19l5 19e8 14|5b14 186l5 186t8
+6U15*stop 14|79b14 83l8 83t12 143s10 160s10
+9U17*drive_forward 14|85b14 89l8 89t21
+12V14*drive_forward{integer} 12>29 14|105b13 116l8 116t21
+12m29 Deadline{12|37M12} 14|105b28 109r48
+13V14*drive_backward{integer} 13>30 14|119b13 130l8 130t22
+13m30 Deadline{12|37M12} 14|119b29 123r48
+14V14*turn_left{integer} 14>25 14|133b13 148l8 148t17
+14m25 Deadline{12|37M12} 14|133b24 138r48 142r59
+15V14*turn_right{integer} 15>26 14|151b13 166l8 166t18
+15m26 Deadline{12|37M12} 14|151b25 156r48 161r59
+16V14*stop{integer} 16>20 14|91b13 102l8 102t12
+16m20 Deadline{12|37M12} 14|91b19 95r48
+17V14*turn_around{integer} 17>28 14|171b13 183l8 183t19
+17m28 Deadline{12|37M12} 14|171b26 180r33
+X 14 nav.adb
+11i4 m1anal_pin{11|36I9} 41r27
+12i4 m1in1_pin{11|36I9} 43r25
+13i4 m1in2_pin{11|36I9} 44r25
+17i4 m2anal_pin{11|36I9} 52r27
+18i4 m2in1_pin{11|36I9} 54r25 65r25 74r25
+19i4 m2in2_pin{11|36I9} 55r25 66r25 75r25
+28i4 zero{11|58I9} 34r24 81r19 82r19 96r22 97r22
+29i4 low{11|58I9} 34r30
+30i4 med{11|58I9} 34r35
+31i4 high{11|58I9} 87r19 88r19 110r22 111r22 124r22 125r22 139r22 140r22
+. 157r22 158r22 177r22 178r19
+37U14 write_to_m1 37b14 37>27 38>27 46l8 46t19 81s7 87s7 96s10 110s10 124s10
+. 139s10 157s10 177s10
+37i27 anal_value{11|58I9} 41r39
+38b27 in_value{boolean} 43r37 44r41
+48U14 write_to_m2 48b14 48>27 49>27 57l8 57t19 82s7 88s7 97s10 111s10 125s10
+. 140s10 158s10 178s7
+48i27 anal_value{11|58I9} 52r39
+49b27 in_value{boolean} 54r37 55r41
+61U14 write_to_m1 61b14 61>27 62>27 68l8 68t19
+61b27 in_value1{boolean} 65r37
+62b27 in_value2{boolean} 66r37
+70U14 write_to_m2 70b14 70>27 71>27 77l8 77t19
+70b27 in_value1{boolean} 74r37
+71b27 in_value2{boolean} 75r37
+92m7 start_time{12|37M12} 95r35
+106m7 start_time{12|37M12} 109r35
+120m7 start_time{12|37M12} 123r35
+134m7 start_time{12|37M12} 138r35 142r46
+137l7 ddl 142r15 145l16 145e19
+152m7 start_time{12|37M12} 156r35 161r46
+155l7 ddl 161r15 163l16 163e19
 

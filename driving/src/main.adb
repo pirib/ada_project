@@ -59,7 +59,7 @@ procedure Main is
 
     TA : constant chore.chore := (task_name => "turnarou" ,
 				  id => 7,
-				  deadline => <>,
+				  deadline => 1000,
 				  errand => nav.turn_around'Access
 				 );
 

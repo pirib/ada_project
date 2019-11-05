@@ -22,7 +22,7 @@ project Digital_Out is
          case Adl_Build is
 
             when "Debug" =>
-               for Main use ("sensor", "drive", "main.adb");
+               for Main use ("main.adb");
 
             when "Production" =>
                for Main use ("main.adb");

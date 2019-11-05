@@ -6,32 +6,34 @@ pragma Suppress (Overflow_Check);
 
 package body ada_main is
 
-   E76 : Short_Integer; pragma Import (Ada, E76, "cortex_m__nvic_E");
-   E47 : Short_Integer; pragma Import (Ada, E47, "mma8653_E");
-   E71 : Short_Integer; pragma Import (Ada, E71, "nrf51__events_E");
-   E19 : Short_Integer; pragma Import (Ada, E19, "nrf51__gpio_E");
-   E90 : Short_Integer; pragma Import (Ada, E90, "nrf51__gpio__tasks_and_events_E");
-   E73 : Short_Integer; pragma Import (Ada, E73, "nrf51__interrupts_E");
-   E29 : Short_Integer; pragma Import (Ada, E29, "nrf51__rtc_E");
-   E32 : Short_Integer; pragma Import (Ada, E32, "nrf51__spi_master_E");
-   E55 : Short_Integer; pragma Import (Ada, E55, "nrf51__tasks_E");
-   E88 : Short_Integer; pragma Import (Ada, E88, "nrf51__adc_E");
-   E53 : Short_Integer; pragma Import (Ada, E53, "nrf51__clock_E");
-   E92 : Short_Integer; pragma Import (Ada, E92, "nrf51__ppi_E");
-   E36 : Short_Integer; pragma Import (Ada, E36, "nrf51__timers_E");
-   E39 : Short_Integer; pragma Import (Ada, E39, "nrf51__twi_E");
-   E07 : Short_Integer; pragma Import (Ada, E07, "nrf51__device_E");
-   E45 : Short_Integer; pragma Import (Ada, E45, "microbit__i2c_E");
-   E43 : Short_Integer; pragma Import (Ada, E43, "microbit__accelerometer_E");
-   E86 : Short_Integer; pragma Import (Ada, E86, "microbit__ios_E");
-   E98 : Short_Integer; pragma Import (Ada, E98, "microbit__servos_E");
-   E51 : Short_Integer; pragma Import (Ada, E51, "microbit__time_E");
-   E82 : Short_Integer; pragma Import (Ada, E82, "chore_E");
-   E49 : Short_Integer; pragma Import (Ada, E49, "microbit__display_E");
-   E04 : Short_Integer; pragma Import (Ada, E04, "accelerometer_E");
-   E84 : Short_Integer; pragma Import (Ada, E84, "nav_E");
-   E94 : Short_Integer; pragma Import (Ada, E94, "qjs_E");
-   E96 : Short_Integer; pragma Import (Ada, E96, "sensor_E");
+   E079 : Short_Integer; pragma Import (Ada, E079, "cortex_m__nvic_E");
+   E051 : Short_Integer; pragma Import (Ada, E051, "mma8653_E");
+   E074 : Short_Integer; pragma Import (Ada, E074, "nrf51__events_E");
+   E019 : Short_Integer; pragma Import (Ada, E019, "nrf51__gpio_E");
+   E093 : Short_Integer; pragma Import (Ada, E093, "nrf51__gpio__tasks_and_events_E");
+   E076 : Short_Integer; pragma Import (Ada, E076, "nrf51__interrupts_E");
+   E029 : Short_Integer; pragma Import (Ada, E029, "nrf51__rtc_E");
+   E032 : Short_Integer; pragma Import (Ada, E032, "nrf51__spi_master_E");
+   E059 : Short_Integer; pragma Import (Ada, E059, "nrf51__tasks_E");
+   E091 : Short_Integer; pragma Import (Ada, E091, "nrf51__adc_E");
+   E057 : Short_Integer; pragma Import (Ada, E057, "nrf51__clock_E");
+   E095 : Short_Integer; pragma Import (Ada, E095, "nrf51__ppi_E");
+   E036 : Short_Integer; pragma Import (Ada, E036, "nrf51__timers_E");
+   E039 : Short_Integer; pragma Import (Ada, E039, "nrf51__twi_E");
+   E043 : Short_Integer; pragma Import (Ada, E043, "nrf51__uart_E");
+   E007 : Short_Integer; pragma Import (Ada, E007, "nrf51__device_E");
+   E099 : Short_Integer; pragma Import (Ada, E099, "microbit__console_E");
+   E049 : Short_Integer; pragma Import (Ada, E049, "microbit__i2c_E");
+   E047 : Short_Integer; pragma Import (Ada, E047, "microbit__accelerometer_E");
+   E089 : Short_Integer; pragma Import (Ada, E089, "microbit__ios_E");
+   E105 : Short_Integer; pragma Import (Ada, E105, "microbit__servos_E");
+   E055 : Short_Integer; pragma Import (Ada, E055, "microbit__time_E");
+   E085 : Short_Integer; pragma Import (Ada, E085, "chore_E");
+   E053 : Short_Integer; pragma Import (Ada, E053, "microbit__display_E");
+   E004 : Short_Integer; pragma Import (Ada, E004, "accelerometer_E");
+   E087 : Short_Integer; pragma Import (Ada, E087, "nav_E");
+   E097 : Short_Integer; pragma Import (Ada, E097, "qjs_E");
+   E103 : Short_Integer; pragma Import (Ada, E103, "sensor_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -54,39 +56,42 @@ package body ada_main is
       Default_Sized_SS_Pool := Sec_Default_Sized_Stacks'Address;
 
 
-      E76 := E76 + 1;
-      E47 := E47 + 1;
-      E71 := E71 + 1;
-      E19 := E19 + 1;
-      E90 := E90 + 1;
+      E079 := E079 + 1;
+      E051 := E051 + 1;
+      E074 := E074 + 1;
+      E019 := E019 + 1;
+      E093 := E093 + 1;
       Nrf51.Interrupts'Elab_Body;
-      E73 := E73 + 1;
-      E29 := E29 + 1;
-      E32 := E32 + 1;
-      E55 := E55 + 1;
-      E88 := E88 + 1;
-      E53 := E53 + 1;
-      E92 := E92 + 1;
-      E36 := E36 + 1;
-      E39 := E39 + 1;
+      E076 := E076 + 1;
+      E029 := E029 + 1;
+      E032 := E032 + 1;
+      E059 := E059 + 1;
+      E091 := E091 + 1;
+      E057 := E057 + 1;
+      E095 := E095 + 1;
+      E036 := E036 + 1;
+      E039 := E039 + 1;
+      E043 := E043 + 1;
       Nrf51.Device'Elab_Spec;
-      E07 := E07 + 1;
-      E45 := E45 + 1;
+      E007 := E007 + 1;
+      Microbit.Console'Elab_Body;
+      E099 := E099 + 1;
+      E049 := E049 + 1;
       Microbit.Accelerometer'Elab_Body;
-      E43 := E43 + 1;
+      E047 := E047 + 1;
       Microbit.Ios'Elab_Spec;
       Microbit.Ios'Elab_Body;
-      E86 := E86 + 1;
-      E98 := E98 + 1;
+      E089 := E089 + 1;
+      E105 := E105 + 1;
       Microbit.Time'Elab_Body;
-      E51 := E51 + 1;
-      E82 := E82 + 1;
+      E055 := E055 + 1;
+      E085 := E085 + 1;
       Microbit.Display'Elab_Body;
-      E49 := E49 + 1;
-      E04 := E04 + 1;
-      E84 := E84 + 1;
-      E94 := E94 + 1;
-      E96 := E96 + 1;
+      E053 := E053 + 1;
+      E004 := E004 + 1;
+      E087 := E087 + 1;
+      E097 := E097 + 1;
+      E103 := E103 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -102,16 +107,16 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   F:\Code\Git\ada_project\driving\obj\chore.o
-   --   F:\Code\Git\ada_project\driving\obj\accelerometer.o
-   --   F:\Code\Git\ada_project\driving\obj\nav.o
-   --   F:\Code\Git\ada_project\driving\obj\qjs.o
-   --   F:\Code\Git\ada_project\driving\obj\sensor.o
-   --   F:\Code\Git\ada_project\driving\obj\main.o
-   --   -LF:\Code\Git\ada_project\driving\obj\
-   --   -LF:\Code\Git\ada_project\driving\obj\
-   --   -LF:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\
-   --   -LD:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\
+   --   /home/nico/Downloads/Real-Time-Systems/driving/obj/chore.o
+   --   /home/nico/Downloads/Real-Time-Systems/driving/obj/accelerometer.o
+   --   /home/nico/Downloads/Real-Time-Systems/driving/obj/nav.o
+   --   /home/nico/Downloads/Real-Time-Systems/driving/obj/qjs.o
+   --   /home/nico/Downloads/Real-Time-Systems/driving/obj/sensor.o
+   --   /home/nico/Downloads/Real-Time-Systems/driving/obj/main.o
+   --   -L/home/nico/Downloads/Real-Time-Systems/driving/obj/
+   --   -L/home/nico/Downloads/Real-Time-Systems/driving/obj/
+   --   -L/home/nico/Downloads/Real-Time-Systems/Ada_Drivers_Library/boards/MicroBit/obj/zfp_lib_Debug/
+   --   -L/home/nico/opt/GNAT/2019-arm-elf/arm-eabi/lib/gnat/zfp-cortex-m0/adalib/
    --   -static
    --   -lgnat
 --  END Object file/option list   

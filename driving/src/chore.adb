@@ -10,7 +10,7 @@ package body chore is
 	-- decide if the value recevied is good or bad. 1 for good, -1 for bad
 	if self.id = 1 then -- AC
 
-	    if temp < 100 and temp > -100 then
+	    if temp < -150 and temp > -350 then
 		return 1; -- normal behavior value
 	    else
 		return -1; -- non horizontal value
@@ -18,12 +18,12 @@ package body chore is
 
 
 	elsif self.id = 2 or self.id = 8 or self.id = 9 then -- SS
-	    return 1;
---  	    if temp < 10 then
---  		return 1; -- there is a wall
---  	    else
---  		return -1; -- there is no wall
---  	    end if;
+
+	    if temp < 100 then
+		return -1; -- there is a wall
+	    else
+		return 1; -- there is no wall
+	    end if;
 
 
 	elsif self.id = 3 or self.id = 4 or self.id = 5 or self.id = 6 or self.id = 7 then  -- DS

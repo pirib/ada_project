@@ -1,12 +1,12 @@
-graph: { title: "F:\Code\Git\ada_project\driving\src\main.adb"
+graph: { title: "/home/nico/Downloads/Real-Time-Systems/driving/src/main.adb"
 node: { title: "memcpy" label: "builtin_memcpy\n<built-in>" shape : ellipse }
-node: { title: "qjs__run" label: "RUN\nF:\Code\Git\ada_project\driving\src\qjs.ads:16:15" shape : ellipse }
-node: { title: "microbit__time__delay_ms" label: "Delay_Ms\nF:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\src\microbit-time.ads:41:14" shape : ellipse }
-node: { title: "accelerometer__initialize" label: "initialize\nF:\Code\Git\ada_project\driving\src\accelerometer.ads:12:15" shape : ellipse }
-node: { title: "_ada_main" label: "Main\nF:\Code\Git\ada_project\driving\src\main.adb:20:1\n672 bytes (static)" }
-edge: { sourcename: "_ada_main" targetname: "qjs__run" label: "F:\Code\Git\ada_project\driving\src\main.adb:102:17" }
-edge: { sourcename: "_ada_main" targetname: "microbit__time__delay_ms" label: "F:\Code\Git\ada_project\driving\src\main.adb:92:18" }
-edge: { sourcename: "_ada_main" targetname: "accelerometer__initialize" label: "F:\Code\Git\ada_project\driving\src\main.adb:91:19" }
+node: { title: "qjs__run" label: "RUN\n/home/nico/Downloads/Real-Time-Systems/driving/src/qjs.ads:16:15" shape : ellipse }
+node: { title: "microbit__time__delay_ms" label: "Delay_Ms\n/home/nico/Downloads/Real-Time-Systems/Ada_Drivers_Library/boards/MicroBit/src/microbit-time.ads:41:14" shape : ellipse }
+node: { title: "accelerometer__initialize" label: "initialize\n/home/nico/Downloads/Real-Time-Systems/driving/src/accelerometer.ads:12:15" shape : ellipse }
+node: { title: "_ada_main" label: "Main\n/home/nico/Downloads/Real-Time-Systems/driving/src/main.adb:20:1\n640 bytes (static)" }
+edge: { sourcename: "_ada_main" targetname: "qjs__run" label: "/home/nico/Downloads/Real-Time-Systems/driving/src/main.adb:102:17" }
+edge: { sourcename: "_ada_main" targetname: "microbit__time__delay_ms" label: "/home/nico/Downloads/Real-Time-Systems/driving/src/main.adb:92:18" }
+edge: { sourcename: "_ada_main" targetname: "accelerometer__initialize" label: "/home/nico/Downloads/Real-Time-Systems/driving/src/main.adb:91:19" }
 edge: { sourcename: "_ada_main" targetname: "memcpy" }
 edge: { sourcename: "_ada_main" targetname: "memcpy" }
 edge: { sourcename: "_ada_main" targetname: "memcpy" }

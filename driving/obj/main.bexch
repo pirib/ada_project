@@ -1,26 +1,26 @@
 [GENERATED OBJECT FILE]
 b__main.o
 [PROJECT FILES]
-F:\Code\Git\ada_project\driving\digital_out.gpr
-20191104091512
-F:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\microbit_zfp.gpr
-20190914074758
+/home/nico/Downloads/Real-Time-Systems/driving/digital_out.gpr
+20191105145946
+/home/nico/Downloads/Real-Time-Systems/Ada_Drivers_Library/boards/MicroBit/microbit_zfp.gpr
+20191028100244
 [BOUND OBJECT FILES]
-F:\Code\Git\ada_project\driving\obj\chore.o
-F:\Code\Git\ada_project\driving\obj\accelerometer.o
-F:\Code\Git\ada_project\driving\obj\nav.o
-F:\Code\Git\ada_project\driving\obj\qjs.o
-F:\Code\Git\ada_project\driving\obj\sensor.o
-F:\Code\Git\ada_project\driving\obj\main.o
+/home/nico/Downloads/Real-Time-Systems/driving/obj/chore.o
+/home/nico/Downloads/Real-Time-Systems/driving/obj/accelerometer.o
+/home/nico/Downloads/Real-Time-Systems/driving/obj/nav.o
+/home/nico/Downloads/Real-Time-Systems/driving/obj/qjs.o
+/home/nico/Downloads/Real-Time-Systems/driving/obj/sensor.o
+/home/nico/Downloads/Real-Time-Systems/driving/obj/main.o
 [GENERATED SOURCE FILES]
 b__main.ads
 b__main.adb
 b__main.ali
 [RESULTING OPTIONS]
--LF:\Code\Git\ada_project\driving\obj\
--LF:\Code\Git\ada_project\driving\obj\
--LF:\Code\Git\ada_project\Ada_Drivers_Library\boards\MicroBit\obj\zfp_lib_Debug\
--LD:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\
+-L/home/nico/Downloads/Real-Time-Systems/driving/obj/
+-L/home/nico/Downloads/Real-Time-Systems/driving/obj/
+-L/home/nico/Downloads/Real-Time-Systems/Ada_Drivers_Library/boards/MicroBit/obj/zfp_lib_Debug/
+-L/home/nico/opt/GNAT/2019-arm-elf/arm-eabi/lib/gnat/zfp-cortex-m0/adalib/
 -static
 -static-libgcc
-D:\software\gnatelf\arm-eabi\lib\gnat\zfp-cortex-m0\adalib\libgnat.a
+/home/nico/opt/GNAT/2019-arm-elf/arm-eabi/lib/gnat/zfp-cortex-m0/adalib/libgnat.a
