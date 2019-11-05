@@ -23,12 +23,10 @@ RN
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U main%b		main.adb		3cb3e652 NE OO SU
+U main%b		main.adb		08f7b235 NE OO SU
 W accelerometer%s	accelerometer.adb	accelerometer.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W chore%s		chore.adb		chore.ali
-W microbit%s		microbit.ads		microbit.ali
-W microbit.time%s	microbit-time.adb	microbit-time.ali
 W nav%s			nav.adb			nav.ali
 W qjs%s			qjs.adb			qjs.ali
 W sensor%s		sensor.adb		sensor.ali
@@ -43,10 +41,10 @@ D hal-i2c.ads		20190914074758 0ed73138 hal.i2c%s
 D hal-spi.ads		20190914074758 fe139819 hal.spi%s
 D hal-time.ads		20190914074758 f5295cd7 hal.time%s
 D interfac.ads		20190518152826 5ab55268 interfaces%s
-D main.adb		20191104124022 77448305 main%b
+D main.adb		20191105101806 f73434b6 main%b
 D microbit.ads		20190914074758 4ce6a4c2 microbit%s
 D microbit-time.ads	20191004151342 6bbc81c6 microbit.time%s
-D nav.ads		20191104120814 7fbe053a nav%s
+D nav.ads		20191105095932 96cc1ab6 nav%s
 D nrf51.ads		20190914074758 548f0fe8 nrf51%s
 D nrf51-device.ads	20190914074758 3066f1b0 nrf51.device%s
 D nrf51-gpio.ads	20190914074758 8e815cce nrf51.gpio%s
@@ -60,26 +58,26 @@ D nrf51_svd-spi.ads	20190914074758 d8f87c63 nrf51_svd.spi%s
 D nrf51_svd-timer.ads	20190914074758 31dae6f3 nrf51_svd.timer%s
 D nrf51_svd-twi.ads	20190914074758 87adf514 nrf51_svd.twi%s
 D qjs.ads		20191104123402 8fa29bfc qjs%s
-D sensor.ads		20191104125038 cc72b7e0 sensor%s
+D sensor.ads		20191105100900 fa88ca7e sensor%s
 D system.ads		20190518152826 e69b74bd system%s
 D s-stoele.ads		20190518152826 2dc34a04 system.storage_elements%s
 D s-unstyp.ads		20190518152826 34867c83 system.unsigned_types%s
 G a e
-G c Z b b [main standard 20 11 none]
-G r c none [main standard 20 11 none] [initialize accelerometer 12 15 none]
-G r c none [main standard 20 11 none] [run qjs 16 15 none]
+G c Z b b [main standard 18 11 none]
+G r c none [main standard 18 11 none] [initialize accelerometer 12 15 none]
+G r c none [main standard 18 11 none] [run qjs 16 15 none]
 X 1 accelerometer.ads
-4K9*accelerometer 23e18 11|14w6 27r45 90r5
-12U15*Initialize 11|90s19
-21V14*check_acc{integer} 11|27r59
+4K9*accelerometer 23e18 11|12w6 25r45 88r5
+12U15*Initialize 11|88s19
+21V14*check_acc{integer} 11|25r59
 X 4 chore.ads
-3K9*chore 22e10 11|17w6 24r19 30r19 36r19 42r19 48r19 54r19 60r19 66r19 72r19
+3K9*chore 22e10 11|15w6 22r19 28r19 34r19 40r19 46r19 52r19 58r19 64r19 70r19
 5P10*function_pointer(integer)
-9R10*chore 18e15 11|24r25 30r25 36r25 42r25 48r25 54r25 60r25 66r25 72r25
-11a9*task_name{string} 11|24m35 30m35 36m35 42m35 48m35 54m35 60m35 66m35
-. 72m35
-12i9*id{integer} 11|25m35 31m35 37m35 43m35 49m35 55m35 61m35 67m35 73m35
-16p9*errand{5P10} 11|27m35 33m35 39m35 45m35 51m35 57m35 63m35 69m35 75m35
+9R10*chore 18e15 11|22r25 28r25 34r25 40r25 46r25 52r25 58r25 64r25 70r25
+11a9*task_name{string} 11|22m35 28m35 34m35 40m35 46m35 52m35 58m35 64m35
+. 70m35
+12i9*id{integer} 11|23m35 29m35 35m35 41m35 47m35 53m35 59m35 65m35 71m35
+16p9*errand{5P10} 11|25m35 31m35 37m35 43m35 49m35 55m35 61m35 67m35 73m35
 X 6 hal-gpio.ads
 47h9*GPIO_Point
 X 7 hal-i2c.ads
@@ -89,34 +87,33 @@ X 8 hal-spi.ads
 X 9 hal-time.ads
 34h9*Delays
 X 11 main.adb
-20U11*Main 20b11 181l5 181t9
-24r5 AC{4|9R10} 79r49 79r65
-30r5 SS{4|9R10} 79r53
-36r5 DF{4|9R10} 79r57
-42r5 DS{4|9R10} 79r61 79r69
-48r5 TL{4|9R10} 79r85
-54r5 TR{4|9R10} 79r89
-60r5 TA{4|9R10} 79r81
-66r5 SL{4|9R10} 79r73
-72r5 SR{4|9R10} 79r77
-79r5 Schedule{27|9R10} 92m5 92r5
-X 12 microbit.ads
-35K9*MicroBit 11|8r6 12|67e13
-X 13 microbit-time.ads
-35K18*Time 11|8w15 13|81e18
+18U11*Main 18b11 179l5 179t9
+22r5 AC{4|9R10} 77r49 77r65
+28r5 SS{4|9R10} 77r53
+34r5 DF{4|9R10} 77r57
+40r5 DS{4|9R10} 77r61 77r69
+46r5 TL{4|9R10} 77r85
+52r5 TR{4|9R10} 77r89
+58r5 TA{4|9R10} 77r81
+64r5 SL{4|9R10} 77r73
+70r5 SR{4|9R10} 77r77
+77r5 Schedule{27|9R10} 90m5 90r5
 X 14 nav.ads
-4K9*Nav 11|12w6 33r45 39r45 45r45 51r45 57r45 63r45 69r45 75r45 14|12e8
-6V14*drive_forward{integer} 11|33r49 39r49 63r49 69r49 75r49
-8V14*turn_left{integer} 11|51r49
-9V14*turn_right{integer} 11|57r49
-10V14*stop{integer} 11|45r49
+4K9*Nav 11|10w6 37r45 43r45 49r45 55r45 61r45 14|19e8
+12V14*drive_forward{integer} 11|37r49
+14V14*turn_left{integer} 11|49r49
+15V14*turn_right{integer} 11|55r49
+16V14*stop{integer} 11|43r49
+17V14*turn_around{integer} 11|61r49
 X 27 qjs.ads
-4K9*QJS 11|18w6 79r16 27|19e8
+4K9*QJS 11|16w6 77r16 27|19e8
 7A10*chore_queue(4|9R10)<integer>
-9R10*schedule 11|79r20 27|13e15
-11a9*major_queue{7A10} 11|79m33
-16U15*run 11|92s14
+9R10*schedule 11|77r20 27|13e15
+11a9*major_queue{7A10} 11|77m33
+16U15*run 11|90s14
 X 28 sensor.ads
-4K9*Sensor 11|13w6 13r32 28|20e11
-6I10*travel_time_us<integer> 11|13r39
+4K9*Sensor 11|11w6 31r45 67r45 73r45 28|20e11
+14V14*sensor_straight{integer} 11|31r52
+16V14*sensor_left{integer} 11|67r52
+18V14*sensor_right{integer} 11|73r52
 

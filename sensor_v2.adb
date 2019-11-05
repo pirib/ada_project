@@ -42,7 +42,6 @@ package body Sensor_v2 is
     duration_echo_us: travel_time_us; -- Duration of the pulse from ECHO pin measured in MicroSeconds
 
 
-   -- d: Integer;
     time_start: MicroBit.Time.Time_Ms;
     measurement_cycle: constant MicroBit.Time.Time_Ms := 60;
 
@@ -50,35 +49,35 @@ package body Sensor_v2 is
     begin
 
 
-    duration_echo_us := 0;
+	duration_echo_us := 0;
 
-    MicroBit.IOs.Set(TrigPin, False);
-    MicroBit.Time.HAL_Delay.Delay_Microseconds(10);
+	MicroBit.IOs.Set(TrigPin, False);
+	MicroBit.Time.HAL_Delay.Delay_Microseconds(10);
 
-    MicroBit.IOs.Set(TrigPin, True);
-    MicroBit.Time.HAL_Delay.Delay_Microseconds(10);
-    MicroBit.IOs.Set(TrigPin, False);
+	MicroBit.IOs.Set(TrigPin, True);
+	MicroBit.Time.HAL_Delay.Delay_Microseconds(10);
+	MicroBit.IOs.Set(TrigPin, False);
 
-   time_start := MicroBit.Time.Clock;
+	time_start := MicroBit.Time.Clock;
 
 
 
-    while MicroBit.Time.Clock-time_start < measurement_cycle loop
+	while MicroBit.Time.Clock-time_start < measurement_cycle loop
 
-	if MicroBit.IOs.Set(EchoPin) then
-
-	    MicroBit.Time.HAL_Delay.Delay_Microseconds(1);
 	    if MicroBit.IOs.Set(EchoPin) then
-		duration_echo_us := duration_echo_us + 1;
-	   -- else
-		--MicroBit.Display.Display( Integer'Image( d ) );
+
+		MicroBit.Time.HAL_Delay.Delay_Microseconds(1);
+		if MicroBit.IOs.Set(EchoPin) then
+		    duration_echo_us := duration_echo_us + 1;
+		    -- else
+		    --MicroBit.Display.Display( Integer'Image( d ) );
+		end if;
+
 	    end if;
 
-	end if;
-
-      end loop;
-        return duration_echo_us;
-end read;
+	end loop;
+	return duration_echo_us;
+    end read;
 
 
 

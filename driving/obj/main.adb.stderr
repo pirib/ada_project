@@ -1,2 +1,0 @@
-main.adb:8:14: warning: unit "MicroBit.Time" is not referenced
-main.adb:13:23: warning: use clause for type "travel_time_us" defined at sensor.ads:6 has no effect

@@ -1,0 +1,1 @@
+nav.adb:173:13: warning: useless assignment to "temp", value overwritten at line 174

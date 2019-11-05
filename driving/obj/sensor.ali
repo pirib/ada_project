@@ -23,12 +23,14 @@ RV NO_DISPATCHING_CALLS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U sensor%b		sensor.adb		95736400 NE OO PK
+U sensor%b		sensor.adb		36dfd74c NE OO PK
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W microbit%s		microbit.ads		microbit.ali
 W microbit.ios%s	microbit-ios.adb	microbit-ios.ali
+W microbit.servos%s	microbit-servos.adb	microbit-servos.ali
+Z system.assertions%s	s-assert.adb		s-assert.ali
 
-U sensor%s		sensor.ads		a7ce3626 EE NE OO PK
+U sensor%s		sensor.ads		91344bb8 EE NE OO PK
 W microbit%s		microbit.ads		microbit.ali
 W microbit.time%s	microbit-time.adb	microbit-time.ali
 
@@ -42,6 +44,7 @@ D hal-time.ads		20190914074758 f5295cd7 hal.time%s
 D interfac.ads		20190518152826 5ab55268 interfaces%s
 D microbit.ads		20190914074758 4ce6a4c2 microbit%s
 D microbit-ios.ads	20190914074758 c34f2bcd microbit.ios%s
+D microbit-servos.ads	20190914074758 c282b648 microbit.servos%s
 D microbit-time.ads	20191004151342 6bbc81c6 microbit.time%s
 D nrf51.ads		20190914074758 548f0fe8 nrf51%s
 D nrf51-device.ads	20190914074758 3066f1b0 nrf51.device%s
@@ -55,9 +58,10 @@ D nrf51_svd-rtc.ads	20190914074758 7ec0736e nrf51_svd.rtc%s
 D nrf51_svd-spi.ads	20190914074758 d8f87c63 nrf51_svd.spi%s
 D nrf51_svd-timer.ads	20190914074758 31dae6f3 nrf51_svd.timer%s
 D nrf51_svd-twi.ads	20190914074758 87adf514 nrf51_svd.twi%s
-D sensor.ads		20191104125038 cc72b7e0 sensor%s
-D sensor.adb		20191104125352 9a4ef82d sensor%b
+D sensor.ads		20191105100900 fa88ca7e sensor%s
+D sensor.adb		20191105102144 cd9a80b7 sensor%b
 D system.ads		20190518152826 e69b74bd system%s
+D s-assert.ads		20190518152826 cd8d2c94 system.assertions%s
 D s-stoele.ads		20190518152826 2dc34a04 system.storage_elements%s
 D s-unstyp.ads		20190518152826 34867c83 system.unsigned_types%s
 G a e
@@ -73,14 +77,17 @@ G r c none [read sensor 12 14 none] [clock microbit__time 39 13 none]
 G r c none [read sensor 12 14 none] [set microbit__ios 52 14 none]
 G r c none [read sensor 12 14 none] [hal_delay microbit__time 64 13 none]
 G r c none [read sensor 12 14 none] [set microbit__ios 55 13 none]
+G r c none [sensor_straight sensor 14 14 none] [go microbit__servos 46 14 none]
 G r c none [sensor_straight sensor 14 14 none] [clock microbit__time 39 13 none]
 G r c none [sensor_straight sensor 14 14 none] [set microbit__ios 52 14 none]
 G r c none [sensor_straight sensor 14 14 none] [hal_delay microbit__time 64 13 none]
 G r c none [sensor_straight sensor 14 14 none] [set microbit__ios 55 13 none]
+G r c none [sensor_left sensor 16 14 none] [go microbit__servos 46 14 none]
 G r c none [sensor_left sensor 16 14 none] [clock microbit__time 39 13 none]
 G r c none [sensor_left sensor 16 14 none] [set microbit__ios 52 14 none]
 G r c none [sensor_left sensor 16 14 none] [hal_delay microbit__time 64 13 none]
 G r c none [sensor_left sensor 16 14 none] [set microbit__ios 55 13 none]
+G r c none [sensor_right sensor 18 14 none] [go microbit__servos 46 14 none]
 G r c none [sensor_right sensor 18 14 none] [clock microbit__time 39 13 none]
 G r c none [sensor_right sensor 18 14 none] [set microbit__ios 52 14 none]
 G r c none [sensor_right sensor 18 14 none] [hal_delay microbit__time 64 13 none]
@@ -96,47 +103,45 @@ X 6 hal-spi.ads
 X 7 hal-time.ads
 34h9*Delays
 36P9*Any_Delays(34R9)
-38x14*Delay_Microseconds 25|21R33 24R33 34R45 58R37 61R37 71R49
+38x14*Delay_Microseconds 26|23R33 26R33 33R41 53R33 56R33 63R41
 X 8 interfac.ads
 77M9*Unsigned_64
 X 9 microbit.ads
-35K9*MicroBit 67e13 24|1r6 1r30 12r32 14r42 16r38 18r39 25|1r6 1r24 20r9
-. 21r9 23r9 24r9 25r9 30r16 34r21 35r24 50r31 51r31 51r56 54r15 57r13 58r13
-. 60r13 61r13 62r13 67r20 71r25 72r28 87r43 93r39 99r40
+35K9*MicroBit 67e13 25|1r6 1r30 12r32 14r42 16r38 18r39 26|1r6 1r24 2r6 22r9
+. 23r9 25r9 26r9 27r9 31r16 33r17 34r20 46r31 47r31 47r56 52r9 53r9 55r9
+. 56r9 57r9 59r15 61r16 63r17 65r20 77r43 79r9 84r39 86r9 91r40 93r9
 X 10 microbit-ios.ads
-34K18*IOs 98e17 25|1w15 1r33 20r18 23r18 25r18 30r25 35r33 57r22 60r22 62r22
-. 67r29 72r37
-36I9*Pin_Id<short_short_integer> 25|10r31 11r31
-52U14*Set 25|20s22 23s22 25s22 57s26 60s26 62s26
-55V13*Set{boolean} 25|30s29 35s37 67s33 72s41
-X 11 microbit-time.ads
-35K18*Time 81e18 24|1w15 1r39 12r41 14r51 16r47 18r48 25|21r18 24r18 34r30
-. 50r40 51r40 51r65 54r24 58r22 61r22 71r34 87r52 93r48 99r49
-37M12*Time_Ms{3|160M9} 24|1r44 12r46 14r56 16r52 18r53 25|50r45 51r45 87r57
-. 93r53 99r54
-39V13*Clock{37M12} 25|51s70 54s29
-64V13*HAL_Delay{7|36P9} 25|21s23 24s23 34s35 58s27 61s27 71s39
-X 24 sensor.ads
-4K9*Sensor 20l5 20e11 25|6b14 106l5 106t11
-6I10*travel_time_us<integer> 8r24
+34K18*IOs 98e17 26|1w15 1r33 22r18 25r18 27r18 31r25 34r29 52r18 55r18 57r18
+. 61r25 65r29
+36I9*Pin_Id<short_short_integer> 26|10r31 11r31
+52U14*Set 26|22s22 25s22 27s22 52s22 55s22 57s22
+55V13*Set{boolean} 26|31s29 34s33 61s29 65s33
+X 11 microbit-servos.ads
+34K18*Servos 52e20 26|2w15 79r18 86r18 93r18
+46U14*Go 26|79s25 86s25 93s25
+X 12 microbit-time.ads
+35K18*Time 81e18 25|1w15 1r39 12r41 14r51 16r47 18r48 26|23r18 26r18 33r26
+. 46r40 47r40 47r65 53r18 56r18 59r24 63r26 77r52 84r48 91r49
+37M12*Time_Ms{3|160M9} 25|1r44 12r46 14r56 16r52 18r53 26|46r45 47r45 77r57
+. 84r53 91r54
+39V13*Clock{37M12} 26|47s70 59s29
+64V13*HAL_Delay{7|36P9} 26|23s23 26s23 33s31 53s23 56s23 63s31
+X 25 sensor.ads
+4K9*Sensor 20l5 20e11 26|6b14 99l5 99t11
+6I10*travel_time_us<integer> 8r24 10r26 26|14r23 17r26
 8i5*travel_time_stop{6I10}
-10V14*read{integer} 25|16b14 47l9 47t13
-12V14*read{integer} 12>21 25|50b14 85l9 85t13 90s16 96s16 102s16
-12m21 Deadline{11|37M12} 25|50b20 54r50
-14V14*sensor_straight{integer} 14>31 25|87b14 91l9 91t24
-14m31 Deadline{11|37M12} 25|87b31 90r21
-16V14*sensor_left{integer} 16>27 25|93b14 97l9 97t20
-16m27 Deadline{11|37M12} 25|93b27 96r21
-18V14*sensor_right{integer} 18>28 25|99b14 103l9 103t21
-18m28 Deadline{11|37M12} 25|99b28 102r21
-X 25 sensor.adb
-10i5 sensor_TRIG_pin{10|36I9} 20r26 23r26 25r26 57r30 60r30 62r30
-11i5 sensor_ECHO_pin{10|36I9} 30r33 35r41 67r37 72r45
-14i5 duration_echo_us{integer} 18m9 36m25 36r45 38r32 42r24 55m13 73m29 73r49
-. 75r36 79r28
-27l9 outerloop 45l18 45e27
-32l17 innerloop 40l26 40e35
-51m9 start_time{11|37M12} 54r37
-64l13 outerloop 82l22 82e31
-69l21 innerloop 77l30 77e39
+10V14*read{6I10} 26|17b14 43l9 43t13
+12V14*read{integer} 12>21 26|46b14 74l9 74t13 81s16 88s16 95s16
+12m21 Deadline{12|37M12} 26|46b20 59r50
+14V14*sensor_straight{integer} 14>31 26|77b14 82l9 82t24
+14m31 Deadline{12|37M12} 26|77b31 81r21
+16V14*sensor_left{integer} 16>27 26|84b14 89l9 89t20
+16m27 Deadline{12|37M12} 26|84b27 88r21
+18V14*sensor_right{integer} 18>28 26|91b14 96l9 96t21
+18m28 Deadline{12|37M12} 26|91b28 95r21
+X 26 sensor.adb
+10i5 sensor_TRIG_pin{10|36I9} 22r26 25r26 27r26 52r26 55r26 57r26
+11i5 sensor_ECHO_pin{10|36I9} 31r33 34r37 61r33 65r37
+14i5 duration_echo_us{25|6I10} 20m9 35m21 35r41 41r16 50m9 66m21 66r41 72r24
+47m9 start_time{12|37M12} 59r37
 

@@ -7,7 +7,7 @@ package Sensor is
     
     travel_time_stop : travel_time_us := 15; 
 
-    function read return Integer; 
+    function read return travel_time_us; 
     
     function read ( Deadline : MicroBit.Time.Time_Ms) return Integer;
     

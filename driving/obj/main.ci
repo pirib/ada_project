@@ -2,9 +2,9 @@ graph: { title: "F:\Code\Git\ada_project\driving\src\main.adb"
 node: { title: "memcpy" label: "builtin_memcpy\n<built-in>" shape : ellipse }
 node: { title: "qjs__run" label: "RUN\nF:\Code\Git\ada_project\driving\src\qjs.ads:16:15" shape : ellipse }
 node: { title: "accelerometer__initialize" label: "initialize\nF:\Code\Git\ada_project\driving\src\accelerometer.ads:12:15" shape : ellipse }
-node: { title: "_ada_main" label: "Main\nF:\Code\Git\ada_project\driving\src\main.adb:20:1\n672 bytes (static)" }
-edge: { sourcename: "_ada_main" targetname: "qjs__run" label: "F:\Code\Git\ada_project\driving\src\main.adb:92:13" }
-edge: { sourcename: "_ada_main" targetname: "accelerometer__initialize" label: "F:\Code\Git\ada_project\driving\src\main.adb:90:18" }
+node: { title: "_ada_main" label: "Main\nF:\Code\Git\ada_project\driving\src\main.adb:18:1\n672 bytes (static)" }
+edge: { sourcename: "_ada_main" targetname: "qjs__run" label: "F:\Code\Git\ada_project\driving\src\main.adb:90:13" }
+edge: { sourcename: "_ada_main" targetname: "accelerometer__initialize" label: "F:\Code\Git\ada_project\driving\src\main.adb:88:18" }
 edge: { sourcename: "_ada_main" targetname: "memcpy" }
 edge: { sourcename: "_ada_main" targetname: "memcpy" }
 edge: { sourcename: "_ada_main" targetname: "memcpy" }

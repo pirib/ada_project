@@ -1,2 +1,0 @@
-sensor.adb:54:59: warning: "return" statement missing following this statement
-sensor.adb:54:59: warning: Program_Error may be raised at run time

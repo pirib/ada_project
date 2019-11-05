@@ -20,11 +20,12 @@ P ZX
 
 RN
 RV NO_ACCESS_SUBPROGRAMS
+RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U chore%b		chore.adb		83fcc939 NE OO PK IL
+U chore%b		chore.adb		eadab245 NE OO PK IL
 Z ada.tags%s		a-tags.adb		a-tags.ali
 
 U chore%s		chore.ads		0277c93f EE NE OO PK IL
@@ -37,7 +38,7 @@ Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
 D ada.ads		20190518152826 76789da1 ada%s
 D a-tags.ads		20190518152826 2dde273c ada.tags%s
 D chore.ads		20191104123536 69cb48f9 chore%s
-D chore.adb		20191104122406 ea3781c0 chore%b
+D chore.adb		20191105093708 8311fabc chore%b
 D hal.ads		20190914074758 2b42c80e hal%s
 D hal-gpio.ads		20190914074758 7f0c2ffe hal.gpio%s
 D hal-i2c.ads		20190914074758 0ed73138 hal.i2c%s
@@ -68,16 +69,16 @@ X 3 chore.ads
 3K9*chore 22l5 22e10 4|3b14 46l5 46t10
 5P10*function_pointer(integer) 5>48 16r17
 5m48 Deadline{12|37M12}
-9R10*chore 18e15 20p14 20r37 4|5r36
+9R10*chore 18e15 20p14 20r37 4|5r37
 11a9*task_name{string}
-12i9*id{integer} 4|11r15 20r18 29r18 33r18
+12i9*id{integer} 4|11r17 20r20 29r20 33r20
 13m9*deadline{12|37M12}
-16p9*errand{5P10} 4|8r20
-20V14*execute{integer} 20=23 20>45 4|5b13 41l8 41t15
-20r23 Self{9R10} 4|5b22 8r15 11r10 20r13 29r13 33r13
-20m45 Deadline{12|37M12} 4|5b44 8r31
+16p9*errand{5P10} 4|8r22
+20V14*execute{integer} 20=23 20>45 4|5b14 41l9 41t16
+20r23 Self{9R10} 4|5b23 8r17 11r12 20r15 29r15 33r15
+20m45 Deadline{12|37M12} 4|5b45 8r33
 X 4 chore.adb
-6i7 temp{integer} 8m7 13r13 22r13
+6i9 temp{integer} 8m9 13r16 13r30 22r16
 X 5 hal.ads
 160M9*UInt64<10|77M9>
 X 6 hal-gpio.ads
@@ -91,8 +92,8 @@ X 9 hal-time.ads
 X 10 interfac.ads
 77M9*Unsigned_64
 X 11 microbit.ads
-35K9*MicroBit 3|1r6 5r59 13r27 20r56 4|5r55 11|67e13
+35K9*MicroBit 3|1r6 5r59 13r27 20r56 4|5r56 11|67e13
 X 12 microbit-time.ads
-35K18*Time 3|1w15 5r68 13r36 20r65 4|5r64 12|81e18
-37M12*Time_Ms{5|160M9} 3|5r73 13r41 20r70 4|5r69
+35K18*Time 3|1w15 5r68 13r36 20r65 4|5r65 12|81e18
+37M12*Time_Ms{5|160M9} 3|5r73 13r41 20r70 4|5r70
 

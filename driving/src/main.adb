@@ -1,15 +1,14 @@
--- TODO add servo code for SS, SL, SR tasks/functions
--- TODO Turn Around code
+-- TODO servo has no deadline in SL, SR, SS
+-- TODO sensor deadline measurement issue
 
 -- PACKAGES
 
 -- Microbit
-with MicroBit.Time;
-
+--with MicroBit.Time;
 
 -- EXTERNAL PACKAGES
 with Nav;
-with Sensor;          use type sensor.travel_time_us;
+with Sensor;
 with Accelerometer;
 
 -- SCHEDULING
@@ -59,7 +58,7 @@ procedure Main is
     TA : constant chore.chore := (task_name => "turnarou" ,
 				  id => 7,
 				  deadline => <>,
-				  errand => nav.drive_forward'Access -- NEEDS CHANGING
+				  errand => nav.turn_around'Access
 				 );
 
     SL : constant chore.chore := (task_name => "sensleft" ,

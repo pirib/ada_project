@@ -24,6 +24,7 @@ package body ada_main is
    E45 : Short_Integer; pragma Import (Ada, E45, "microbit__i2c_E");
    E43 : Short_Integer; pragma Import (Ada, E43, "microbit__accelerometer_E");
    E86 : Short_Integer; pragma Import (Ada, E86, "microbit__ios_E");
+   E98 : Short_Integer; pragma Import (Ada, E98, "microbit__servos_E");
    E51 : Short_Integer; pragma Import (Ada, E51, "microbit__time_E");
    E82 : Short_Integer; pragma Import (Ada, E82, "chore_E");
    E49 : Short_Integer; pragma Import (Ada, E49, "microbit__display_E");
@@ -76,6 +77,7 @@ package body ada_main is
       Microbit.Ios'Elab_Spec;
       Microbit.Ios'Elab_Body;
       E86 := E86 + 1;
+      E98 := E98 + 1;
       Microbit.Time'Elab_Body;
       E51 := E51 + 1;
       E82 := E82 + 1;

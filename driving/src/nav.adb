@@ -76,6 +76,25 @@ package body Nav is
 	
     end write_to_m2;
 
+    procedure stop is
+    begin
+	write_to_m1(False, False);
+	write_to_m2(False, False);
+    end stop;
+    
+
+    function stop (Deadline : MicroBit.Time.Time_Ms) return Integer is
+	start_time : constant MicroBit.Time.Time_Ms := MicroBit.Time.Clock;
+    begin
+
+	while MicroBit.Time.Clock - start_time < Deadline loop
+	    write_to_m1(False, False);
+	    write_to_m2(False, False);
+	    return 1;
+	end loop;
+	return -1;
+	
+    end stop;
 
 
     function drive_forward (Deadline : MicroBit.Time.Time_Ms) return Integer is
@@ -110,11 +129,15 @@ package body Nav is
 	start_time : constant MicroBit.Time.Time_Ms := MicroBit.Time.Clock;
     begin
 
+	ddl:
 	while MicroBit.Time.Clock - start_time < Deadline loop
 	    write_to_m1(high, True);
 	    write_to_m2(high, False);
+	    MicroBit.Time.Delay_Ms(50);
+	    exit ddl when MicroBit.Time.Clock - start_time < Deadline;
+	    stop;
 	    return 1;
-	end loop;
+	end loop ddl;
 	return -1;
 	
     end turn_left;
@@ -124,28 +147,37 @@ package body Nav is
 	start_time : constant MicroBit.Time.Time_Ms := MicroBit.Time.Clock;
     begin
 
+	ddl:
 	while MicroBit.Time.Clock - start_time < Deadline loop
 	    write_to_m1(high, False);
 	    write_to_m2(high, True);
+	    MicroBit.Time.Delay_Ms(50);
+	    stop;
+	    exit ddl when MicroBit.Time.Clock - start_time < Deadline;
 	    return 1;
-	end loop;
+	end loop ddl;
 	return -1;
 	
     end turn_right;
 
 
-    function stop (Deadline : MicroBit.Time.Time_Ms) return Integer is
+   
+    
+    function turn_around( Deadline : MicroBit.Time.Time_Ms) return Integer is
 	start_time : constant MicroBit.Time.Time_Ms := MicroBit.Time.Clock;
+	temp: Integer := 0;
     begin
-
-	while MicroBit.Time.Clock - start_time < Deadline loop
-	    write_to_m1(False, False);
-	    write_to_m2(False, False);
-	    return 1;
-	end loop;
-	return -1;
 	
-    end stop;
+	ddl:
+	while MicroBit.Time.Clock - start_time < Deadline loop
+	    temp := turn_right(Deadline/2);
+	    temp := turn_right(Deadline/2);
+	    exit ddl when MicroBit.Time.Clock - start_time < Deadline;
+	    return 1;
+	end loop ddl;
+	return temp;
+	
+    end turn_around;
     
     
 end Nav;
