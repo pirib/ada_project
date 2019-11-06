@@ -27,10 +27,11 @@ package body QJS is
 
             NB :
             FOR I in 1..3 LOOP  -- (AC, SS, DF)
-
-               Answer := self.major_queue(I).execute( self.major_queue(I).deadline );
                current_task_id := self.major_queue(I).id;
+               MicroBit.Console.Put_Line(Self.major_queue(I).task_name);
                MicroBit.Console.Put_Line(Integer'Image (current_task_id));
+               Answer := self.major_queue(I).execute( self.major_queue(I).deadline );
+
                MicroBit.Console.New_Line;
 
                if current_task_id = 1 and answer = -1 then -- If the value from AC is bad
@@ -53,10 +54,10 @@ package body QJS is
 
             NH :
             FOR I in 4..5 LOOP  -- (DS, AC)
-
-               Answer := self.major_queue(I).execute( self.major_queue(I).deadline );
                current_task_id := self.major_queue(I).id;
+               MicroBit.Console.Put_Line(Self.major_queue(I).task_name);
                MicroBit.Console.Put_Line(Integer'Image (current_task_id));
+               Answer := self.major_queue(I).execute( self.major_queue(I).deadline );
                MicroBit.Console.New_Line;
                if current_task_id = 1 and answer = 1 then -- If the value from AC is good
                   current_queue_id := NB_q;
@@ -74,10 +75,11 @@ package body QJS is
 
             SC :
             FOR I in 6..9 LOOP  -- (DS, SL, SR , TA)
-
-               Answer := self.major_queue(I).execute( self.major_queue(I).deadline );
                current_task_id := self.major_queue(I).id;
+               MicroBit.Console.Put_Line(Self.major_queue(I).task_name);
                MicroBit.Console.Put_Line(Integer'Image (current_task_id));
+               Answer := self.major_queue(I).execute( self.major_queue(I).deadline );
+
                MicroBit.Console.New_Line;
 
                if current_task_id = 8 and answer = 1 then -- If the value from SL is good
@@ -98,10 +100,11 @@ package body QJS is
 
             TL :
             FOR I in 10..10 LOOP
-
-               Answer := self.major_queue(I).execute( self.major_queue(I).deadline );
                current_task_id := self.major_queue(I).id;
+               MicroBit.Console.Put_Line(Self.major_queue(I).task_name);
                MicroBit.Console.Put_Line(Integer'Image (current_task_id));
+               Answer := self.major_queue(I).execute( self.major_queue(I).deadline );
+
                MicroBit.Console.New_Line;
 
                if Answer = 1 then -- If the value from SS is good
@@ -117,10 +120,11 @@ package body QJS is
          elsif current_queue_id = TR_q then
             TR :
             FOR I in 11..11 LOOP  -- (DS, SS)  -- Need to add AC
-
-               Answer := self.major_queue(I).execute( self.major_queue(I).deadline );
                current_task_id := self.major_queue(I).id;
+               MicroBit.Console.Put_Line(Self.major_queue(I).task_name);
                MicroBit.Console.Put_Line(Integer'Image (current_task_id));
+               Answer := self.major_queue(I).execute( self.major_queue(I).deadline );
+
                MicroBit.Console.New_Line;
 
                if Answer = 1 then -- If the value from SS is good

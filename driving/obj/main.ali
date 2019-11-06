@@ -36,7 +36,7 @@ W sensor%s		sensor.adb		sensor.ali
 D accelerometer.ads	20191105145153 75ee854e accelerometer%s
 D ada.ads		20190518110050 76789da1 ada%s
 D a-tags.ads		20190518110050 2dde273c ada.tags%s
-D chore.ads		20191105145153 40361b3b chore%s
+D chore.ads		20191105202023 40361b3b chore%s
 D hal.ads		20191028100244 2b42c80e hal%s
 D hal-gpio.ads		20191028100244 7f0c2ffe hal.gpio%s
 D hal-i2c.ads		20191028100244 0ed73138 hal.i2c%s
@@ -44,7 +44,7 @@ D hal-spi.ads		20191028100244 fe139819 hal.spi%s
 D hal-time.ads		20191028100244 f5295cd7 hal.time%s
 D hal-uart.ads		20191028100244 d58316b4 hal.uart%s
 D interfac.ads		20190518110050 5ab55268 interfaces%s
-D main.adb		20191105160420 5f0b5510 main%b
+D main.adb		20191106084304 5f0b5510 main%b
 D microbit.ads		20191028100244 c9bb1867 microbit%s
 D microbit-time.ads	20191028100244 6bbc81c6 microbit.time%s
 D nav.ads		20191105145153 85e0bc78 nav%s
@@ -73,8 +73,8 @@ G r c none [main standard 20 11 none] [initialize accelerometer 12 15 none]
 G r c none [main standard 20 11 none] [delay_ms microbit__time 41 14 none]
 G r c none [main standard 20 11 none] [run qjs 16 15 none]
 X 1 accelerometer.ads
-4K9*accelerometer 23e18 12|14w6 27r45 91r6
-12U15*Initialize 12|91s20
+4K9*accelerometer 23e18 12|14w6 27r45 92r6
+12U15*Initialize 12|92s20
 21V14*check_acc{integer} 12|27r59
 X 4 chore.ads
 3K9*chore 22e10 12|17w6 24r19 30r19 36r19 42r19 48r19 54r19 60r19 66r19 72r19
@@ -100,7 +100,7 @@ X 10 hal-uart.ads
 X 11 interfac.ads
 77M9*Unsigned_64
 X 12 main.adb
-20U11*Main 20b11 196l5 196t9
+20U11*Main 20b11 197l5 197t9
 24r5 AC{4|9R10} 79r49 79r65
 30r5 SS{4|9R10} 79r53
 36r5 DF{4|9R10} 79r57
@@ -110,14 +110,14 @@ X 12 main.adb
 60r5 TA{4|9R10} 79r81
 66r5 SL{4|9R10} 79r73
 72r5 SR{4|9R10} 79r77
-79r5 Schedule{30|9R10} 102m9 102r9
-88i5 testvalue{integer}
+79r5 Schedule{30|9R10} 103m9 103r9
+89i5 testvalue{integer}
 X 13 microbit.ads
-35K9*MicroBit 12|7r6 8w6 92r5 13|70e13
+35K9*MicroBit 12|7r6 8w6 93r5 13|70e13
 X 14 microbit-time.ads
-35K18*Time 12|7w15 92r14 14|81e18
+35K18*Time 12|7w15 93r14 14|81e18
 37M12*Time_Ms{5|160M9}
-41U14*Delay_Ms 12|92s19
+41U14*Delay_Ms 12|93s19
 X 15 nav.ads
 4K9*Nav 12|12w6 39r45 45r45 51r45 57r45 63r45 15|19e8
 12V14*drive_forward{integer} 12|39r49
@@ -130,7 +130,7 @@ X 30 qjs.ads
 7A10*chore_queue(4|9R10)<integer>
 9R10*schedule 12|79r20 30|13e15
 11a9*major_queue{7A10} 12|79m33
-16U15*run 12|102s18
+16U15*run 12|103s18
 X 31 sensor.ads
 4K9*Sensor 12|13w6 33r45 69r45 75r45 31|20e11
 14V14*sensor_straight{integer} 12|33r52

@@ -9,14 +9,14 @@ package body Nav is
    --  Motor 1 Pins left motor
 
    m1anal_pin: constant Pin_Id := 0; 
-   m1in1_pin: constant Pin_Id := 16;
-   m1in2_pin: constant Pin_Id := 15;      
+   m1in1_pin: constant Pin_Id := 11; --11
+   m1in2_pin: constant Pin_Id := 5; -- 5     
 
    --  Motor 2 Pins right motor
     
-   m2anal_pin: constant Pin_Id := 2;
-   m2in1_pin: constant Pin_Id := 11;
-   m2in2_pin: constant Pin_Id := 5;      
+   m2anal_pin: constant Pin_Id := 0;
+   m2in1_pin: constant Pin_Id := 16; -- 16
+   m2in2_pin: constant Pin_Id := 15;  -- 15
     
     
    --  Variables
@@ -138,9 +138,10 @@ package body Nav is
       while MicroBit.Time.Clock - start_time < Deadline loop
          write_to_m1(high, True);
          write_to_m2(high, False);
-         MicroBit.Time.Delay_Ms(70);
-         exit ddl when MicroBit.Time.Clock - start_time < Deadline;
+         MicroBit.Time.Delay_Ms(Deadline);
          stop;
+       --  exit ddl when MicroBit.Time.Clock - start_time < Deadline;
+         
          return 1;
       end loop ddl;
       return -1;
@@ -156,9 +157,9 @@ package body Nav is
       while MicroBit.Time.Clock - start_time < Deadline loop
          write_to_m1(high, False);
          write_to_m2(high, True);
-         MicroBit.Time.Delay_Ms(70);
+         MicroBit.Time.Delay_Ms(Deadline);
          stop;
-         exit ddl when MicroBit.Time.Clock - start_time < Deadline;
+      --   exit ddl when MicroBit.Time.Clock - start_time < Deadline;
          return 1;
       end loop ddl;
       return -1;
